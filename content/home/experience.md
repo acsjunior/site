@@ -30,7 +30,7 @@ experience:
     date_end: ''
     description: ''
     
-  - title: Pesquisador
+  - title: Aluno pesquisador
     company: Universidade Federal do Paraná (GTAO - Grupo de Tecnologia Aplicada à Otimização)
     company_url: 'https://gtao-ufpr.herokuapp.com'
     location: Curitiba - PR
