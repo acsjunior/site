@@ -1,0 +1,27 @@
+---
+title: Visualizando dados em R com ggplot2
+author: acsjunior
+date: '2019-11-03'
+slug: []
+categories:
+  - Tutoriais
+tags:
+  - R
+  - ggplot2
+  - tidyverse
+  - visualização de dados
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2019-11-03T15:06:27-03:00'
+featured: no
+image:
+  caption: 'Crédito: [https://ggplot2.tidyverse.org/](https://ggplot2.tidyverse.org/)'
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+Seja na apresentação de informações, na análise exploratória de dados ou no diagnóstico de um modelo, a visualização de dados se faz sempre necessária. Uma das principais bibliotecas para criação de visuais em R é o ggplot2 e neste artigo eu vou demonstrar como trabalhar com os principais recursos deste pacote.
+
+*[Clique aqui](https://www.linkedin.com/pulse/visualizando-dados-em-r-com-ggplot2-antonio-c-da-silva-júnior/) para acessar a publicação completa realizada no Linkedin*

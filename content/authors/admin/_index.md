@@ -1,6 +1,5 @@
 ---
 bio:
-  matter.
 education:
   courses:
   - course: M.e Métodos Numéricos em Engenharia

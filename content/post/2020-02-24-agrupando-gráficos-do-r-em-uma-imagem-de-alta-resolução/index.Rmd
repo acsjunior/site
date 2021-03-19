@@ -1,0 +1,29 @@
+---
+title: Agrupando gráficos do R em uma imagem de alta resolução
+author: acsjunior
+date: '2020-02-24'
+slug: []
+categories:
+  - Tutoriais
+tags:
+  - R
+  - ggplot2
+  - ggpubr
+  - visualização de dados
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-02-24T15:37:16-03:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+Com o Rmarkdown podemos elaborar relatórios e slides com facilidade e muita qualidade, mas há momentos que precisamos levar os visuais criados no R para um documento externo. Já tive a necessidade, por exemplo, de gerar alguns gráficos para serem incluídos no informativo interno de uma empresa que eu trabalhei e o requisito era que estes gráficos estivessem em alta resolução.
+
+Neste post, baseado na dúvida recente de um colega, vou demonstrar como agrupar alguns gráficos do ggplot2 em uma imagem de alta resolução.
+
+*[Clique aqui](https://www.linkedin.com/pulse/agrupando-gráficos-do-r-em-uma-imagem-de-alta-da-silva-júnior/) para acessar a publicação completa realizada no Linkedin*

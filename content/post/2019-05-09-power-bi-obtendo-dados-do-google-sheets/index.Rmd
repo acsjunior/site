@@ -1,0 +1,25 @@
+---
+title: Power BI - Obtendo dados do Google Sheets
+author: acsjunior
+date: '2019-05-09'
+slug: []
+categories:
+  - Tutoriais
+tags:
+  - Power BI
+  - Google Sheets
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2019-05-09T14:09:04-03:00'
+featured: no
+image:
+  caption:
+  focal_point: ''
+  preview_only: no  
+projects: []
+---
+
+Embora o Power BI nos permita obter dados de inúmeras fontes, infelizmente ele não possui um conector específico para o Google Sheets. No entanto, é possível obter dados de planilhas do Google de uma maneira relativamente simples e neste post será demonstrado como.
+
+*[Clique aqui](https://www.linkedin.com/pulse/power-bi-obtendo-dados-do-google-sheets-antonio-c-da-silva-júnior/) para acessar a publicação completa realizada no Linkedin*

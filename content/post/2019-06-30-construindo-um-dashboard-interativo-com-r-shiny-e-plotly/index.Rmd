@@ -1,0 +1,33 @@
+---
+title: Construindo um dashboard interativo com R, Shiny e Plotly
+author: acsjunior
+date: '2019-06-30'
+slug: []
+categories:
+  - Tutoriais
+tags:
+  - R
+  - shiny
+  - shinydashboard
+  - ggplot2
+  - plotly
+  - visualização de dados
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2019-06-30T14:57:36-03:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+Quando o objetivo é apenas usufruir de um painel interativo para acompanhamento do negócio e apoio à tomada de decisão, será que é necessário investir em uma plataforma de BI?
+
+Neste artigo vou demonstrar como construir um dashboard interativo e gratuito (desde que publicado em servidor local) com linguagem R e os pacotes Shiny e Plotly.
+
+*[Clique aqui](https://www.linkedin.com/pulse/construindo-um-dashboard-interativo-com-r-shiny-e-da-silva-júnior/) para acessar a publicação completa realizada no Linkedin*
+
+
