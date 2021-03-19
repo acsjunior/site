@@ -1,0 +1,18 @@
+# Theme metadata
+name = "acsjunior"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#003459"
+
+# Menu
+menu_primary = "#003459" # 500
+menu_text = "#fff"
+menu_text_active = "#007ea7" # A100
+menu_title = "#fff"
+
+# Home sections
+home_section_odd = "rgb(255, 255, 255)"
+home_section_even = "rgb(255, 255, 255)"
