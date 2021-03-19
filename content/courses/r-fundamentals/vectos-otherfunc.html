@@ -1,0 +1,118 @@
+---
+date: "2020-04-26"
+title: Outras Funcionalidades dos Vetores
+type: book
+weight: 8
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="inclusão-e-remoção" class="section level2">
+<h2>Inclusão e remoção:</h2>
+<pre class="r"><code>uf &lt;- c(&quot;TO&quot;, &quot;MG&quot;, &quot;AM&quot;, &quot;PE&quot;)
+uf</code></pre>
+<pre><code>## [1] &quot;TO&quot; &quot;MG&quot; &quot;AM&quot; &quot;PE&quot;</code></pre>
+<p><br></p>
+<p>Incluindo o PR no final do vetor:</p>
+<pre class="r"><code>uf &lt;- append(uf, &quot;PR&quot;)
+uf</code></pre>
+<pre><code>## [1] &quot;TO&quot; &quot;MG&quot; &quot;AM&quot; &quot;PE&quot; &quot;PR&quot;</code></pre>
+<p><br></p>
+<p>Substituindo o elemento da posição 2:</p>
+<pre class="r"><code>uf[2] &lt;- &quot;CE&quot;
+uf</code></pre>
+<pre><code>## [1] &quot;TO&quot; &quot;CE&quot; &quot;AM&quot; &quot;PE&quot; &quot;PR&quot;</code></pre>
+<p><br></p>
+<p>Removendo o elemento da posição 2:</p>
+<pre class="r"><code>uf &lt;- uf[-4]
+uf</code></pre>
+<pre><code>## [1] &quot;TO&quot; &quot;CE&quot; &quot;AM&quot; &quot;PR&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="quantidade-de-elementos" class="section level2">
+<h2>Quantidade de elementos</h2>
+<p><br></p>
+<pre class="r"><code>length(uf)</code></pre>
+<pre><code>## [1] 4</code></pre>
+<p><br></p>
+</div>
+<div id="ordem-dos-elementos" class="section level2">
+<h2>Ordem dos elementos</h2>
+<p><br></p>
+<p>Organizando os elementos em ordem crescente:</p>
+<pre class="r"><code>sort(uf)</code></pre>
+<pre><code>## [1] &quot;AM&quot; &quot;CE&quot; &quot;PR&quot; &quot;TO&quot;</code></pre>
+<p><br></p>
+<p>Organizando os elementos em ordem decrescente:</p>
+<pre class="r"><code>sort(uf, decreasing = TRUE)</code></pre>
+<pre><code>## [1] &quot;TO&quot; &quot;PR&quot; &quot;CE&quot; &quot;AM&quot;</code></pre>
+<p><br></p>
+<p>Exibindo os elementos em ordem reversa:</p>
+<pre class="r"><code>rev(uf)</code></pre>
+<pre><code>## [1] &quot;PR&quot; &quot;AM&quot; &quot;CE&quot; &quot;TO&quot;</code></pre>
+<p><br></p>
+<p>Obtendo o terceiro UF (considerando o alfabeto):</p>
+<pre class="r"><code>i &lt;- order(uf)
+i</code></pre>
+<pre><code>## [1] 3 2 4 1</code></pre>
+<p><br></p>
+<pre class="r"><code>uf[i[3]]</code></pre>
+<pre><code>## [1] &quot;PR&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="valores-únicos" class="section level2">
+<h2>Valores únicos</h2>
+<p><br></p>
+<pre class="r"><code>x &lt;- c(&quot;a&quot;, &quot;b&quot;, &quot;a&quot;, &quot;c&quot;, &quot;b&quot;, &quot;c&quot;, &quot;b&quot;, &quot;a&quot;, &quot;c&quot;, &quot;b&quot;)
+unique(x)</code></pre>
+<pre><code>## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="valores-na-missing" class="section level2">
+<h2>Valores NA (missing)</h2>
+<p><br></p>
+<p>Testando se os valores são NA:</p>
+<pre class="r"><code>x &lt;- c(1, 2, NA, 3, 4, 5, NA)
+is.na(x)</code></pre>
+<pre><code>## [1] FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE</code></pre>
+<p><br></p>
+<p>Verificando se há ao menos um valor NA:</p>
+<pre class="r"><code>any(is.na(x))</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+</div>
+<div id="repetindo-valores" class="section level2">
+<h2>Repetindo valores</h2>
+<p><br></p>
+<p>Repetindo a letra “a” 5 vezes:</p>
+<pre class="r"><code>rep(&quot;a&quot;, 5)</code></pre>
+<pre><code>## [1] &quot;a&quot; &quot;a&quot; &quot;a&quot; &quot;a&quot; &quot;a&quot;</code></pre>
+<p><br></p>
+<p>Criando um vetor com 5 elementos “a” e 5 elementos “b”:</p>
+<pre class="r"><code>v &lt;- c(rep(&quot;a&quot;, 5), rep(&quot;b&quot;, 5))
+v</code></pre>
+<pre><code>##  [1] &quot;a&quot; &quot;a&quot; &quot;a&quot; &quot;a&quot; &quot;a&quot; &quot;b&quot; &quot;b&quot; &quot;b&quot; &quot;b&quot; &quot;b&quot;</code></pre>
+<p><br></p>
+<p>Embaralhando os elementos:</p>
+<pre class="r"><code>v &lt;- sample(v)
+v</code></pre>
+<pre><code>##  [1] &quot;b&quot; &quot;b&quot; &quot;b&quot; &quot;b&quot; &quot;a&quot; &quot;a&quot; &quot;a&quot; &quot;b&quot; &quot;a&quot; &quot;a&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="nomes" class="section level2">
+<h2>Nomes</h2>
+<p><br></p>
+<pre class="r"><code>MGLU3 &lt;- c(59.7, 60.5, 62.9, 63.7, 62.2)
+MGLU3</code></pre>
+<pre><code>## [1] 59.7 60.5 62.9 63.7 62.2</code></pre>
+<p><br></p>
+<pre class="r"><code>names(MGLU3) &lt;- c(&quot;SEG&quot;, &quot;TER&quot;, &quot;QUA&quot;, &quot;QUI&quot;, &quot;SEX&quot;)
+MGLU3</code></pre>
+<pre><code>##  SEG  TER  QUA  QUI  SEX 
+## 59.7 60.5 62.9 63.7 62.2</code></pre>
+<p><br></p>
+<pre class="r"><code>MGLU3[&quot;QUA&quot;]</code></pre>
+<pre><code>##  QUA 
+## 62.9</code></pre>
+</div>

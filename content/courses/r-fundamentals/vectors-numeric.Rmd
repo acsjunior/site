@@ -1,0 +1,263 @@
+---
+date: "2020-04-26"
+title: Vetores Numéricos
+type: book
+weight: 4
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
+```
+
+## Criação
+
+<hr>
+
+```{r}
+reais <- c(1, 2, 3.5, 4.9, 5.1, 6)
+reais
+```
+
+<br>
+
+```{r}
+inteiros <- 1:6
+inteiros
+```
+
+<br>
+
+## Classe e tipo
+
+<hr>
+
+```{r}
+class(reais)
+```
+
+<br>
+
+```{r}
+class(inteiros)
+```
+
+<br>
+
+```{r}
+typeof(reais)
+```
+
+<br>
+
+```{r}
+typeof(inteiros)
+```
+
+<br>
+
+## Teste
+
+<hr>
+
+É numérico?
+```{r}
+is.numeric(reais)
+```
+
+<br>
+
+```{r}
+is.numeric(inteiros)
+```
+
+<br>
+
+É inteiro?
+```{r}
+is.integer(reais)
+```
+
+<br>
+
+```{r}
+is.integer(inteiros)
+```
+
+<br>
+
+## Conversão
+
+<hr>
+
+De <i>numeric</i> para <i>integer</i>:
+```{r}
+int <- as.integer(reais)
+int
+```
+
+<br>
+
+```{r}
+class(int)
+```
+
+<br>
+
+De <i>integer</i> para <i>numeric</i>:
+```{r}
+num <- as.numeric(inteiros)
+num
+```
+
+<br>
+
+```{r}
+class(num)
+```
+
+<br>
+
+## Matemática e estatística
+
+<hr>
+
+### Operações básicas
+
+<br>
+
+Entre vetores com o mesmo número de elementos:
+```{r}
+v1 <- c(1, 2, 3, 4)
+v2 <- c(2, 3, 4, 5)
+v1 + v2
+```
+
+<br>
+
+```{r}
+v1 * v2
+```
+
+<br>
+
+Entre vetores com número diferente de elementos (múltiplos):
+```{r}
+v1 <- c(1, 2, 3, 4)
+v2 <- c(2, 3)
+v1 + v2
+```
+
+<br>
+
+Entre vetores com número diferente de elementos (não múltiplos):
+```{r}
+v1 <- c(1, 2, 3, 4)
+v2 <- c(2, 3, 4)
+v1 * v2
+```
+
+<br>
+
+Somatório:
+```{r}
+sum(v1)
+```
+
+<br>
+
+Produto:
+```{r}
+prod(v1)
+```
+
+<br>
+
+### Álgebra linear
+
+<br>
+
+Multiplicação por escalar ($2v$):
+```{r}
+v <- c(2, 3, 4)
+2 * v
+```
+
+<br>
+
+Produto interno ($v \bullet u$):
+```{r}
+v <- c(2, 3, 4)
+u <- c(1, 2, 3)
+v %*% u
+```
+
+<br>
+
+```{r}
+class(v %*% u)
+```
+
+<br>
+
+Produto vetorial ($v \times u$):
+```{r}
+v %o% u
+```
+
+<br>
+
+```{r}
+class(v %o% u)
+```
+
+<br>
+
+Norma ($\lVert v \rVert$)
+```{r}
+sqrt(sum(v^2))
+```
+
+<br>
+
+### Estatística básica
+
+Média:
+```{r}
+v <- c(1,2,2,3,4,4,4,5,6,6)
+mean(v)
+```
+
+<br>
+
+Mediana:
+```{r}
+median(v)
+```
+
+<br>
+
+Mínimo:
+```{r}
+min(v)
+```
+
+<br>
+
+Máximo:
+```{r}
+max(v)
+```
+
+<br>
+
+Variância
+```{r}
+var(v)
+```
+
+<br>
+
+Desvio padrão:
+```{r}
+sd(v)
+```

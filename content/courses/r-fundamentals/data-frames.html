@@ -1,0 +1,552 @@
+---
+date: "2020-04-26"
+title: Data Frames
+type: book
+weight: 10
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="criação" class="section level2">
+<h2>Criação</h2>
+<p><br></p>
+<pre class="r"><code>nome &lt;- c(&quot;Carlos&quot;, &quot;Bruna&quot;, &quot;Jéssica&quot;, &quot;Tiago&quot;, &quot;Marta&quot;)
+cidade &lt;- c(&quot;Goiânia&quot;, &quot;Belo Horizonte&quot;, &quot;São Paulo&quot;, &quot;Maceió&quot;, &quot;Belo Horizonte&quot;)
+idade &lt;- c(20, 33, 18, 45, 27)
+salario &lt;- c(2500, 3800, 4100, 2900, 3000)
+df &lt;- data.frame(nome, cidade, idade, salario)
+df</code></pre>
+<pre><code>##      nome         cidade idade salario
+## 1  Carlos        Goiânia    20    2500
+## 2   Bruna Belo Horizonte    33    3800
+## 3 Jéssica      São Paulo    18    4100
+## 4   Tiago         Maceió    45    2900
+## 5   Marta Belo Horizonte    27    3000</code></pre>
+<p><br></p>
+<pre class="r"><code>df &lt;- data.frame(NOME = nome, CIDADE = cidade, IDADE = idade, SALARIO = salario)
+df</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO
+## 1  Carlos        Goiânia    20    2500
+## 2   Bruna Belo Horizonte    33    3800
+## 3 Jéssica      São Paulo    18    4100
+## 4   Tiago         Maceió    45    2900
+## 5   Marta Belo Horizonte    27    3000</code></pre>
+<p><br></p>
+</div>
+<div id="datasets-built-in" class="section level2">
+<h2>Datasets built-in</h2>
+<p><br></p>
+<p>Carregando o dataset <b>iris</b>:</p>
+<pre class="r"><code>data(iris)
+head(iris)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p><i>Para visualizar a lista de datasets built-in do R, execute</i> <code>data()</code>.</p>
+<p><br></p>
+</div>
+<div id="informações" class="section level2">
+<h2>Informações</h2>
+<p>Visualizando as dimensões do dataset:</p>
+<pre class="r"><code>dim(df)</code></pre>
+<pre><code>## [1] 5 4</code></pre>
+<p><br></p>
+<p>Visualizando o número de linhas dataset:</p>
+<pre class="r"><code>nrow(df)</code></pre>
+<pre><code>## [1] 5</code></pre>
+<p><br></p>
+<p>Visualizando o número de colunas dataset:</p>
+<pre class="r"><code>ncol(df)</code></pre>
+<pre><code>## [1] 4</code></pre>
+<p><br></p>
+<p>Visualizando a estrutura do dataset:</p>
+<pre class="r"><code>str(df)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    5 obs. of  4 variables:
+##  $ NOME   : chr  &quot;Carlos&quot; &quot;Bruna&quot; &quot;Jéssica&quot; &quot;Tiago&quot; ...
+##  $ CIDADE : chr  &quot;Goiânia&quot; &quot;Belo Horizonte&quot; &quot;São Paulo&quot; &quot;Maceió&quot; ...
+##  $ IDADE  : num  20 33 18 45 27
+##  $ SALARIO: num  2500 3800 4100 2900 3000</code></pre>
+<p><br></p>
+<p>Visualizando as 6 primeiras linhas:</p>
+<pre class="r"><code>head(df)</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO
+## 1  Carlos        Goiânia    20    2500
+## 2   Bruna Belo Horizonte    33    3800
+## 3 Jéssica      São Paulo    18    4100
+## 4   Tiago         Maceió    45    2900
+## 5   Marta Belo Horizonte    27    3000</code></pre>
+<p><br></p>
+<p>Visualizando as 3 primeiras linhas:</p>
+<pre class="r"><code>head(df, 3)</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO
+## 1  Carlos        Goiânia    20    2500
+## 2   Bruna Belo Horizonte    33    3800
+## 3 Jéssica      São Paulo    18    4100</code></pre>
+<p><br></p>
+<p>Visualizando as 6 últimas linhas:</p>
+<pre class="r"><code>tail(df)</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO
+## 1  Carlos        Goiânia    20    2500
+## 2   Bruna Belo Horizonte    33    3800
+## 3 Jéssica      São Paulo    18    4100
+## 4   Tiago         Maceió    45    2900
+## 5   Marta Belo Horizonte    27    3000</code></pre>
+<p><br></p>
+<p>Visualizando as 3 últimas linhas:</p>
+<pre class="r"><code>tail(df, 3)</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO
+## 3 Jéssica      São Paulo    18    4100
+## 4   Tiago         Maceió    45    2900
+## 5   Marta Belo Horizonte    27    3000</code></pre>
+<p><br></p>
+<p>Resumindo as variáveis:</p>
+<pre class="r"><code>summary(df)</code></pre>
+<pre><code>##      NOME              CIDADE              IDADE         SALARIO    
+##  Length:5           Length:5           Min.   :18.0   Min.   :2500  
+##  Class :character   Class :character   1st Qu.:20.0   1st Qu.:2900  
+##  Mode  :character   Mode  :character   Median :27.0   Median :3000  
+##                                        Mean   :28.6   Mean   :3260  
+##                                        3rd Qu.:33.0   3rd Qu.:3800  
+##                                        Max.   :45.0   Max.   :4100</code></pre>
+<p><br></p>
+</div>
+<div id="indexação" class="section level2">
+<h2>Indexação</h2>
+<p><br></p>
+<div id="colunas" class="section level3">
+<h3>Colunas</h3>
+<p><br></p>
+<p>Selecionando a terceira coluna:</p>
+<pre class="r"><code>df[,3] ## retorna um vetor</code></pre>
+<pre><code>## [1] 20 33 18 45 27</code></pre>
+<p><br></p>
+<p>Selecionando a coluna <b>IDADE</b>:</p>
+<pre class="r"><code>df$IDADE ## retorna um vetor</code></pre>
+<pre><code>## [1] 20 33 18 45 27</code></pre>
+<p><br></p>
+<pre class="r"><code>df[,&quot;IDADE&quot;] ## retorna um vetor</code></pre>
+<pre><code>## [1] 20 33 18 45 27</code></pre>
+<p><br></p>
+<pre class="r"><code>df[[&quot;IDADE&quot;]] ## retorna um vetor</code></pre>
+<pre><code>## [1] 20 33 18 45 27</code></pre>
+<p><br></p>
+<pre class="r"><code>df[&quot;IDADE&quot;] ## retorna uma data.frame</code></pre>
+<pre><code>##   IDADE
+## 1    20
+## 2    33
+## 3    18
+## 4    45
+## 5    27</code></pre>
+<p><br></p>
+<p>Selecionando as três primeiras colunas:</p>
+<pre class="r"><code>df[,1:3]</code></pre>
+<pre><code>##      NOME         CIDADE IDADE
+## 1  Carlos        Goiânia    20
+## 2   Bruna Belo Horizonte    33
+## 3 Jéssica      São Paulo    18
+## 4   Tiago         Maceió    45
+## 5   Marta Belo Horizonte    27</code></pre>
+<p><br></p>
+<pre class="r"><code>df[,c(1,2,3)]</code></pre>
+<pre><code>##      NOME         CIDADE IDADE
+## 1  Carlos        Goiânia    20
+## 2   Bruna Belo Horizonte    33
+## 3 Jéssica      São Paulo    18
+## 4   Tiago         Maceió    45
+## 5   Marta Belo Horizonte    27</code></pre>
+<p><br></p>
+<pre class="r"><code>df[, c(TRUE, TRUE, TRUE, FALSE)]</code></pre>
+<pre><code>##      NOME         CIDADE IDADE
+## 1  Carlos        Goiânia    20
+## 2   Bruna Belo Horizonte    33
+## 3 Jéssica      São Paulo    18
+## 4   Tiago         Maceió    45
+## 5   Marta Belo Horizonte    27</code></pre>
+<p><br></p>
+</div>
+<div id="linhas" class="section level3">
+<h3>Linhas</h3>
+<p><br></p>
+<p>Selecionando a segunda linha:</p>
+<pre class="r"><code>df[2,]</code></pre>
+<pre><code>##    NOME         CIDADE IDADE SALARIO
+## 2 Bruna Belo Horizonte    33    3800</code></pre>
+<p><br></p>
+<p>Selecionando as três primeiras linhas:</p>
+<pre class="r"><code>df[1:3,]</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO
+## 1  Carlos        Goiânia    20    2500
+## 2   Bruna Belo Horizonte    33    3800
+## 3 Jéssica      São Paulo    18    4100</code></pre>
+<p><br></p>
+<pre class="r"><code>df[c(1,2,3),]</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO
+## 1  Carlos        Goiânia    20    2500
+## 2   Bruna Belo Horizonte    33    3800
+## 3 Jéssica      São Paulo    18    4100</code></pre>
+<p><br></p>
+<pre class="r"><code>df[c(TRUE, TRUE, TRUE, FALSE, FALSE),]</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO
+## 1  Carlos        Goiânia    20    2500
+## 2   Bruna Belo Horizonte    33    3800
+## 3 Jéssica      São Paulo    18    4100</code></pre>
+<p><br></p>
+</div>
+<div id="células" class="section level3">
+<h3>Células</h3>
+<p><br></p>
+<p>Selecionando a célula localizada na primeira linha e segunda coluna:</p>
+<pre class="r"><code>df[1,2]</code></pre>
+<pre><code>## [1] &quot;Goiânia&quot;</code></pre>
+<p><br></p>
+<p>Selecionando a célula localizada na primeira linha e na coluna <b>CIDADE</b>:</p>
+<pre class="r"><code>df[1, &quot;CIDADE&quot;]</code></pre>
+<pre><code>## [1] &quot;Goiânia&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>df$CIDADE[1]</code></pre>
+<pre><code>## [1] &quot;Goiânia&quot;</code></pre>
+<p><br></p>
+<p>Selecionando as células localizadas na primeira linha e segunda e quarta colunas:</p>
+<pre class="r"><code>df[1, c(2,4)]</code></pre>
+<pre><code>##    CIDADE SALARIO
+## 1 Goiânia    2500</code></pre>
+<p><br></p>
+<p>Selecionando as células localizadas as três primeiras linhas e três primeiras colunas:</p>
+<pre class="r"><code>df[1:3, 1:3]</code></pre>
+<pre><code>##      NOME         CIDADE IDADE
+## 1  Carlos        Goiânia    20
+## 2   Bruna Belo Horizonte    33
+## 3 Jéssica      São Paulo    18</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="adição" class="section level2">
+<h2>Adição</h2>
+<p><br></p>
+<div id="coluna" class="section level3">
+<h3>Coluna</h3>
+<p><br></p>
+<p>Adicionando a coluna <b>SOBRENOME</b>:</p>
+<pre class="r"><code>nova_coluna &lt;- c(&quot;Santana&quot;, &quot;Oliveira&quot;, &quot;dos Santos&quot;, &quot;da Cruz&quot;, &quot;Fonseca&quot;)
+df$SOBRENOME &lt;- nova_coluna
+df</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO  SOBRENOME
+## 1  Carlos        Goiânia    20    2500    Santana
+## 2   Bruna Belo Horizonte    33    3800   Oliveira
+## 3 Jéssica      São Paulo    18    4100 dos Santos
+## 4   Tiago         Maceió    45    2900    da Cruz
+## 5   Marta Belo Horizonte    27    3000    Fonseca</code></pre>
+<p><br></p>
+<p>Adicionando a coluna <b>STATUS</b>:</p>
+<pre class="r"><code>status &lt;- c(&quot;ativo&quot;, &quot;ativo&quot;, &quot;inativo&quot;, &quot;ativo&quot;, &quot;inativo&quot;)
+df[, &quot;STATUS&quot;] &lt;- status
+df</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO  SOBRENOME  STATUS
+## 1  Carlos        Goiânia    20    2500    Santana   ativo
+## 2   Bruna Belo Horizonte    33    3800   Oliveira   ativo
+## 3 Jéssica      São Paulo    18    4100 dos Santos inativo
+## 4   Tiago         Maceió    45    2900    da Cruz   ativo
+## 5   Marta Belo Horizonte    27    3000    Fonseca inativo</code></pre>
+<p><br></p>
+<p>Adicionando a coluna <b>IDADE_x2</b>:</p>
+<pre class="r"><code>df$IDADE_x2 &lt;- df$IDADE * 2
+df</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO  SOBRENOME  STATUS IDADE_x2
+## 1  Carlos        Goiânia    20    2500    Santana   ativo       40
+## 2   Bruna Belo Horizonte    33    3800   Oliveira   ativo       66
+## 3 Jéssica      São Paulo    18    4100 dos Santos inativo       36
+## 4   Tiago         Maceió    45    2900    da Cruz   ativo       90
+## 5   Marta Belo Horizonte    27    3000    Fonseca inativo       54</code></pre>
+<p><br></p>
+</div>
+<div id="linha" class="section level3">
+<h3>Linha</h3>
+<p><br></p>
+<p>Adicionando uma nova linha:</p>
+<pre class="r"><code>nova_linha &lt;- data.frame(NOME = &quot;Joana&quot;, CIDADE = &quot;Porto Alegre&quot;, IDADE = 62, SALARIO = 3600, SOBRENOME = &quot;da Silva&quot;, STATUS = &quot;ativo&quot;, IDADE_x2 = 124)
+nova_linha</code></pre>
+<pre><code>##    NOME       CIDADE IDADE SALARIO SOBRENOME STATUS IDADE_x2
+## 1 Joana Porto Alegre    62    3600  da Silva  ativo      124</code></pre>
+<p><br></p>
+<pre class="r"><code>df &lt;- rbind(df, nova_linha)
+df</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO  SOBRENOME  STATUS IDADE_x2
+## 1  Carlos        Goiânia    20    2500    Santana   ativo       40
+## 2   Bruna Belo Horizonte    33    3800   Oliveira   ativo       66
+## 3 Jéssica      São Paulo    18    4100 dos Santos inativo       36
+## 4   Tiago         Maceió    45    2900    da Cruz   ativo       90
+## 5   Marta Belo Horizonte    27    3000    Fonseca inativo       54
+## 6   Joana   Porto Alegre    62    3600   da Silva   ativo      124</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="colunas-são-vetores" class="section level2">
+<h2>Colunas são vetores?</h2>
+<p><br></p>
+<pre class="r"><code>is.vector(df$IDADE)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+<pre class="r"><code>class(df$IDADE)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="medidas-estatísticas" class="section level2">
+<h2>Medidas estatísticas</h2>
+<p><br></p>
+<p>Média:</p>
+<pre class="r"><code>mean(df$SALARIO)</code></pre>
+<pre><code>## [1] 3316.667</code></pre>
+<p><br></p>
+<p>Mediana:</p>
+<pre class="r"><code>median(df$SALARIO)</code></pre>
+<pre><code>## [1] 3300</code></pre>
+<p><br></p>
+<p>Mínimo:</p>
+<pre class="r"><code>min(df$SALARIO)</code></pre>
+<pre><code>## [1] 2500</code></pre>
+<p><br></p>
+<p>Máximo:</p>
+<pre class="r"><code>max(df$SALARIO)</code></pre>
+<pre><code>## [1] 4100</code></pre>
+<p><br></p>
+<p>Variância:</p>
+<pre class="r"><code>var(df$SALARIO)</code></pre>
+<pre><code>## [1] 373666.7</code></pre>
+<p><br></p>
+<p>Desvio padrão:</p>
+<pre class="r"><code>sd(df$SALARIO)</code></pre>
+<pre><code>## [1] 611.2828</code></pre>
+<p><br></p>
+<p>Quartis:</p>
+<pre class="r"><code>quantile(df$SALARIO)</code></pre>
+<pre><code>##   0%  25%  50%  75% 100% 
+## 2500 2925 3300 3750 4100</code></pre>
+<p><br></p>
+<p>Decis:</p>
+<pre class="r"><code>quantile(df$SALARIO, probs = seq(0, 1, 0.1))</code></pre>
+<pre><code>##   0%  10%  20%  30%  40%  50%  60%  70%  80%  90% 100% 
+## 2500 2700 2900 2950 3000 3300 3600 3700 3800 3950 4100</code></pre>
+<p><br></p>
+<p>Frequência:</p>
+<pre class="r"><code>table(df$STATUS)</code></pre>
+<pre><code>## 
+##   ativo inativo 
+##       4       2</code></pre>
+<p><br></p>
+<pre class="r"><code>prop.table(table(df$STATUS))</code></pre>
+<pre><code>## 
+##     ativo   inativo 
+## 0.6666667 0.3333333</code></pre>
+<p><br></p>
+</div>
+<div id="nomes" class="section level2">
+<h2>Nomes</h2>
+<p><br></p>
+<div id="colunas-1" class="section level3">
+<h3>Colunas</h3>
+<p><br></p>
+<p>Exibindo os nomes das colunas:</p>
+<pre class="r"><code>colnames(df)</code></pre>
+<pre><code>## [1] &quot;NOME&quot;      &quot;CIDADE&quot;    &quot;IDADE&quot;     &quot;SALARIO&quot;   &quot;SOBRENOME&quot; &quot;STATUS&quot;   
+## [7] &quot;IDADE_x2&quot;</code></pre>
+<p><br></p>
+<p>Alterando o nome da segunda coluna:</p>
+<pre class="r"><code>colnames(df)[2] &lt;- &quot;cidade&quot;
+head(df)</code></pre>
+<pre><code>##      NOME         cidade IDADE SALARIO  SOBRENOME  STATUS IDADE_x2
+## 1  Carlos        Goiânia    20    2500    Santana   ativo       40
+## 2   Bruna Belo Horizonte    33    3800   Oliveira   ativo       66
+## 3 Jéssica      São Paulo    18    4100 dos Santos inativo       36
+## 4   Tiago         Maceió    45    2900    da Cruz   ativo       90
+## 5   Marta Belo Horizonte    27    3000    Fonseca inativo       54
+## 6   Joana   Porto Alegre    62    3600   da Silva   ativo      124</code></pre>
+<p><br></p>
+<p>Alterando o nome de todas as colunas:</p>
+<pre class="r"><code>novos_nomes &lt;- c(&quot;Nome&quot;, &quot;Cidade&quot;, &quot;Idade&quot;, &quot;Salario&quot;, &quot;Sobrenome&quot;, &quot;Status&quot;, &quot;Idade_x2&quot;)
+colnames(df) &lt;- novos_nomes
+head(df)</code></pre>
+<pre><code>##      Nome         Cidade Idade Salario  Sobrenome  Status Idade_x2
+## 1  Carlos        Goiânia    20    2500    Santana   ativo       40
+## 2   Bruna Belo Horizonte    33    3800   Oliveira   ativo       66
+## 3 Jéssica      São Paulo    18    4100 dos Santos inativo       36
+## 4   Tiago         Maceió    45    2900    da Cruz   ativo       90
+## 5   Marta Belo Horizonte    27    3000    Fonseca inativo       54
+## 6   Joana   Porto Alegre    62    3600   da Silva   ativo      124</code></pre>
+<p><br></p>
+<p>Transformando todos os nomes em letras maiúsculas:</p>
+<pre class="r"><code>colnames(df) &lt;- toupper(colnames(df))
+head(df)</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO  SOBRENOME  STATUS IDADE_X2
+## 1  Carlos        Goiânia    20    2500    Santana   ativo       40
+## 2   Bruna Belo Horizonte    33    3800   Oliveira   ativo       66
+## 3 Jéssica      São Paulo    18    4100 dos Santos inativo       36
+## 4   Tiago         Maceió    45    2900    da Cruz   ativo       90
+## 5   Marta Belo Horizonte    27    3000    Fonseca inativo       54
+## 6   Joana   Porto Alegre    62    3600   da Silva   ativo      124</code></pre>
+<p><br></p>
+</div>
+<div id="linhas-1" class="section level3">
+<h3>Linhas</h3>
+<p><br></p>
+<p>Exibindo os nomes das linhas:</p>
+<pre class="r"><code>rownames(df)</code></pre>
+<pre><code>## [1] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; &quot;5&quot; &quot;6&quot;</code></pre>
+<p><br></p>
+<p>Alternado o nome da segunda linha:</p>
+<pre class="r"><code>rownames(df)[2] &lt;- &quot;linha_2&quot;
+head(df)</code></pre>
+<pre><code>##            NOME         CIDADE IDADE SALARIO  SOBRENOME  STATUS IDADE_X2
+## 1        Carlos        Goiânia    20    2500    Santana   ativo       40
+## linha_2   Bruna Belo Horizonte    33    3800   Oliveira   ativo       66
+## 3       Jéssica      São Paulo    18    4100 dos Santos inativo       36
+## 4         Tiago         Maceió    45    2900    da Cruz   ativo       90
+## 5         Marta Belo Horizonte    27    3000    Fonseca inativo       54
+## 6         Joana   Porto Alegre    62    3600   da Silva   ativo      124</code></pre>
+<p><br></p>
+<p>Alterando o nome de todas as linhas:</p>
+<pre class="r"><code>novos_nomes &lt;- c(&quot;linha1&quot;, &quot;linha2&quot;, &quot;linha3&quot;, &quot;linha4&quot;, &quot;linha5&quot;, &quot;linha6&quot;)
+rownames(df) &lt;- novos_nomes
+head(df)</code></pre>
+<pre><code>##           NOME         CIDADE IDADE SALARIO  SOBRENOME  STATUS IDADE_X2
+## linha1  Carlos        Goiânia    20    2500    Santana   ativo       40
+## linha2   Bruna Belo Horizonte    33    3800   Oliveira   ativo       66
+## linha3 Jéssica      São Paulo    18    4100 dos Santos inativo       36
+## linha4   Tiago         Maceió    45    2900    da Cruz   ativo       90
+## linha5   Marta Belo Horizonte    27    3000    Fonseca inativo       54
+## linha6   Joana   Porto Alegre    62    3600   da Silva   ativo      124</code></pre>
+<p><br></p>
+<pre class="r"><code>rownames(df) &lt;- 1:nrow(df)
+head(df)</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO  SOBRENOME  STATUS IDADE_X2
+## 1  Carlos        Goiânia    20    2500    Santana   ativo       40
+## 2   Bruna Belo Horizonte    33    3800   Oliveira   ativo       66
+## 3 Jéssica      São Paulo    18    4100 dos Santos inativo       36
+## 4   Tiago         Maceió    45    2900    da Cruz   ativo       90
+## 5   Marta Belo Horizonte    27    3000    Fonseca inativo       54
+## 6   Joana   Porto Alegre    62    3600   da Silva   ativo      124</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="remoção" class="section level2">
+<h2>Remoção</h2>
+<p><br></p>
+<div id="colunas-2" class="section level3">
+<h3>Colunas</h3>
+<p><br></p>
+<pre class="r"><code>head(df)</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO  SOBRENOME  STATUS IDADE_X2
+## 1  Carlos        Goiânia    20    2500    Santana   ativo       40
+## 2   Bruna Belo Horizonte    33    3800   Oliveira   ativo       66
+## 3 Jéssica      São Paulo    18    4100 dos Santos inativo       36
+## 4   Tiago         Maceió    45    2900    da Cruz   ativo       90
+## 5   Marta Belo Horizonte    27    3000    Fonseca inativo       54
+## 6   Joana   Porto Alegre    62    3600   da Silva   ativo      124</code></pre>
+<p><br></p>
+<p>Removendo sexta coluna:</p>
+<pre class="r"><code>df &lt;- df[, -6]
+head(df)</code></pre>
+<pre><code>##      NOME         CIDADE IDADE SALARIO  SOBRENOME IDADE_X2
+## 1  Carlos        Goiânia    20    2500    Santana       40
+## 2   Bruna Belo Horizonte    33    3800   Oliveira       66
+## 3 Jéssica      São Paulo    18    4100 dos Santos       36
+## 4   Tiago         Maceió    45    2900    da Cruz       90
+## 5   Marta Belo Horizonte    27    3000    Fonseca       54
+## 6   Joana   Porto Alegre    62    3600   da Silva      124</code></pre>
+<p><br></p>
+<p>Removendo a segunda e quarta coluna:</p>
+<pre class="r"><code>df &lt;- df[, c(-2, -4)]
+head(df)</code></pre>
+<pre><code>##      NOME IDADE  SOBRENOME IDADE_X2
+## 1  Carlos    20    Santana       40
+## 2   Bruna    33   Oliveira       66
+## 3 Jéssica    18 dos Santos       36
+## 4   Tiago    45    da Cruz       90
+## 5   Marta    27    Fonseca       54
+## 6   Joana    62   da Silva      124</code></pre>
+<p><br></p>
+<p>Removendo a coluna <b>IDADE</b>:</p>
+<pre class="r"><code>df$IDADE &lt;- NULL</code></pre>
+<p><br></p>
+</div>
+<div id="linhas-2" class="section level3">
+<h3>Linhas</h3>
+<p><br></p>
+<p>Removendo a primeira linha:</p>
+<pre class="r"><code>df &lt;- df[-1,]
+head(df)</code></pre>
+<pre><code>##      NOME  SOBRENOME IDADE_X2
+## 2   Bruna   Oliveira       66
+## 3 Jéssica dos Santos       36
+## 4   Tiago    da Cruz       90
+## 5   Marta    Fonseca       54
+## 6   Joana   da Silva      124</code></pre>
+<p><br></p>
+<p>Removendo a terceira e quinta linha:</p>
+<pre class="r"><code>df &lt;- df[c(-3,-5),]
+head(df)</code></pre>
+<pre><code>##      NOME  SOBRENOME IDADE_X2
+## 2   Bruna   Oliveira       66
+## 3 Jéssica dos Santos       36
+## 5   Marta    Fonseca       54</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="combinando-data-frames" class="section level2">
+<h2>Combinando data frames</h2>
+<p><br></p>
+<pre class="r"><code>df_a &lt;- data.frame(nome = c(&quot;Roberto&quot;, &quot;Maria&quot;, &quot;Andressa&quot;),
+                   sobrenome = c(&quot;Santos&quot;, &quot;Andrade&quot;, &quot;Fonseca&quot;))
+df_a</code></pre>
+<pre><code>##       nome sobrenome
+## 1  Roberto    Santos
+## 2    Maria   Andrade
+## 3 Andressa   Fonseca</code></pre>
+<p><br></p>
+<pre class="r"><code>df_b &lt;- data.frame(nome = c(&quot;Rosana&quot;, &quot;Júlio&quot;, &quot;Edson&quot;),
+                   sobrenome = c(&quot;Ferreira&quot;, &quot;da Cruz&quot;, &quot;Silva&quot;))
+df_b</code></pre>
+<pre><code>##     nome sobrenome
+## 1 Rosana  Ferreira
+## 2  Júlio   da Cruz
+## 3  Edson     Silva</code></pre>
+<p><br></p>
+<p>Unindo os datasets <b>df_a</b> e <b>df_b</b> linha a linha:</p>
+<pre class="r"><code>df_linha &lt;- rbind(df_a, df_b)
+df_linha</code></pre>
+<pre><code>##       nome sobrenome
+## 1  Roberto    Santos
+## 2    Maria   Andrade
+## 3 Andressa   Fonseca
+## 4   Rosana  Ferreira
+## 5    Júlio   da Cruz
+## 6    Edson     Silva</code></pre>
+<p><br></p>
+<pre class="r"><code>df_c &lt;- data.frame(nome = c(&quot;Roberto&quot;, &quot;Maria&quot;, &quot;Andressa&quot;),
+                   idade = c(30, 41, 17))
+df_c</code></pre>
+<pre><code>##       nome idade
+## 1  Roberto    30
+## 2    Maria    41
+## 3 Andressa    17</code></pre>
+<p><br></p>
+<p>Unindo os datasets <b>df_a</b> e <b>df_c</b> coluna a coluna:</p>
+<pre class="r"><code>df_coluna &lt;- cbind(df_a, df_c)
+df_coluna</code></pre>
+<pre><code>##       nome sobrenome     nome idade
+## 1  Roberto    Santos  Roberto    30
+## 2    Maria   Andrade    Maria    41
+## 3 Andressa   Fonseca Andressa    17</code></pre>
+<p><br></p>
+<p>Combinando os datasets <b>df_a</b> e <b>df_c</b>:</p>
+<pre class="r"><code>df_comb &lt;- merge(df_a, df_c, by = &quot;nome&quot;)
+df_comb</code></pre>
+<pre><code>##       nome sobrenome idade
+## 1 Andressa   Fonseca    17
+## 2    Maria   Andrade    41
+## 3  Roberto    Santos    30</code></pre>
+</div>

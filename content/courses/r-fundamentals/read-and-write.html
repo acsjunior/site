@@ -1,0 +1,265 @@
+---
+date: "2020-04-26"
+title: Leitura e Escrita de Arquivos
+type: book
+weight: 12
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="escrita" class="section level2">
+<h2>Escrita</h2>
+<p><br></p>
+<pre class="r"><code>head(iris)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<pre class="r"><code>head(mtcars)</code></pre>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+<p><br></p>
+<div id="arquivos-de-texto" class="section level3">
+<h3>Arquivos de texto</h3>
+<p><br></p>
+<pre class="r"><code>write.csv(iris, &quot;iris.csv&quot;, row.names = F) ## separado por vírgula
+write.csv2(iris, &quot;iris-pontoevirgula.csv&quot;, row.names = F) ## separado por ponto e vírgula
+write.table(iris, &quot;iris.txt&quot;, row.names = F) ## separado por espaço
+write.table(iris, &quot;iris.tsv&quot;, row.names = F, sep =&quot;\t&quot;) ## separado por tabulação
+write.table(iris, &quot;iris-semcabecalho.csv&quot;, row.names = F, col.names = F, sep = &quot;,&quot;) ## sem cabeçalho</code></pre>
+<p><br></p>
+</div>
+<div id="planilhas" class="section level3">
+<h3>Planilhas</h3>
+<p><br></p>
+<div id="requisitos" class="section level4">
+<h4>Requisitos</h4>
+<ul>
+<li><p>Instalar o Java JDK:<br>
+<a href="https://www.oracle.com/technetwork/pt/java/javase/downloads/index.html" class="uri">https://www.oracle.com/technetwork/pt/java/javase/downloads/index.html</a></p></li>
+<li><p>Configurar as variáveis de ambiente:<br>
+<b>JAVA_HOME</b>: diretório do Java JDK<br>
+<b>Path</b>: diretório bin do Java JDK (mover para cima)</p></li>
+<li><p>Instalar os pacotes <b>rJava</b>, <b>openxlsx</b></p></li>
+</ul>
+<p><br></p>
+<p>Carregando os pacotes:</p>
+<pre class="r"><code>library(rJava)</code></pre>
+<pre class="r"><code>library(openxlsx)</code></pre>
+<p><br></p>
+</div>
+<div id="excel" class="section level4">
+<h4>Excel</h4>
+<p><br></p>
+<p>Exportando o dataset <b>iris</b> para Excel:</p>
+<pre class="r"><code>write.xlsx(iris, &quot;iris.xlsx&quot;)</code></pre>
+<p><br></p>
+<p>Exportando os datasets <b>iris</b> e <b>mtcars</b> para um mesmo arquivo Excel:</p>
+<pre class="r"><code>planilhas &lt;- list(&quot;Dataset Iris&quot; = iris, &quot;Dataset Mtcars&quot; = mtcars)
+write.xlsx(planilhas, &quot;iris-mtcars.xlsx&quot;)</code></pre>
+<p><br></p>
+</div>
+<div id="opendocuments" class="section level4">
+<h4>OpenDocuments</h4>
+<p><br></p>
+<p>Exportando o dataset <b>iris</b> para OpenDocument:</p>
+<pre class="r"><code>write.xlsx(iris, &quot;iris.ods&quot;)</code></pre>
+<p><br></p>
+<p>Exportando os datasets <b>iris</b> e <b>mtcars</b> para um mesmo arquivo Excel:</p>
+<pre class="r"><code>planilhas &lt;- list(&quot;Dataset Iris&quot; = iris, &quot;Dataset Mtcars&quot; = mtcars)
+write.xlsx(planilhas, &quot;iris-mtcars.ods&quot;)</code></pre>
+<p><br></p>
+</div>
+</div>
+</div>
+<div id="leitura" class="section level2">
+<h2>Leitura</h2>
+<p><br></p>
+<div id="arquivos-de-texto-1" class="section level3">
+<h3>Arquivos de texto</h3>
+<p><br></p>
+<p>Lendo uma base de dados separada por vírgula:</p>
+<pre class="r"><code>df_csv &lt;- read.csv(&quot;iris.csv&quot;)
+head(df_csv)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p><br></p>
+<p>Lendo uma base de dados separada por ponto e vírgula:</p>
+<pre class="r"><code>df_csv2 &lt;- read.csv2(&quot;iris-pontoevirgula.csv&quot;)
+head(df_csv2)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p><br></p>
+<p>Lendo uma base de dados separada por tabulação:</p>
+<pre class="r"><code>df_tab &lt;- read.table(&quot;iris.tsv&quot;)
+head(df_tab)</code></pre>
+<pre><code>##             V1          V2           V3          V4      V5
+## 1 Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 2          5.1         3.5          1.4         0.2  setosa
+## 3          4.9           3          1.4         0.2  setosa
+## 4          4.7         3.2          1.3         0.2  setosa
+## 5          4.6         3.1          1.5         0.2  setosa
+## 6            5         3.6          1.4         0.2  setosa</code></pre>
+<p><br></p>
+<pre class="r"><code>df_tab &lt;- read.table(&quot;iris.tsv&quot;, header = TRUE)
+head(df_tab)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p><br></p>
+<p>Lendo uma base de dados separada por tabulação, utilizando a função ao <code>read.csv()</code>::</p>
+<pre class="r"><code>df_tab &lt;- read.csv(&quot;iris.tsv&quot;)
+head(df_tab)</code></pre>
+<pre><code>##   Sepal.Length.Sepal.Width.Petal.Length.Petal.Width.Species
+## 1                                5.1\t3.5\t1.4\t0.2\tsetosa
+## 2                                  4.9\t3\t1.4\t0.2\tsetosa
+## 3                                4.7\t3.2\t1.3\t0.2\tsetosa
+## 4                                4.6\t3.1\t1.5\t0.2\tsetosa
+## 5                                  5\t3.6\t1.4\t0.2\tsetosa
+## 6                                5.4\t3.9\t1.7\t0.4\tsetosa</code></pre>
+<p><br></p>
+<pre class="r"><code>df_tab &lt;- read.csv(&quot;iris.tsv&quot;, sep = &quot;\t&quot;)
+head(df_tab)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p><br></p>
+<p>Lendo uma base de dados separada por vírgula sem cabeçalho:</p>
+<pre class="r"><code>df_csv3 &lt;- read.csv(&quot;iris-semcabecalho.csv&quot;)
+head(df_csv3)</code></pre>
+<pre><code>##   X5.1 X3.5 X1.4 X0.2 setosa
+## 1  4.9  3.0  1.4  0.2 setosa
+## 2  4.7  3.2  1.3  0.2 setosa
+## 3  4.6  3.1  1.5  0.2 setosa
+## 4  5.0  3.6  1.4  0.2 setosa
+## 5  5.4  3.9  1.7  0.4 setosa
+## 6  4.6  3.4  1.4  0.3 setosa</code></pre>
+<p><br></p>
+<pre class="r"><code>df_csv3 &lt;- read.csv(&quot;iris-semcabecalho.csv&quot;, header = F)
+head(df_csv3)</code></pre>
+<pre><code>##    V1  V2  V3  V4     V5
+## 1 5.1 3.5 1.4 0.2 setosa
+## 2 4.9 3.0 1.4 0.2 setosa
+## 3 4.7 3.2 1.3 0.2 setosa
+## 4 4.6 3.1 1.5 0.2 setosa
+## 5 5.0 3.6 1.4 0.2 setosa
+## 6 5.4 3.9 1.7 0.4 setosa</code></pre>
+<p><br></p>
+<pre class="r"><code>df_csv3 &lt;- read.csv(&quot;iris-semcabecalho.csv&quot;, header = F, 
+                    col.names = c(&quot;ComprSep&quot;, &quot;LargSep&quot;, &quot;ComprPet&quot;, &quot;LargPet&quot;, &quot;Esp&quot;))
+head(df_csv3)</code></pre>
+<pre><code>##   ComprSep LargSep ComprPet LargPet    Esp
+## 1      5.1     3.5      1.4     0.2 setosa
+## 2      4.9     3.0      1.4     0.2 setosa
+## 3      4.7     3.2      1.3     0.2 setosa
+## 4      4.6     3.1      1.5     0.2 setosa
+## 5      5.0     3.6      1.4     0.2 setosa
+## 6      5.4     3.9      1.7     0.4 setosa</code></pre>
+<p><br></p>
+<pre class="r"><code>df_csv3 &lt;- read.csv(&quot;iris-semcabecalho.csv&quot;, header = F)
+colnames(df_csv3) &lt;- c(&quot;ComprSep&quot;, &quot;LargSep&quot;, &quot;ComprPet&quot;, &quot;LargPet&quot;, &quot;Esp&quot;)
+head(df_csv3)</code></pre>
+<pre><code>##   ComprSep LargSep ComprPet LargPet    Esp
+## 1      5.1     3.5      1.4     0.2 setosa
+## 2      4.9     3.0      1.4     0.2 setosa
+## 3      4.7     3.2      1.3     0.2 setosa
+## 4      4.6     3.1      1.5     0.2 setosa
+## 5      5.0     3.6      1.4     0.2 setosa
+## 6      5.4     3.9      1.7     0.4 setosa</code></pre>
+<p><br></p>
+</div>
+<div id="planilhas-1" class="section level3">
+<h3>Planilhas</h3>
+<p><br></p>
+<div id="excel-1" class="section level4">
+<h4>Excel</h4>
+<p><br></p>
+<pre class="r"><code>library(openxlsx)
+df_iris &lt;- read.xlsx(&quot;iris-mtcars.xlsx&quot;) ## por padrão a primeira planilha é lida
+head(df_iris)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p><br></p>
+<pre class="r"><code>df_mtcars &lt;- read.xlsx(&quot;iris-mtcars.xlsx&quot;, sheet = 2)
+head(df_mtcars)</code></pre>
+<pre><code>##    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## 1 21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## 2 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## 3 22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## 4 21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## 5 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## 6 18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+<p><br></p>
+<pre class="r"><code>arquivo_completo &lt;- loadWorkbook(&quot;iris-mtcars.xlsx&quot;)</code></pre>
+<p><br></p>
+</div>
+<div id="opendocument" class="section level4">
+<h4>OpenDocument</h4>
+<p><br></p>
+<pre class="r"><code>df_mtcars &lt;- read.xlsx(&quot;iris-mtcars.ods&quot;, sheet = 2)
+head(df_mtcars)</code></pre>
+<pre><code>##    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## 1 21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## 2 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## 3 22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## 4 21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## 5 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## 6 18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+<p><br></p>
+</div>
+<div id="arquivos-online" class="section level4">
+<h4>Arquivos online</h4>
+<p><br></p>
+<p><a href="https://archive.ics.uci.edu/ml/datasets/wine" class="uri">https://archive.ics.uci.edu/ml/datasets/wine</a></p>
+<p><br></p>
+<pre class="r"><code>df_wine &lt;- read.csv(&quot;https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data&quot;)
+head(df_wine)</code></pre>
+<pre><code>##   X1 X14.23 X1.71 X2.43 X15.6 X127 X2.8 X3.06 X.28 X2.29 X5.64 X1.04 X3.92
+## 1  1  13.20  1.78  2.14  11.2  100 2.65  2.76 0.26  1.28  4.38  1.05  3.40
+## 2  1  13.16  2.36  2.67  18.6  101 2.80  3.24 0.30  2.81  5.68  1.03  3.17
+## 3  1  14.37  1.95  2.50  16.8  113 3.85  3.49 0.24  2.18  7.80  0.86  3.45
+## 4  1  13.24  2.59  2.87  21.0  118 2.80  2.69 0.39  1.82  4.32  1.04  2.93
+## 5  1  14.20  1.76  2.45  15.2  112 3.27  3.39 0.34  1.97  6.75  1.05  2.85
+## 6  1  14.39  1.87  2.45  14.6   96 2.50  2.52 0.30  1.98  5.25  1.02  3.58
+##   X1065
+## 1  1050
+## 2  1185
+## 3  1480
+## 4   735
+## 5  1450
+## 6  1290</code></pre>
+</div>
+</div>
+</div>

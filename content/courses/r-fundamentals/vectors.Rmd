@@ -1,0 +1,174 @@
+---
+date: "2020-04-26"
+title: Introdução a Vetores
+type: book
+weight: 3
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
+```
+
+## Criação
+
+<br>
+
+### Função <code>c()</code>
+
+<br>
+
+Vetor numérico real:
+```{r}
+reais <- c(1, 2, 3.5)
+reais
+```
+
+<br>
+
+```{r}
+class(reais)
+```
+
+<br>
+
+Vetor numérico inteiro:
+```{r}
+inteiros <- c(1L, 2L, 3L)
+inteiros
+```
+
+<br>
+
+```{r}
+class(inteiros)
+```
+
+<br>
+
+Vetor de texto:
+```{r}
+estados <- c("São Paulo", "Rio Grande do Norte", "Minas Gerais", "Mato Grosso do Sul")
+estados
+```
+
+<br>
+
+```{r}
+class(estados)
+```
+
+<br>
+
+Vetor lógico:
+```{r}
+logicos <- c(TRUE, TRUE, FALSE, T, F, F)
+logicos
+```
+
+<br>
+
+```{r}
+class(logicos)
+```
+
+<br>
+
+### Operador <code>:</code>
+
+<br>
+
+Criando uma sequência de 1 a 10:
+```{r}
+sequencia_1 <- 1:10
+sequencia_1
+```
+
+<br>
+
+```{r}
+class(sequencia_1)
+```
+
+<br>
+
+### Função <code>seq()</code>
+
+<br>
+
+Criando uma sequência de 1 a 10:
+```{r}
+sequencia_2 <- seq(1, 10, by = 1)
+sequencia_2
+```
+
+<br>
+
+```{r}
+class(sequencia_2)
+```
+
+<br>
+
+Criando uma sequência de 5 a 50, de 5 em 5:
+```{r}
+sequencia_3 <- seq(5, 50, by = 5)
+sequencia_3
+```
+
+<br>
+
+```{r}
+class(sequencia_3)
+```
+
+<br>
+
+## Teste
+
+<hr>
+
+É vetor?
+```{r}
+continente <- "América do Sul"
+is.vector(continente)
+```
+
+<br>
+
+```{r}
+idades <- c(28, 31, 17)
+is.vector(idades)
+```
+
+<br>
+
+## Nomes
+
+<br>
+
+```{r}
+notas <- c(9.8, 7.4, 6, 10)
+notas
+```
+
+<br>
+
+```{r}
+names(notas) <- c("Matemática", "Português", "Geografia", "História")
+notas
+```
+
+<br>
+
+## Contagem de Elementos
+
+```{r}
+continente <- "América do Sul"
+length(continente)
+```
+
+<br>
+
+```{r}
+disciplinas <- c("Matemática", "Português", "Geografia", "História")
+length(disciplinas)
+```

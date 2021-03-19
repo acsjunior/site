@@ -1,0 +1,247 @@
+---
+date: "2020-04-26"
+title: Listas
+type: book
+weight: 11
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
+options(scipen=999)
+```
+
+## Criação
+
+<br>
+
+Criando um vetor:
+```{r}
+v1 <- 1:4
+v1
+```
+
+<br>
+
+Criando uma matriz:
+```{r}
+m1 <- matrix(11:14, nrow = 2, byrow = T)
+m1
+```
+
+<br>
+
+Criando um data frame:
+```{r}
+df1 <- data.frame(col_a = 1:4,
+                  col_b = 5:8)
+df1
+```
+
+<br>
+
+Criando uma lista:
+```{r}
+l1 <- list(v1, m1, df1)
+l1
+```
+
+<br>
+
+```{r}
+l2 <- list(elemento1 = v1,
+           elemento2 = m1,
+           elemento3 = df1,
+           elemento4 = l1)
+l2
+```
+
+<br>
+
+## Classe e tipo:
+
+<br>
+
+```{r}
+class(l1)
+```
+
+```{r}
+typeof(l1)
+```
+
+<br>
+
+## Teste
+
+```{r}
+is.list(l1)
+```
+
+<br>
+
+## Conversão
+
+<br>
+
+Convertendo um vetor em lista:
+```{r}
+v1_list <- as.list(v1)
+v1_list
+```
+
+<br>
+
+Convertendo uma matriz em lista:
+```{r}
+m1_list <- as.list(m1)
+m1_list
+```
+
+<br>
+
+Convertendo um data frame em lista:
+```{r}
+df1_list <- as.list(df1)
+df1_list
+```
+
+<br>
+
+Convertendo uma lista em vetor:
+```{r}
+v1_unlist <- unlist(v1_list)
+v1_unlist
+```
+
+<br>
+
+```{r}
+m1_unlist <- unlist(m1_list)
+m1_unlist
+```
+
+<br>
+
+```{r}
+df1_unlist <- unlist(df1_list)
+df1_unlist
+```
+
+<br>
+
+```{r}
+l1_unlist <- unlist(l1)
+l1_unlist
+```
+
+<br>
+
+## Indexação
+
+<br>
+
+Acessando o primeiro elemento de <b>l1</b>, mantendo a estrutura de lista:
+```{r}
+l1[1]
+```
+
+<br>
+
+```{r}
+class(l1[1])
+```
+
+<br>
+
+Acessando o primeiro elemento de <b>l1</b>, respeitando a estrutura original do elemento:
+```{r}
+l1[[1]]
+```
+
+<br>
+
+```{r}
+class(l1[[1]])
+```
+
+<br>
+
+Acessando o primeiro elemento do segundo elemento de <b>l1</b>:
+```{r}
+l1[[2]][1]
+```
+
+<br>
+
+Acessando o terceiro elemento de <b>l2</b>, respeitando a estrutura original do elemento:
+```{r}
+l2['elemento3']
+```
+
+<br>
+
+```{r}
+class(l2['elemento3'])
+```
+
+<br>
+
+Acessando o terceiro elemento de <b>l2</b>, respeitando a estrutura original do elemento:
+```{r}
+l2$elemento3
+```
+
+<br>
+
+```{r}
+class(l2$elemento3)
+```
+
+<br>
+
+```{r}
+l2[['elemento3']]
+```
+
+<br>
+
+```{r}
+class(l2[['elemento3']])
+```
+
+<br>
+
+Acessando a segunda coluna do terceiro elemento de <b>l2</b>:
+```{r}
+l2$elemento3[,2]
+```
+
+<br>
+
+```{r}
+l2[['elemento3']][,2]
+```
+
+<br>
+
+## Nomes
+
+<br>
+
+Nomeando os elementos de <b>l1</b>:
+```{r}
+length(l1)
+```
+
+<br>
+
+```{r}
+names(l1) <- c("vetor", "matriz", "dataframe")
+l1
+```
+
+<br>
+
+```{r}
+names(l1)
+```

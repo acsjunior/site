@@ -1,0 +1,259 @@
+---
+date: "2020-04-26"
+title: Listas
+type: book
+weight: 11
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="criação" class="section level2">
+<h2>Criação</h2>
+<p><br></p>
+<p>Criando um vetor:</p>
+<pre class="r"><code>v1 &lt;- 1:4
+v1</code></pre>
+<pre><code>## [1] 1 2 3 4</code></pre>
+<p><br></p>
+<p>Criando uma matriz:</p>
+<pre class="r"><code>m1 &lt;- matrix(11:14, nrow = 2, byrow = T)
+m1</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]   11   12
+## [2,]   13   14</code></pre>
+<p><br></p>
+<p>Criando um data frame:</p>
+<pre class="r"><code>df1 &lt;- data.frame(col_a = 1:4,
+                  col_b = 5:8)
+df1</code></pre>
+<pre><code>##   col_a col_b
+## 1     1     5
+## 2     2     6
+## 3     3     7
+## 4     4     8</code></pre>
+<p><br></p>
+<p>Criando uma lista:</p>
+<pre class="r"><code>l1 &lt;- list(v1, m1, df1)
+l1</code></pre>
+<pre><code>## [[1]]
+## [1] 1 2 3 4
+## 
+## [[2]]
+##      [,1] [,2]
+## [1,]   11   12
+## [2,]   13   14
+## 
+## [[3]]
+##   col_a col_b
+## 1     1     5
+## 2     2     6
+## 3     3     7
+## 4     4     8</code></pre>
+<p><br></p>
+<pre class="r"><code>l2 &lt;- list(elemento1 = v1,
+           elemento2 = m1,
+           elemento3 = df1,
+           elemento4 = l1)
+l2</code></pre>
+<pre><code>## $elemento1
+## [1] 1 2 3 4
+## 
+## $elemento2
+##      [,1] [,2]
+## [1,]   11   12
+## [2,]   13   14
+## 
+## $elemento3
+##   col_a col_b
+## 1     1     5
+## 2     2     6
+## 3     3     7
+## 4     4     8
+## 
+## $elemento4
+## $elemento4[[1]]
+## [1] 1 2 3 4
+## 
+## $elemento4[[2]]
+##      [,1] [,2]
+## [1,]   11   12
+## [2,]   13   14
+## 
+## $elemento4[[3]]
+##   col_a col_b
+## 1     1     5
+## 2     2     6
+## 3     3     7
+## 4     4     8</code></pre>
+<p><br></p>
+</div>
+<div id="classe-e-tipo" class="section level2">
+<h2>Classe e tipo:</h2>
+<p><br></p>
+<pre class="r"><code>class(l1)</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<pre class="r"><code>typeof(l1)</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="teste" class="section level2">
+<h2>Teste</h2>
+<pre class="r"><code>is.list(l1)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+</div>
+<div id="conversão" class="section level2">
+<h2>Conversão</h2>
+<p><br></p>
+<p>Convertendo um vetor em lista:</p>
+<pre class="r"><code>v1_list &lt;- as.list(v1)
+v1_list</code></pre>
+<pre><code>## [[1]]
+## [1] 1
+## 
+## [[2]]
+## [1] 2
+## 
+## [[3]]
+## [1] 3
+## 
+## [[4]]
+## [1] 4</code></pre>
+<p><br></p>
+<p>Convertendo uma matriz em lista:</p>
+<pre class="r"><code>m1_list &lt;- as.list(m1)
+m1_list</code></pre>
+<pre><code>## [[1]]
+## [1] 11
+## 
+## [[2]]
+## [1] 13
+## 
+## [[3]]
+## [1] 12
+## 
+## [[4]]
+## [1] 14</code></pre>
+<p><br></p>
+<p>Convertendo um data frame em lista:</p>
+<pre class="r"><code>df1_list &lt;- as.list(df1)
+df1_list</code></pre>
+<pre><code>## $col_a
+## [1] 1 2 3 4
+## 
+## $col_b
+## [1] 5 6 7 8</code></pre>
+<p><br></p>
+<p>Convertendo uma lista em vetor:</p>
+<pre class="r"><code>v1_unlist &lt;- unlist(v1_list)
+v1_unlist</code></pre>
+<pre><code>## [1] 1 2 3 4</code></pre>
+<p><br></p>
+<pre class="r"><code>m1_unlist &lt;- unlist(m1_list)
+m1_unlist</code></pre>
+<pre><code>## [1] 11 13 12 14</code></pre>
+<p><br></p>
+<pre class="r"><code>df1_unlist &lt;- unlist(df1_list)
+df1_unlist</code></pre>
+<pre><code>## col_a1 col_a2 col_a3 col_a4 col_b1 col_b2 col_b3 col_b4 
+##      1      2      3      4      5      6      7      8</code></pre>
+<p><br></p>
+<pre class="r"><code>l1_unlist &lt;- unlist(l1)
+l1_unlist</code></pre>
+<pre><code>##                                                         col_a1 col_a2 col_a3 
+##      1      2      3      4     11     13     12     14      1      2      3 
+## col_a4 col_b1 col_b2 col_b3 col_b4 
+##      4      5      6      7      8</code></pre>
+<p><br></p>
+</div>
+<div id="indexação" class="section level2">
+<h2>Indexação</h2>
+<p><br></p>
+<p>Acessando o primeiro elemento de <b>l1</b>, mantendo a estrutura de lista:</p>
+<pre class="r"><code>l1[1]</code></pre>
+<pre><code>## [[1]]
+## [1] 1 2 3 4</code></pre>
+<p><br></p>
+<pre class="r"><code>class(l1[1])</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<p><br></p>
+<p>Acessando o primeiro elemento de <b>l1</b>, respeitando a estrutura original do elemento:</p>
+<pre class="r"><code>l1[[1]]</code></pre>
+<pre><code>## [1] 1 2 3 4</code></pre>
+<p><br></p>
+<pre class="r"><code>class(l1[[1]])</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+<p>Acessando o primeiro elemento do segundo elemento de <b>l1</b>:</p>
+<pre class="r"><code>l1[[2]][1]</code></pre>
+<pre><code>## [1] 11</code></pre>
+<p><br></p>
+<p>Acessando o terceiro elemento de <b>l2</b>, respeitando a estrutura original do elemento:</p>
+<pre class="r"><code>l2[&#39;elemento3&#39;]</code></pre>
+<pre><code>## $elemento3
+##   col_a col_b
+## 1     1     5
+## 2     2     6
+## 3     3     7
+## 4     4     8</code></pre>
+<p><br></p>
+<pre class="r"><code>class(l2[&#39;elemento3&#39;])</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<p><br></p>
+<p>Acessando o terceiro elemento de <b>l2</b>, respeitando a estrutura original do elemento:</p>
+<pre class="r"><code>l2$elemento3</code></pre>
+<pre><code>##   col_a col_b
+## 1     1     5
+## 2     2     6
+## 3     3     7
+## 4     4     8</code></pre>
+<p><br></p>
+<pre class="r"><code>class(l2$elemento3)</code></pre>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>l2[[&#39;elemento3&#39;]]</code></pre>
+<pre><code>##   col_a col_b
+## 1     1     5
+## 2     2     6
+## 3     3     7
+## 4     4     8</code></pre>
+<p><br></p>
+<pre class="r"><code>class(l2[[&#39;elemento3&#39;]])</code></pre>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+<p><br></p>
+<p>Acessando a segunda coluna do terceiro elemento de <b>l2</b>:</p>
+<pre class="r"><code>l2$elemento3[,2]</code></pre>
+<pre><code>## [1] 5 6 7 8</code></pre>
+<p><br></p>
+<pre class="r"><code>l2[[&#39;elemento3&#39;]][,2]</code></pre>
+<pre><code>## [1] 5 6 7 8</code></pre>
+<p><br></p>
+</div>
+<div id="nomes" class="section level2">
+<h2>Nomes</h2>
+<p><br></p>
+<p>Nomeando os elementos de <b>l1</b>:</p>
+<pre class="r"><code>length(l1)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<p><br></p>
+<pre class="r"><code>names(l1) &lt;- c(&quot;vetor&quot;, &quot;matriz&quot;, &quot;dataframe&quot;)
+l1</code></pre>
+<pre><code>## $vetor
+## [1] 1 2 3 4
+## 
+## $matriz
+##      [,1] [,2]
+## [1,]   11   12
+## [2,]   13   14
+## 
+## $dataframe
+##   col_a col_b
+## 1     1     5
+## 2     2     6
+## 3     3     7
+## 4     4     8</code></pre>
+<p><br></p>
+<pre class="r"><code>names(l1)</code></pre>
+<pre><code>## [1] &quot;vetor&quot;     &quot;matriz&quot;    &quot;dataframe&quot;</code></pre>
+</div>

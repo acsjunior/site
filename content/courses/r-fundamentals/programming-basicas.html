@@ -1,0 +1,327 @@
+---
+date: "2020-04-26"
+title: Introdução à Lógica de Programação
+type: book
+weight: 14
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="estruturas-de-repetição" class="section level2">
+<h2>Estruturas de Repetição</h2>
+<p><br></p>
+<pre class="r"><code>data(mtcars)
+df &lt;- mtcars</code></pre>
+<p><br></p>
+<div id="instrução-for" class="section level3">
+<h3>Instrução <code>for</code>:</h3>
+<p><br></p>
+<pre class="r"><code>for(i in 1:5) {
+  mensagem &lt;- paste(&quot;Esta é a iteração número&quot;, i)
+  print(mensagem)
+}</code></pre>
+<pre><code>## [1] &quot;Esta é a iteração número 1&quot;
+## [1] &quot;Esta é a iteração número 2&quot;
+## [1] &quot;Esta é a iteração número 3&quot;
+## [1] &quot;Esta é a iteração número 4&quot;
+## [1] &quot;Esta é a iteração número 5&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>for(i in 1:nrow(df)) {
+  veiculo &lt;- rownames(df)[i]
+  n_cilindros &lt;- df$cyl[i]
+  mensagem &lt;- paste(&quot;O veículo&quot;, veiculo, &quot;possui&quot;, n_cilindros, &quot;cilindros&quot;)
+  print(mensagem)
+}</code></pre>
+<pre><code>## [1] &quot;O veículo Mazda RX4 possui 6 cilindros&quot;
+## [1] &quot;O veículo Mazda RX4 Wag possui 6 cilindros&quot;
+## [1] &quot;O veículo Datsun 710 possui 4 cilindros&quot;
+## [1] &quot;O veículo Hornet 4 Drive possui 6 cilindros&quot;
+## [1] &quot;O veículo Hornet Sportabout possui 8 cilindros&quot;
+## [1] &quot;O veículo Valiant possui 6 cilindros&quot;
+## [1] &quot;O veículo Duster 360 possui 8 cilindros&quot;
+## [1] &quot;O veículo Merc 240D possui 4 cilindros&quot;
+## [1] &quot;O veículo Merc 230 possui 4 cilindros&quot;
+## [1] &quot;O veículo Merc 280 possui 6 cilindros&quot;
+## [1] &quot;O veículo Merc 280C possui 6 cilindros&quot;
+## [1] &quot;O veículo Merc 450SE possui 8 cilindros&quot;
+## [1] &quot;O veículo Merc 450SL possui 8 cilindros&quot;
+## [1] &quot;O veículo Merc 450SLC possui 8 cilindros&quot;
+## [1] &quot;O veículo Cadillac Fleetwood possui 8 cilindros&quot;
+## [1] &quot;O veículo Lincoln Continental possui 8 cilindros&quot;
+## [1] &quot;O veículo Chrysler Imperial possui 8 cilindros&quot;
+## [1] &quot;O veículo Fiat 128 possui 4 cilindros&quot;
+## [1] &quot;O veículo Honda Civic possui 4 cilindros&quot;
+## [1] &quot;O veículo Toyota Corolla possui 4 cilindros&quot;
+## [1] &quot;O veículo Toyota Corona possui 4 cilindros&quot;
+## [1] &quot;O veículo Dodge Challenger possui 8 cilindros&quot;
+## [1] &quot;O veículo AMC Javelin possui 8 cilindros&quot;
+## [1] &quot;O veículo Camaro Z28 possui 8 cilindros&quot;
+## [1] &quot;O veículo Pontiac Firebird possui 8 cilindros&quot;
+## [1] &quot;O veículo Fiat X1-9 possui 4 cilindros&quot;
+## [1] &quot;O veículo Porsche 914-2 possui 4 cilindros&quot;
+## [1] &quot;O veículo Lotus Europa possui 4 cilindros&quot;
+## [1] &quot;O veículo Ford Pantera L possui 8 cilindros&quot;
+## [1] &quot;O veículo Ferrari Dino possui 6 cilindros&quot;
+## [1] &quot;O veículo Maserati Bora possui 8 cilindros&quot;
+## [1] &quot;O veículo Volvo 142E possui 4 cilindros&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="instrução-while" class="section level3">
+<h3>Instrução <code>while</code>:</h3>
+<p><br></p>
+<pre class="r"><code>i &lt;- 1
+while(i &lt;= 5) {
+  mensagem &lt;- paste(&quot;Esta é a iteração número&quot;, i)
+  print(mensagem)
+  i &lt;- i + 1
+}</code></pre>
+<pre><code>## [1] &quot;Esta é a iteração número 1&quot;
+## [1] &quot;Esta é a iteração número 2&quot;
+## [1] &quot;Esta é a iteração número 3&quot;
+## [1] &quot;Esta é a iteração número 4&quot;
+## [1] &quot;Esta é a iteração número 5&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>i &lt;- 1
+while(i &lt;= nrow(df)) {
+  veiculo &lt;- rownames(df)[i]
+  n_cilindros &lt;- df$cyl[i]
+  mensagem &lt;- paste(&quot;O veículo&quot;, veiculo, &quot;possui&quot;, n_cilindros, &quot;cilindros&quot;)
+  print(mensagem)
+  i &lt;- i + 1
+}</code></pre>
+<pre><code>## [1] &quot;O veículo Mazda RX4 possui 6 cilindros&quot;
+## [1] &quot;O veículo Mazda RX4 Wag possui 6 cilindros&quot;
+## [1] &quot;O veículo Datsun 710 possui 4 cilindros&quot;
+## [1] &quot;O veículo Hornet 4 Drive possui 6 cilindros&quot;
+## [1] &quot;O veículo Hornet Sportabout possui 8 cilindros&quot;
+## [1] &quot;O veículo Valiant possui 6 cilindros&quot;
+## [1] &quot;O veículo Duster 360 possui 8 cilindros&quot;
+## [1] &quot;O veículo Merc 240D possui 4 cilindros&quot;
+## [1] &quot;O veículo Merc 230 possui 4 cilindros&quot;
+## [1] &quot;O veículo Merc 280 possui 6 cilindros&quot;
+## [1] &quot;O veículo Merc 280C possui 6 cilindros&quot;
+## [1] &quot;O veículo Merc 450SE possui 8 cilindros&quot;
+## [1] &quot;O veículo Merc 450SL possui 8 cilindros&quot;
+## [1] &quot;O veículo Merc 450SLC possui 8 cilindros&quot;
+## [1] &quot;O veículo Cadillac Fleetwood possui 8 cilindros&quot;
+## [1] &quot;O veículo Lincoln Continental possui 8 cilindros&quot;
+## [1] &quot;O veículo Chrysler Imperial possui 8 cilindros&quot;
+## [1] &quot;O veículo Fiat 128 possui 4 cilindros&quot;
+## [1] &quot;O veículo Honda Civic possui 4 cilindros&quot;
+## [1] &quot;O veículo Toyota Corolla possui 4 cilindros&quot;
+## [1] &quot;O veículo Toyota Corona possui 4 cilindros&quot;
+## [1] &quot;O veículo Dodge Challenger possui 8 cilindros&quot;
+## [1] &quot;O veículo AMC Javelin possui 8 cilindros&quot;
+## [1] &quot;O veículo Camaro Z28 possui 8 cilindros&quot;
+## [1] &quot;O veículo Pontiac Firebird possui 8 cilindros&quot;
+## [1] &quot;O veículo Fiat X1-9 possui 4 cilindros&quot;
+## [1] &quot;O veículo Porsche 914-2 possui 4 cilindros&quot;
+## [1] &quot;O veículo Lotus Europa possui 4 cilindros&quot;
+## [1] &quot;O veículo Ford Pantera L possui 8 cilindros&quot;
+## [1] &quot;O veículo Ferrari Dino possui 6 cilindros&quot;
+## [1] &quot;O veículo Maserati Bora possui 8 cilindros&quot;
+## [1] &quot;O veículo Volvo 142E possui 4 cilindros&quot;</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="estruturas-condicionais" class="section level2">
+<h2>Estruturas Condicionais</h2>
+<p><br></p>
+<pre class="r"><code>data(mtcars)
+df &lt;- mtcars</code></pre>
+<p><br></p>
+<div id="instrução-if" class="section level3">
+<h3>Instrução <code>if</code>:</h3>
+<p><br></p>
+<pre class="r"><code>cilindros &lt;- 4
+
+if(cilindros &gt; 4) {
+  mensagem &lt;- &quot;Mais de 4 cilindros&quot;
+} else {
+  mensagem &lt;- &quot;Até 4 cilindros&quot;
+}
+
+print(mensagem)</code></pre>
+<pre><code>## [1] &quot;Até 4 cilindros&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>classificador_veiculo &lt;- function(cilindros) {
+  if(cilindros &gt; 4) {
+    mensagem &lt;- &quot;Mais de 4 cilindros&quot;
+  } else {
+    mensagem &lt;- &quot;Até 4 cilindros&quot;
+  }
+  
+  return(mensagem)
+}</code></pre>
+<p><br></p>
+<pre class="r"><code>classificador_veiculo(2)</code></pre>
+<pre><code>## [1] &quot;Até 4 cilindros&quot;</code></pre>
+<pre class="r"><code>classificador_veiculo(6)</code></pre>
+<pre><code>## [1] &quot;Mais de 4 cilindros&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>cilindros &lt;- 4
+carburadores &lt;- 2
+
+if(cilindros &lt;= 4 &amp; carburadores &lt;= 2) {
+  mensagem &lt;- &quot;Até 4 cilindros e até 2 carburadores&quot;
+} else if(cilindros &gt; 4 &amp; carburadores &lt;= 2) {
+  mensagem &lt;- &quot;Acima de 4 cilindros e até 2 carburadores&quot;
+} else if(cilindros &lt;= 4 &amp; carburadores &gt; 2) {
+  mensagem &lt;- &quot;Até 4 cilindros e acima de 2 carburadores&quot;
+} else {
+  mensagem &lt;- &quot;Acima de 4 cilindros e acima de 2 carburadores&quot;
+}
+
+print(mensagem)</code></pre>
+<pre><code>## [1] &quot;Até 4 cilindros e até 2 carburadores&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>classificador_veiculo_2 &lt;- function(cilindros, carburadores) {
+  if(cilindros &lt;= 4 &amp; carburadores &lt;= 2) {
+    mensagem &lt;- &quot;Até 4 cilindros e até 2 carburadores&quot;
+  } else if(cilindros &gt; 4 &amp; carburadores &lt;= 2) {
+    mensagem &lt;- &quot;Acima de 4 cilindros e até 2 carburadores&quot;
+  } else if(cilindros &lt;= 4 &amp; carburadores &gt; 2) {
+    mensagem &lt;- &quot;Até 4 cilindros e acima de 2 carburadores&quot;
+  } else {
+    mensagem &lt;- &quot;Acima de 4 cilindros e acima de 2 carburadores&quot;
+  }
+  
+  return(mensagem)
+}</code></pre>
+<p><br></p>
+<pre class="r"><code>classificador_veiculo_2(2,2)</code></pre>
+<pre><code>## [1] &quot;Até 4 cilindros e até 2 carburadores&quot;</code></pre>
+<pre class="r"><code>classificador_veiculo_2(6,2)</code></pre>
+<pre><code>## [1] &quot;Acima de 4 cilindros e até 2 carburadores&quot;</code></pre>
+<pre class="r"><code>classificador_veiculo_2(2,6)</code></pre>
+<pre><code>## [1] &quot;Até 4 cilindros e acima de 2 carburadores&quot;</code></pre>
+<pre class="r"><code>classificador_veiculo_2(6,6)</code></pre>
+<pre><code>## [1] &quot;Acima de 4 cilindros e acima de 2 carburadores&quot;</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="combinando-estruturas-de-repetição-e-condicionais" class="section level2">
+<h2>Combinando estruturas de repetição e condicionais</h2>
+<p><br></p>
+<pre class="r"><code>df$classificacao_veiculo &lt;- NA
+
+for(i in 1:nrow(df)) {
+  if(df$cyl[i] &lt;= 4 &amp; df$carb[i] &lt;= 2) {
+    classificacao &lt;- &quot;Até 4 cilindros e até 2 carburadores&quot;
+  } else if(df$cyl[i] &gt; 4 &amp; df$carb[i] &lt;= 2) {
+    classificacao &lt;- &quot;Acima de 4 cilindros e até 2 carburadores&quot;
+  } else if(df$cyl[i] &lt;= 4 &amp; df$carb[i] &gt; 2) {
+    classificacao &lt;- &quot;Até 4 cilindros e acima de 2 carburadores&quot;
+  } else {
+    classificacao &lt;- &quot;Acima de 4 cilindros e acima de 2 carburadores&quot;
+  }
+  df$classificacao_veiculo[i] &lt;- classificacao
+}
+
+table(df$classificacao_veiculo)</code></pre>
+<pre><code>## 
+## Acima de 4 cilindros e acima de 2 carburadores 
+##                                             15 
+##      Acima de 4 cilindros e até 2 carburadores 
+##                                              6 
+##           Até 4 cilindros e até 2 carburadores 
+##                                             11</code></pre>
+<p><br></p>
+<pre class="r"><code>df$score &lt;- NA
+
+for(i in 1:nrow(df)) {
+  if(df$hp[i] &gt; 150) {
+    coeficiente &lt;- 1
+  } else {
+    coeficiente &lt;- 2
+  }
+  score &lt;- df$mpg[i] * coeficiente
+  df$score[i] &lt;- score
+}
+
+head(df)</code></pre>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+##                                            classificacao_veiculo score
+## Mazda RX4         Acima de 4 cilindros e acima de 2 carburadores  42.0
+## Mazda RX4 Wag     Acima de 4 cilindros e acima de 2 carburadores  42.0
+## Datsun 710                  Até 4 cilindros e até 2 carburadores  45.6
+## Hornet 4 Drive         Acima de 4 cilindros e até 2 carburadores  42.8
+## Hornet Sportabout      Acima de 4 cilindros e até 2 carburadores  18.7
+## Valiant                Acima de 4 cilindros e até 2 carburadores  36.2</code></pre>
+<p><br></p>
+<pre class="r"><code>calcula_score &lt;- function(dataframe, col_score, var_referencia, valor_referencia, coef_1, coef_2, var_calculo) {
+  
+  dataframe[col_score] &lt;- NA
+  
+  for(i in 1:nrow(dataframe)) {
+    if(dataframe[i, var_referencia] &gt; valor_referencia) {
+      coeficiente &lt;- coef_1
+    } else {
+      coeficiente &lt;- coef_2
+    }
+    score &lt;- dataframe[i, var_calculo] * coeficiente
+    dataframe[i, col_score] &lt;- score
+  }
+  
+  return(dataframe)
+}</code></pre>
+<p><br></p>
+<pre class="r"><code>df_2 &lt;- calcula_score(dataframe = df, 
+                      col_score = &quot;score2&quot;, 
+                      var_referencia = &quot;hp&quot;,
+                      valor_referencia = 150,
+                      coef_1 = 1, 
+                      coef_2 = 2, 
+                      var_calculo = &quot;mpg&quot;)
+
+head(df_2)</code></pre>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+##                                            classificacao_veiculo score score2
+## Mazda RX4         Acima de 4 cilindros e acima de 2 carburadores  42.0   42.0
+## Mazda RX4 Wag     Acima de 4 cilindros e acima de 2 carburadores  42.0   42.0
+## Datsun 710                  Até 4 cilindros e até 2 carburadores  45.6   45.6
+## Hornet 4 Drive         Acima de 4 cilindros e até 2 carburadores  42.8   42.8
+## Hornet Sportabout      Acima de 4 cilindros e até 2 carburadores  18.7   18.7
+## Valiant                Acima de 4 cilindros e até 2 carburadores  36.2   36.2</code></pre>
+<p><br></p>
+</div>
+<div id="outras-funções" class="section level2">
+<h2>Outras funções</h2>
+<p><br></p>
+<div id="função-ifelse" class="section level3">
+<h3>Função <code>ifelse()</code></h3>
+<pre class="r"><code>df$class_cyl &lt;- ifelse(df$cyl &gt; 4, 
+                       &quot;acima de 4&quot;, 
+                       &quot;4 ou menos&quot;)
+table(df$class_cyl)</code></pre>
+<pre><code>## 
+## 4 ou menos acima de 4 
+##         11         21</code></pre>
+<p><br></p>
+<pre class="r"><code>df$class_hp &lt;- ifelse(df$hp &lt;= 150, 
+                      &quot;até 150&quot;,
+                      ifelse(df$hp &lt; 250, &quot;entre 151 e 250&quot;, &quot;acima de 250&quot;))
+table(df$class_hp)</code></pre>
+<pre><code>## 
+##    acima de 250         até 150 entre 151 e 250 
+##               2              19              11</code></pre>
+<p><br></p>
+<p><br></p>
+</div>
+<div id="função-switch" class="section level3">
+<h3>Função <code>switch()</code></h3>
+</div>
+</div>

@@ -1,0 +1,431 @@
+---
+date: "2020-04-26"
+title: Matrizes
+type: book
+weight: 9
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
+options(scipen=999)
+```
+
+## Criação
+
+<br>
+
+Criando uma matriz com 3 linhas e 4 colunas:
+```{r}
+v1 <- 1:12
+v1
+```
+
+<br>
+
+```{r}
+m1 <- matrix(v1, nrow = 3)
+m1
+```
+
+<br>
+
+```{r}
+m2 <- matrix(v1, nrow = 3, byrow = T)
+m2
+```
+
+<br>
+
+## Classe e tipo
+
+<br>
+
+```{r}
+class(m2)
+```
+
+<br>
+
+```{r}
+typeof(m2)
+```
+
+<br>
+
+## Teste
+
+<br>
+
+```{r}
+is.matrix(m2)
+```
+
+<br>
+
+```{r}
+is.integer(m2)
+```
+
+<br>
+
+## Conversão
+
+<br>
+
+De matriz do tipo <i>integer</i> para matriz do tipo <i>character</i>:
+```{r}
+m2 <- matrix(as.character(m2), nrow = 3)
+m2
+```
+
+<br>
+
+```{r}
+typeof(m2)
+```
+
+<br>
+
+De matriz do tipo <i>character</i> para matriz do tipo <i>numeric</i>:
+```{r}
+m2 <- matrix(as.numeric(m2), nrow = 3)
+m2
+```
+
+<br>
+
+```{r}
+typeof(m2)
+```
+
+<br>
+
+De matriz para um vetor numérico:
+```{r}
+v2 <- as.numeric(m2)
+v2
+```
+
+<br>
+
+```{r}
+v2 <- sort(v2)
+v2
+```
+
+<br>
+
+```{r}
+class(v2)
+```
+
+De matriz para data frame:
+```{r}
+df <- as.data.frame(v2)
+df
+```
+
+<br>
+
+```{r}
+class(df)
+```
+
+<br>
+
+## Nomes
+
+<br>
+
+```{r}
+paciente1 <- c(1.33, 4.02, 5.24, 2.32)
+paciente2 <- c(1.44, 2.76, 6.08, 3.13)
+m_pacientes <- matrix(c(paciente1, paciente2), nrow=2, byrow = T)
+m_pacientes
+```
+
+<br>
+
+### Colunas
+
+<br>
+
+```{r}
+colnames(m_pacientes) <- c("exame_a", "exame_b", "exame_c", "exame_d")
+m_pacientes
+```
+
+<br>
+
+### Linhas
+
+<br>
+
+```{r}
+rownames(m_pacientes) <- c("paciente1", "paciente2")
+m_pacientes
+```
+
+<br>
+
+## Matemática
+
+<hr>
+
+### Operações básicas
+
+<br>
+
+```{r}
+A <- matrix(1:4, nrow=2, byrow = T)
+A
+```
+
+<br>
+
+```{r}
+B <- matrix(2:5, nrow=2, byrow = T)
+B
+```
+
+<br>
+
+```{r}
+C <- matrix(3:8, nrow=2, byrow = T)
+C
+```
+
+<br>
+
+```{r}
+D <- matrix(3:8, nrow=3, byrow = T)
+D
+```
+<br>
+
+#### Soma
+
+<br>
+
+```{r}
+A + 10
+```
+
+<br>
+
+```{r}
+A + B
+```
+
+<br>
+
+```{r}
+A + C
+```
+
+<br>
+
+```{r}
+A + D
+```
+
+<br>
+
+#### Multiplicação
+
+<br>
+
+```{r}
+A * 10
+```
+
+<br>
+
+```{r}
+A * B
+```
+
+<br>
+
+```{r}
+A * C
+```
+
+<br>
+
+```{r}
+A * D
+```
+
+<br>
+
+### Álgebra Linear
+
+<br>
+
+Multiplicação entre matrizes:
+```{r}
+A %*% B
+```
+
+<br>
+
+```{r}
+B %*% A
+```
+
+<br>
+
+```{r}
+A %*% C
+```
+
+<br>
+
+```{r}
+C %*% A
+```
+
+<br>
+
+Transposta:
+```{r}
+t(A)
+```
+
+<br>
+
+Inversa:
+```{r}
+solve(A)
+```
+
+<br>
+
+Determinante:
+```{r}
+det(A)
+```
+
+<br>
+
+### Operações relacionais
+
+<br>
+
+```{r}
+A <- matrix(c(1,2,3,4), nrow=2)
+A
+```
+
+<br>
+
+```{r}
+B <- matrix(c(1,3,2,4), nrow=2)
+B
+```
+
+<br>
+
+```{r}
+A > B
+```
+
+<br>
+
+```{r}
+A < B
+```
+
+<br>
+
+```{r}
+A >= B
+```
+
+<br>
+
+```{r}
+A <= B
+```
+
+<br>
+
+```{r}
+A == B
+```
+
+<br>
+
+```{r}
+A != B
+```
+
+<br>
+
+### Outras operações
+
+<br>
+
+```{r}
+colSums(m_pacientes)
+```
+
+<br>
+
+```{r}
+rowSums(m_pacientes)
+```
+
+<br>
+
+```{r}
+colMeans(m_pacientes)
+```
+
+<br>
+
+```{r}
+rowMeans(m_pacientes)
+```
+
+## Indexação
+
+<br>
+
+Selecionando a segunda coluna:
+```{r}
+C[,2]
+```
+
+<br>
+
+```{r}
+class(C[,2])
+```
+
+<br>
+
+Selecionando a primeira linha:
+```{r}
+C[1,]
+```
+
+<br>
+
+```{r}
+class(C[1,])
+```
+
+<br>
+
+Selecionando a célula da primeira linha e segunda coluna:
+```{r}
+C[1,2]
+```
+
+<br>
+
+```{r}
+class(C[1,2])
+```

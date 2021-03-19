@@ -1,0 +1,221 @@
+---
+date: "2020-04-26"
+title: Objetos e Principais Tipos de Dados
+type: book
+weight: 2
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="objetos" class="section level2">
+<h2>Objetos</h2>
+<hr>
+<p>Regras para criar os nomes dos objetos:</p>
+<ul>
+<li>Não pode iniciar com número;</li>
+<li>Não pode iniciar com símbolos, como ^, !, $, @, +, -, /, ou *.</li>
+</ul>
+<p>Principais objetos do R:</p>
+<ul>
+<li>Vetores</li>
+<li>Matrizes</li>
+<li>Listas</li>
+<li>Data frames</li>
+<li>Funções</li>
+</ul>
+<p><br></p>
+<p>Atribuindo o valor <i>papagaio</i> ao objeto <b>animal</b>:</p>
+<pre class="r"><code>animal &lt;- &quot;papagaio&quot;</code></pre>
+<p><br></p>
+<p>Imprimindo <b>animal</b>:</p>
+<pre class="r"><code>animal</code></pre>
+<pre><code>## [1] &quot;papagaio&quot;</code></pre>
+<pre class="r"><code>print(animal)</code></pre>
+<pre><code>## [1] &quot;papagaio&quot;</code></pre>
+<p><br></p>
+<p>Atribuindo o valor <i>Rio Grande do Norte</i> ao objeto <b>1estado</b>:</p>
+<pre class="r"><code>1estado &lt;- &quot;Rio Grande do Norte&quot;</code></pre>
+<pre><code>## Error: &lt;text&gt;:1:1: unexpected input
+## 1: 1es
+##     ^</code></pre>
+<p><br></p>
+<p>Atribuindo o valor <i>Rio Grande do Norte</i> ao objeto <b>estado1</b>:</p>
+<pre class="r"><code>estado1 &lt;- &quot;Rio Grande do Norte&quot;</code></pre>
+<p><br></p>
+<p>Imprimindo <b>estado1</b>:</p>
+<pre class="r"><code>estado1</code></pre>
+<pre><code>## [1] &quot;Rio Grande do Norte&quot;</code></pre>
+<p><br></p>
+<p>Atribuindo o valor <span class="math inline">\(2\)</span> ao objeto <b>numero_1</b>:</p>
+<pre class="r"><code>numero_1 &lt;- 2</code></pre>
+<p><br></p>
+<p>Atribuindo o valor <span class="math inline">\(4\)</span> ao mesmo objeto <b>numero_1</b>:</p>
+<pre class="r"><code>numero_1 &lt;- 4</code></pre>
+<p><br></p>
+<p>Imprimindo <b>numero_1</b>:</p>
+<pre class="r"><code>numero_1</code></pre>
+<pre><code>## [1] 4</code></pre>
+<p><br></p>
+<div id="gerenciando-objetos" class="section level3">
+<h3>Gerenciando objetos</h3>
+<p><br></p>
+<p>Listando os objetos criados:</p>
+<pre class="r"><code>obj1 &lt;- 1
+obj2 &lt;- 2
+obj3 &lt;- 3
+obj4 &lt;- 4
+ls()</code></pre>
+<pre><code>## [1] &quot;animal&quot;   &quot;estado1&quot;  &quot;numero_1&quot; &quot;obj1&quot;     &quot;obj2&quot;     &quot;obj3&quot;     &quot;obj4&quot;</code></pre>
+<p><br></p>
+<p>Removendo um objeto:</p>
+<pre class="r"><code>rm(animal)
+ls()</code></pre>
+<pre><code>## [1] &quot;estado1&quot;  &quot;numero_1&quot; &quot;obj1&quot;     &quot;obj2&quot;     &quot;obj3&quot;     &quot;obj4&quot;</code></pre>
+<p><br></p>
+<p>Removendo vários objetos:</p>
+<pre class="r"><code>rm(obj2, obj3, obj4)
+ls()</code></pre>
+<pre><code>## [1] &quot;estado1&quot;  &quot;numero_1&quot; &quot;obj1&quot;</code></pre>
+<p><br></p>
+<p>Removendo todos os objetos:</p>
+<pre class="r"><code>rm(list = ls())
+ls()</code></pre>
+<pre><code>## character(0)</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="principais-tipos-de-dados" class="section level2">
+<h2>Principais Tipos de Dados</h2>
+<hr>
+<div id="numérico-conjunto-dos-reais" class="section level3">
+<h3>Numérico (conjunto dos reais):</h3>
+<p><br></p>
+<pre class="r"><code>n1 &lt;- 5
+n1</code></pre>
+<pre><code>## [1] 5</code></pre>
+<p><br></p>
+<pre class="r"><code>class(n1)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>n2 &lt;- 2.76
+n2</code></pre>
+<pre><code>## [1] 2.76</code></pre>
+<p><br></p>
+<pre class="r"><code>class(n2)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="numérico-conjunto-dos-inteiros" class="section level3">
+<h3>Numérico (conjunto dos inteiros)</h3>
+<p><br></p>
+<pre class="r"><code>n3 &lt;- 5L
+n3</code></pre>
+<pre><code>## [1] 5</code></pre>
+<p><br></p>
+<pre class="r"><code>class(n3)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="texto" class="section level3">
+<h3>Texto:</h3>
+<p><br></p>
+<pre class="r"><code>t1 &lt;- &quot;a&quot;
+t1</code></pre>
+<pre><code>## [1] &quot;a&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>class(t1)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>t2 &lt;- &quot;fundamentos da linguagem R&quot;
+t2</code></pre>
+<pre><code>## [1] &quot;fundamentos da linguagem R&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>class(t2)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="lógico" class="section level3">
+<h3>Lógico:</h3>
+<p><br></p>
+<pre class="r"><code>l1 &lt;- TRUE
+l1</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+<pre class="r"><code>class(l1)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>l2 &lt;- FALSE
+l2</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<p><br></p>
+<pre class="r"><code>class(l2)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>l3 &lt;- T
+l3</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+<pre class="r"><code>class(l3)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>l4 &lt;- F
+l4</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<p><br></p>
+<pre class="r"><code>class(l4)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="data" class="section level3">
+<h3>Data</h3>
+<p><br></p>
+<pre class="r"><code>d1 &lt;- Sys.Date()
+d1</code></pre>
+<pre><code>## [1] &quot;2021-03-19&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>class(d1)</code></pre>
+<pre><code>## [1] &quot;Date&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="data-e-hora" class="section level3">
+<h3>Data e Hora:</h3>
+<p><br></p>
+<pre class="r"><code>d2 &lt;- Sys.time()
+d2</code></pre>
+<pre><code>## [1] &quot;2021-03-19 12:56:43 -03&quot;</code></pre>
+<pre class="r"><code>class(d2)</code></pre>
+<pre><code>## [1] &quot;POSIXct&quot; &quot;POSIXt&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="casos-especiais" class="section level3">
+<h3>Casos especiais</h3>
+<p><br></p>
+<pre class="r"><code>i &lt;- 4 / 0
+i</code></pre>
+<pre><code>## [1] Inf</code></pre>
+<p><br></p>
+<pre class="r"><code>1 + i</code></pre>
+<pre><code>## [1] Inf</code></pre>
+<p><br></p>
+<pre class="r"><code>class(i)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>sq &lt;- sqrt(-1)</code></pre>
+<pre><code>## Warning in sqrt(-1): NaNs produced</code></pre>
+<pre class="r"><code>sq</code></pre>
+<pre><code>## [1] NaN</code></pre>
+<p><br></p>
+<pre class="r"><code>1 + sq</code></pre>
+<pre><code>## [1] NaN</code></pre>
+<p><br></p>
+<pre class="r"><code>class(sq)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>1 + NA</code></pre>
+<pre><code>## [1] NA</code></pre>
+<p><br></p>
+<pre class="r"><code>class(NA)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+</div>
+</div>

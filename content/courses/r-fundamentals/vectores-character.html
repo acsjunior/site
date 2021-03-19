@@ -1,0 +1,235 @@
+---
+date: "2020-04-26"
+title: Vetores de Texto
+type: book
+weight: 5
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="criação" class="section level2">
+<h2>Criação</h2>
+<hr>
+<pre class="r"><code>estados &lt;- c(&quot;Paraná&quot;, &quot;Goiás&quot;, &quot;Ceará&quot;, &quot;Minas Gerais&quot;)
+estados</code></pre>
+<pre><code>## [1] &quot;Paraná&quot;       &quot;Goiás&quot;        &quot;Ceará&quot;        &quot;Minas Gerais&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="classe-e-tipo" class="section level2">
+<h2>Classe e tipo</h2>
+<hr>
+<pre class="r"><code>class(estados)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>typeof(estados)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="teste" class="section level2">
+<h2>Teste</h2>
+<hr>
+<p>É <i>character</i>?</p>
+<pre class="r"><code>is.character(estados)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+</div>
+<div id="conversão" class="section level2">
+<h2>Conversão</h2>
+<hr>
+<p>De <i>numeric</i> para <i>character</i>:</p>
+<pre class="r"><code>num &lt;- c(1,2,3,4,5)
+char &lt;- as.character(num)
+char</code></pre>
+<pre><code>## [1] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; &quot;5&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>class(char)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p><br></p>
+<p>De <i>character</i> para <i>numeric</i> (formato numérico):</p>
+<pre class="r"><code>char &lt;- c(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;)
+num &lt;- as.numeric(char)
+num</code></pre>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<p><br></p>
+<pre class="r"><code>class(num)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+<p>De <i>character</i> para <i>numeric</i> (formato de texto):</p>
+<pre class="r"><code>char &lt;- c(&quot;Dólar&quot;, &quot;Euro&quot;, &quot;Real&quot;)
+num &lt;- as.numeric(char)</code></pre>
+<pre><code>## Warning: NAs introduced by coercion</code></pre>
+<pre class="r"><code>num</code></pre>
+<pre><code>## [1] NA NA NA</code></pre>
+<p><br></p>
+<pre class="r"><code>class(num)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="contagem-de-caracteres" class="section level2">
+<h2>Contagem de caracteres</h2>
+<hr>
+<pre class="r"><code>estados</code></pre>
+<pre><code>## [1] &quot;Paraná&quot;       &quot;Goiás&quot;        &quot;Ceará&quot;        &quot;Minas Gerais&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>num_caract &lt;- nchar(estados)
+num_caract</code></pre>
+<pre><code>## [1]  6  5  5 12</code></pre>
+<p><br></p>
+<pre class="r"><code>class(num_caract)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+<div id="espaços" class="section level3">
+<h3>Espaços</h3>
+<p><br></p>
+<pre class="r"><code>zero_espaco &lt;- &quot;&quot;
+nchar(zero_espaco)</code></pre>
+<pre><code>## [1] 0</code></pre>
+<p><br></p>
+<pre class="r"><code>um_espaco &lt;- &quot; &quot;
+nchar(um_espaco)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p><br></p>
+<pre class="r"><code>dois_espacos &lt;- &quot;  &quot;
+nchar(dois_espacos)</code></pre>
+<pre><code>## [1] 2</code></pre>
+<p><br></p>
+<pre class="r"><code>tres_espacos &lt;- &quot;   &quot;
+nchar(tres_espacos)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="tratamento-de-texto" class="section level2">
+<h2>Tratamento de texto</h2>
+<hr>
+<div id="concatenção" class="section level3">
+<h3>Concatenção</h3>
+<p><br></p>
+<pre class="r"><code>nomes &lt;- c(&quot;Paulo&quot;, &quot;Ana&quot;, &quot;Carla&quot;)
+sobrenomes &lt;- c(&quot;Oliveira&quot;, &quot;Silva&quot;, &quot;Ferreira&quot;)
+nomes_completos &lt;- paste(nomes, sobrenomes, sep = &quot; &quot;)
+nomes_completos</code></pre>
+<pre><code>## [1] &quot;Paulo Oliveira&quot; &quot;Ana Silva&quot;      &quot;Carla Ferreira&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="substituição" class="section level3">
+<h3>Substituição</h3>
+<p><br></p>
+<p>Substituindo “da Inglaterra” por “do Reino Unido”:</p>
+<pre class="r"><code>frases &lt;- c(&quot;Londres é a capital da Inglaterra.&quot;, &quot;Elizabeth é a rainha da Inglaterra.&quot;)
+frases</code></pre>
+<pre><code>## [1] &quot;Londres é a capital da Inglaterra.&quot;  &quot;Elizabeth é a rainha da Inglaterra.&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>gsub(pattern = &quot;da Inglaterra&quot;, replacement = &quot;do Reino Unido&quot;, x = frases)</code></pre>
+<pre><code>## [1] &quot;Londres é a capital do Reino Unido.&quot; 
+## [2] &quot;Elizabeth é a rainha do Reino Unido.&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="transformação" class="section level3">
+<h3>Transformação</h3>
+<p><br></p>
+<p>Transformando para letras maiúsculas:</p>
+<pre class="r"><code>estados &lt;- c(&quot;sp&quot;, &quot;mg&quot;, &quot;ba&quot;, &quot;am&quot;)
+estados</code></pre>
+<pre><code>## [1] &quot;sp&quot; &quot;mg&quot; &quot;ba&quot; &quot;am&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>toupper(estados)</code></pre>
+<pre><code>## [1] &quot;SP&quot; &quot;MG&quot; &quot;BA&quot; &quot;AM&quot;</code></pre>
+<p><br></p>
+<p>Transformando para letras minúsculas:</p>
+<pre class="r"><code>animais &lt;- c(&quot;CARNEIRO&quot;, &quot;Vaca&quot;, &quot;ElEfAnTe&quot;)
+animais</code></pre>
+<pre><code>## [1] &quot;CARNEIRO&quot; &quot;Vaca&quot;     &quot;ElEfAnTe&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>tolower(animais)</code></pre>
+<pre><code>## [1] &quot;carneiro&quot; &quot;vaca&quot;     &quot;elefante&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="aparação" class="section level3">
+<h3>Aparação</h3>
+<p><br></p>
+<p>Aparando os espaços das extremidades:</p>
+<pre class="r"><code>capitais &lt;- c(&quot; Buenos Aires &quot;, &quot; Montevideo &quot;)
+capitais</code></pre>
+<pre><code>## [1] &quot; Buenos Aires &quot; &quot; Montevideo &quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>trimws(capitais)</code></pre>
+<pre><code>## [1] &quot;Buenos Aires&quot; &quot;Montevideo&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="separação" class="section level3">
+<h3>Separação</h3>
+<p><br></p>
+<p>Separando o texto em função do espaço:</p>
+<pre class="r"><code>titulo &lt;- &quot;Fundamentos da Linguagem R&quot;
+titulo</code></pre>
+<pre><code>## [1] &quot;Fundamentos da Linguagem R&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>titulo_sep &lt;- strsplit(x = titulo, split = &quot; &quot;)
+titulo_sep</code></pre>
+<pre><code>## [[1]]
+## [1] &quot;Fundamentos&quot; &quot;da&quot;          &quot;Linguagem&quot;   &quot;R&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>class(titulo_sep)</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="extração" class="section level3">
+<h3>Extração</h3>
+<p><br></p>
+<p>Extraindo os 2 primeiros caracteres:</p>
+<pre class="r"><code>codigos &lt;- c(&quot;01-1234&quot;, &quot;02-4321&quot;, &quot;03-5678&quot;, &quot;04-8765&quot;)
+codigos</code></pre>
+<pre><code>## [1] &quot;01-1234&quot; &quot;02-4321&quot; &quot;03-5678&quot; &quot;04-8765&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>codigos &lt;- substr(x = codigos, start = 1, stop = 2)
+codigos</code></pre>
+<pre><code>## [1] &quot;01&quot; &quot;02&quot; &quot;03&quot; &quot;04&quot;</code></pre>
+<p><br></p>
+<p>Extraindo os 4 últimos caracteres:</p>
+<pre class="r"><code>codigos &lt;- c(&quot;01-1234&quot;, &quot;02-4321&quot;, &quot;03-5678&quot;, &quot;04-8765&quot;)
+codigos &lt;- substr(x = codigos, start = 4, stop = 8)
+codigos</code></pre>
+<pre><code>## [1] &quot;1234&quot; &quot;4321&quot; &quot;5678&quot; &quot;8765&quot;</code></pre>
+<p><br></p>
+<p>Identificando a posição do caracter “/”:</p>
+<pre class="r"><code>codigos &lt;- c(&quot;003/2020&quot;, &quot;1242/2020&quot;, &quot;13579/2020&quot;)
+as.numeric(regexpr(pattern = &quot;/&quot;, text = codigos))</code></pre>
+<pre><code>## [1] 4 5 6</code></pre>
+<p><br></p>
+<p>Extraindo o texto antes do caracter “/”:</p>
+<pre class="r"><code>posicao_barra &lt;- as.numeric(regexpr(pattern = &quot;/&quot;, text = codigos))
+prefixos &lt;- substr(x = codigos, 
+                   start = 1,
+                   stop = posicao_barra - 1)
+prefixos</code></pre>
+<pre><code>## [1] &quot;003&quot;   &quot;1242&quot;  &quot;13579&quot;</code></pre>
+<p><br></p>
+<p>Criando a função <code>esquerda()</code> como a do <b>Excel</b>:</p>
+<pre class="r"><code>esquerda &lt;- function(texto, n) {
+  out &lt;- substr(x = texto, 
+                start = 1, 
+                stop = n)
+  return(out)
+}</code></pre>
+<p><br></p>
+<p>Extraindo os 2 primeiros caracteres utilizando a função <code>esquerda()</code>:</p>
+<pre class="r"><code>codigos &lt;- c(&quot;01-1234&quot;, &quot;02-4321&quot;, &quot;03-5678&quot;, &quot;04-8765&quot;)
+esquerda(texto = codigos, n = 2)</code></pre>
+<pre><code>## [1] &quot;01&quot; &quot;02&quot; &quot;03&quot; &quot;04&quot;</code></pre>
+<p><br></p>
+<p>Criando a função <code>direita()</code> como a do <b>Excel</b>:</p>
+<pre class="r"><code>direita &lt;- function(texto, n) {
+  out &lt;- substr(x = texto, 
+                start = nchar(texto) - n + 1,
+                stop = nchar(texto))
+  return(out)
+}</code></pre>
+<p><br></p>
+<p>Extraindo os 4 últimos caracteres utilizando a função <code>direita()</code>:</p>
+<pre class="r"><code>codigos &lt;- c(&quot;01-1234&quot;, &quot;02-4321&quot;, &quot;03-5678&quot;, &quot;04-8765&quot;)
+direita(texto = codigos, n = 4)</code></pre>
+<pre><code>## [1] &quot;1234&quot; &quot;4321&quot; &quot;5678&quot; &quot;8765&quot;</code></pre>
+</div>
+</div>

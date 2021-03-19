@@ -1,0 +1,347 @@
+---
+date: "2020-04-26"
+title: Vetores de Texto
+type: book
+weight: 5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Criação
+
+<hr>
+
+```{r}
+estados <- c("Paraná", "Goiás", "Ceará", "Minas Gerais")
+estados
+```
+
+<br>
+
+## Classe e tipo
+
+<hr>
+
+```{r}
+class(estados)
+```
+
+<br>
+
+```{r}
+typeof(estados)
+```
+
+<br>
+
+## Teste
+
+<hr>
+
+É <i>character</i>?
+```{r}
+is.character(estados)
+```
+
+<br>
+
+## Conversão
+
+<hr>
+
+De <i>numeric</i> para <i>character</i>:
+```{r}
+num <- c(1,2,3,4,5)
+char <- as.character(num)
+char
+```
+
+<br>
+
+```{r}
+class(char)
+```
+
+<br>
+
+De <i>character</i> para <i>numeric</i> (formato numérico):
+```{r}
+char <- c("1", "2", "3", "4", "5")
+num <- as.numeric(char)
+num
+```
+
+<br>
+
+```{r}
+class(num)
+```
+
+<br>
+
+De <i>character</i> para <i>numeric</i> (formato de texto):
+```{r}
+char <- c("Dólar", "Euro", "Real")
+num <- as.numeric(char)
+num
+```
+
+<br>
+
+```{r}
+class(num)
+```
+
+<br>
+
+## Contagem de caracteres
+
+<hr>
+
+```{r}
+estados
+```
+
+<br>
+
+```{r}
+num_caract <- nchar(estados)
+num_caract
+```
+
+<br>
+
+```{r}
+class(num_caract)
+```
+
+<br>
+
+### Espaços
+
+<br>
+
+```{r}
+zero_espaco <- ""
+nchar(zero_espaco)
+```
+
+<br>
+
+```{r}
+um_espaco <- " "
+nchar(um_espaco)
+```
+
+<br>
+
+```{r}
+dois_espacos <- "  "
+nchar(dois_espacos)
+```
+
+<br>
+
+```{r}
+tres_espacos <- "   "
+nchar(tres_espacos)
+```
+
+<br>
+
+## Tratamento de texto
+
+<hr>
+
+### Concatenção
+
+<br>
+
+```{r}
+nomes <- c("Paulo", "Ana", "Carla")
+sobrenomes <- c("Oliveira", "Silva", "Ferreira")
+nomes_completos <- paste(nomes, sobrenomes, sep = " ")
+nomes_completos
+```
+
+<br>
+
+### Substituição
+
+<br>
+
+Substituindo "da Inglaterra" por "do Reino Unido":
+```{r}
+frases <- c("Londres é a capital da Inglaterra.", "Elizabeth é a rainha da Inglaterra.")
+frases
+```
+
+<br>
+
+```{r}
+gsub(pattern = "da Inglaterra", replacement = "do Reino Unido", x = frases)
+```
+
+<br>
+
+### Transformação
+
+<br>
+
+Transformando para letras maiúsculas:
+```{r}
+estados <- c("sp", "mg", "ba", "am")
+estados
+```
+
+<br>
+
+```{r}
+toupper(estados)
+```
+
+<br>
+
+Transformando para letras minúsculas:
+```{r}
+animais <- c("CARNEIRO", "Vaca", "ElEfAnTe")
+animais
+```
+
+<br>
+
+```{r}
+tolower(animais)
+```
+
+<br>
+
+### Aparação
+
+<br>
+
+Aparando os espaços das extremidades:
+```{r}
+capitais <- c(" Buenos Aires ", " Montevideo ")
+capitais
+```
+
+<br>
+
+```{r}
+trimws(capitais)
+```
+
+<br>
+
+### Separação
+
+<br>
+
+Separando o texto em função do espaço:
+```{r}
+titulo <- "Fundamentos da Linguagem R"
+titulo
+```
+
+<br>
+
+```{r}
+titulo_sep <- strsplit(x = titulo, split = " ")
+titulo_sep
+```
+
+<br>
+
+```{r}
+class(titulo_sep)
+```
+
+<br>
+
+### Extração
+
+<br>
+
+Extraindo os 2 primeiros caracteres:
+```{r}
+codigos <- c("01-1234", "02-4321", "03-5678", "04-8765")
+codigos
+```
+
+<br>
+
+```{r}
+codigos <- substr(x = codigos, start = 1, stop = 2)
+codigos
+```
+
+<br>
+
+Extraindo os 4 últimos caracteres:
+```{r}
+codigos <- c("01-1234", "02-4321", "03-5678", "04-8765")
+codigos <- substr(x = codigos, start = 4, stop = 8)
+codigos
+```
+
+<br>
+
+Identificando a posição do caracter "/":
+```{r}
+codigos <- c("003/2020", "1242/2020", "13579/2020")
+as.numeric(regexpr(pattern = "/", text = codigos))
+```
+
+<br>
+
+Extraindo o texto antes do caracter "/":
+```{r}
+posicao_barra <- as.numeric(regexpr(pattern = "/", text = codigos))
+prefixos <- substr(x = codigos, 
+                   start = 1,
+                   stop = posicao_barra - 1)
+prefixos
+```
+
+<br>
+
+Criando a função <code>esquerda()</code> como a do <b>Excel</b>:
+```{r}
+esquerda <- function(texto, n) {
+  out <- substr(x = texto, 
+                start = 1, 
+                stop = n)
+  return(out)
+}
+```
+
+<br>
+
+Extraindo os 2 primeiros caracteres utilizando a função <code>esquerda()</code>:
+```{r}
+codigos <- c("01-1234", "02-4321", "03-5678", "04-8765")
+esquerda(texto = codigos, n = 2)
+```
+
+<br>
+
+Criando a função <code>direita()</code> como a do <b>Excel</b>:
+```{r}
+direita <- function(texto, n) {
+  out <- substr(x = texto, 
+                start = nchar(texto) - n + 1,
+                stop = nchar(texto))
+  return(out)
+}
+```
+
+<br>
+
+Extraindo os 4 últimos caracteres utilizando a função <code>direita()</code>:
+```{r}
+codigos <- c("01-1234", "02-4321", "03-5678", "04-8765")
+direita(texto = codigos, n = 4)
+```

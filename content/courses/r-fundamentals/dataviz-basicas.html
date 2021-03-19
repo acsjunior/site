@@ -1,0 +1,95 @@
+---
+date: "2020-04-26"
+title: Introdução à Visualização de Dados
+type: book
+weight: 13
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="principais-gráficos" class="section level2">
+<h2>Principais gráficos</h2>
+<p><br></p>
+<pre class="r"><code>data(iris)
+library(ggplot2)</code></pre>
+<p><br></p>
+<div id="dispersão" class="section level3">
+<h3>Dispersão</h3>
+<p><br></p>
+<pre class="r"><code>ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Petal.Length)) +
+  geom_point()</code></pre>
+<p><img src="/courses/r-fundamentals/dataviz-basicas_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><br></p>
+<pre class="r"><code>ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Petal.Length)) +
+  geom_point(color = &quot;blue&quot;, size = 3, alpha = 0.5) +
+  labs(title = &quot;Título do gráfico&quot;, x = &quot;Eixo das abscissas&quot;, y = &quot;Eixo das ordenadas&quot;)</code></pre>
+<p><img src="/courses/r-fundamentals/dataviz-basicas_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><br></p>
+</div>
+<div id="histograma" class="section level3">
+<h3>Histograma</h3>
+<p><br></p>
+<pre class="r"><code>ggplot(data = iris, mapping = aes(x = Sepal.Length)) +
+  geom_histogram()</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/courses/r-fundamentals/dataviz-basicas_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><br></p>
+<pre class="r"><code>ggplot(data = iris, mapping = aes(x = Sepal.Length)) +
+  geom_histogram(bins = 10, fill = &quot;blue&quot;, color = &quot;purple&quot;, alpha = 0.5) +
+  labs(title = &quot;Título do gráfico&quot;, x = &quot;Eixo das abscissas&quot;, y = &quot;Eixo das ordenadas&quot;)</code></pre>
+<p><img src="/courses/r-fundamentals/dataviz-basicas_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><br></p>
+</div>
+<div id="boxplot" class="section level3">
+<h3>Boxplot</h3>
+<p><br></p>
+<pre class="r"><code>ggplot(data = iris, mapping = aes(y = Sepal.Length)) +
+  geom_boxplot()</code></pre>
+<p><img src="/courses/r-fundamentals/dataviz-basicas_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><br></p>
+<pre class="r"><code>ggplot(data = iris, mapping = aes(x = Species, y = Sepal.Length)) +
+  geom_boxplot()</code></pre>
+<p><img src="/courses/r-fundamentals/dataviz-basicas_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><br></p>
+<pre class="r"><code>ggplot(data = iris, mapping = aes(x = Species, y = Sepal.Length)) +
+  geom_boxplot(fill = &quot;blue&quot;, color = &quot;purple&quot;, alpha = 0.5) +
+  labs(title = &quot;Título do gráfico&quot;, x = &quot;Eixo das abscissas&quot;, y = &quot;Eixo das ordenadas&quot;)</code></pre>
+<p><img src="/courses/r-fundamentals/dataviz-basicas_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><br></p>
+</div>
+<div id="barras-e-colunas" class="section level3">
+<h3>Barras e Colunas</h3>
+<p><br></p>
+<pre class="r"><code>ggplot(data = iris, mapping = aes(x = Species)) +
+  geom_bar()</code></pre>
+<p><img src="/courses/r-fundamentals/dataviz-basicas_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><br></p>
+<pre class="r"><code>ggplot(data = iris, mapping = aes(x = Species)) +
+  geom_bar(fill = &quot;blue&quot;, alpha = 0.5)</code></pre>
+<p><img src="/courses/r-fundamentals/dataviz-basicas_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><br></p>
+<pre class="r"><code>ggplot(data = iris, mapping = aes(x = Species, y = Sepal.Length)) +
+  geom_col(fill = &quot;blue&quot;, alpha = 0.5)</code></pre>
+<p><img src="/courses/r-fundamentals/dataviz-basicas_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><br></p>
+<pre class="r"><code>ggplot(data = iris, mapping = aes(x = Species, y = Sepal.Length)) +
+  geom_col(fill = &quot;blue&quot;, alpha = 0.5) +
+  labs(title = &quot;Título do gráfico&quot;, x = &quot;Eixo das abscissas&quot;, y = &quot;Eixo das ordenadas&quot;)</code></pre>
+<p><img src="/courses/r-fundamentals/dataviz-basicas_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><br></p>
+</div>
+<div id="linhas" class="section level3">
+<h3>Linhas</h3>
+<p><br></p>
+<pre class="r"><code>ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_line()</code></pre>
+<p><img src="/courses/r-fundamentals/dataviz-basicas_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><br></p>
+<pre class="r"><code>ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_line(color = &quot;blue&quot;) +
+  geom_point(color = &quot;purple&quot;) +
+  labs(title = &quot;Título do gráfico&quot;, x = &quot;Eixo das abscissas&quot;, y = &quot;Eixo das ordenadas&quot;)</code></pre>
+<p><img src="/courses/r-fundamentals/dataviz-basicas_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+</div>
+</div>

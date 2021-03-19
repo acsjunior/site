@@ -1,0 +1,343 @@
+---
+date: "2020-04-26"
+title: Matrizes
+type: book
+weight: 9
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="criação" class="section level2">
+<h2>Criação</h2>
+<p><br></p>
+<p>Criando uma matriz com 3 linhas e 4 colunas:</p>
+<pre class="r"><code>v1 &lt;- 1:12
+v1</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12</code></pre>
+<p><br></p>
+<pre class="r"><code>m1 &lt;- matrix(v1, nrow = 3)
+m1</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12</code></pre>
+<p><br></p>
+<pre class="r"><code>m2 &lt;- matrix(v1, nrow = 3, byrow = T)
+m2</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    2    3    4
+## [2,]    5    6    7    8
+## [3,]    9   10   11   12</code></pre>
+<p><br></p>
+</div>
+<div id="classe-e-tipo" class="section level2">
+<h2>Classe e tipo</h2>
+<p><br></p>
+<pre class="r"><code>class(m2)</code></pre>
+<pre><code>## [1] &quot;matrix&quot; &quot;array&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>typeof(m2)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="teste" class="section level2">
+<h2>Teste</h2>
+<p><br></p>
+<pre class="r"><code>is.matrix(m2)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+<pre class="r"><code>is.integer(m2)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+</div>
+<div id="conversão" class="section level2">
+<h2>Conversão</h2>
+<p><br></p>
+<p>De matriz do tipo <i>integer</i> para matriz do tipo <i>character</i>:</p>
+<pre class="r"><code>m2 &lt;- matrix(as.character(m2), nrow = 3)
+m2</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,] &quot;1&quot;  &quot;2&quot;  &quot;3&quot;  &quot;4&quot; 
+## [2,] &quot;5&quot;  &quot;6&quot;  &quot;7&quot;  &quot;8&quot; 
+## [3,] &quot;9&quot;  &quot;10&quot; &quot;11&quot; &quot;12&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>typeof(m2)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p><br></p>
+<p>De matriz do tipo <i>character</i> para matriz do tipo <i>numeric</i>:</p>
+<pre class="r"><code>m2 &lt;- matrix(as.numeric(m2), nrow = 3)
+m2</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    2    3    4
+## [2,]    5    6    7    8
+## [3,]    9   10   11   12</code></pre>
+<p><br></p>
+<pre class="r"><code>typeof(m2)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<p><br></p>
+<p>De matriz para um vetor numérico:</p>
+<pre class="r"><code>v2 &lt;- as.numeric(m2)
+v2</code></pre>
+<pre><code>##  [1]  1  5  9  2  6 10  3  7 11  4  8 12</code></pre>
+<p><br></p>
+<pre class="r"><code>v2 &lt;- sort(v2)
+v2</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12</code></pre>
+<p><br></p>
+<pre class="r"><code>class(v2)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p>De matriz para data frame:</p>
+<pre class="r"><code>df &lt;- as.data.frame(v2)
+df</code></pre>
+<pre><code>##    v2
+## 1   1
+## 2   2
+## 3   3
+## 4   4
+## 5   5
+## 6   6
+## 7   7
+## 8   8
+## 9   9
+## 10 10
+## 11 11
+## 12 12</code></pre>
+<p><br></p>
+<pre class="r"><code>class(df)</code></pre>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="nomes" class="section level2">
+<h2>Nomes</h2>
+<p><br></p>
+<pre class="r"><code>paciente1 &lt;- c(1.33, 4.02, 5.24, 2.32)
+paciente2 &lt;- c(1.44, 2.76, 6.08, 3.13)
+m_pacientes &lt;- matrix(c(paciente1, paciente2), nrow=2, byrow = T)
+m_pacientes</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,] 1.33 4.02 5.24 2.32
+## [2,] 1.44 2.76 6.08 3.13</code></pre>
+<p><br></p>
+<div id="colunas" class="section level3">
+<h3>Colunas</h3>
+<p><br></p>
+<pre class="r"><code>colnames(m_pacientes) &lt;- c(&quot;exame_a&quot;, &quot;exame_b&quot;, &quot;exame_c&quot;, &quot;exame_d&quot;)
+m_pacientes</code></pre>
+<pre><code>##      exame_a exame_b exame_c exame_d
+## [1,]    1.33    4.02    5.24    2.32
+## [2,]    1.44    2.76    6.08    3.13</code></pre>
+<p><br></p>
+</div>
+<div id="linhas" class="section level3">
+<h3>Linhas</h3>
+<p><br></p>
+<pre class="r"><code>rownames(m_pacientes) &lt;- c(&quot;paciente1&quot;, &quot;paciente2&quot;)
+m_pacientes</code></pre>
+<pre><code>##           exame_a exame_b exame_c exame_d
+## paciente1    1.33    4.02    5.24    2.32
+## paciente2    1.44    2.76    6.08    3.13</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="matemática" class="section level2">
+<h2>Matemática</h2>
+<hr>
+<div id="operações-básicas" class="section level3">
+<h3>Operações básicas</h3>
+<p><br></p>
+<pre class="r"><code>A &lt;- matrix(1:4, nrow=2, byrow = T)
+A</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    1    2
+## [2,]    3    4</code></pre>
+<p><br></p>
+<pre class="r"><code>B &lt;- matrix(2:5, nrow=2, byrow = T)
+B</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    2    3
+## [2,]    4    5</code></pre>
+<p><br></p>
+<pre class="r"><code>C &lt;- matrix(3:8, nrow=2, byrow = T)
+C</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    3    4    5
+## [2,]    6    7    8</code></pre>
+<p><br></p>
+<pre class="r"><code>D &lt;- matrix(3:8, nrow=3, byrow = T)
+D</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    3    4
+## [2,]    5    6
+## [3,]    7    8</code></pre>
+<p><br></p>
+<div id="soma" class="section level4">
+<h4>Soma</h4>
+<p><br></p>
+<pre class="r"><code>A + 10</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]   11   12
+## [2,]   13   14</code></pre>
+<p><br></p>
+<pre class="r"><code>A + B</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    3    5
+## [2,]    7    9</code></pre>
+<p><br></p>
+<pre class="r"><code>A + C</code></pre>
+<pre><code>## Error in A + C: non-conformable arrays</code></pre>
+<p><br></p>
+<pre class="r"><code>A + D</code></pre>
+<pre><code>## Error in A + D: non-conformable arrays</code></pre>
+<p><br></p>
+</div>
+<div id="multiplicação" class="section level4">
+<h4>Multiplicação</h4>
+<p><br></p>
+<pre class="r"><code>A * 10</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]   10   20
+## [2,]   30   40</code></pre>
+<p><br></p>
+<pre class="r"><code>A * B</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    2    6
+## [2,]   12   20</code></pre>
+<p><br></p>
+<pre class="r"><code>A * C</code></pre>
+<pre><code>## Error in A * C: non-conformable arrays</code></pre>
+<p><br></p>
+<pre class="r"><code>A * D</code></pre>
+<pre><code>## Error in A * D: non-conformable arrays</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="álgebra-linear" class="section level3">
+<h3>Álgebra Linear</h3>
+<p><br></p>
+<p>Multiplicação entre matrizes:</p>
+<pre class="r"><code>A %*% B</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]   10   13
+## [2,]   22   29</code></pre>
+<p><br></p>
+<pre class="r"><code>B %*% A</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]   11   16
+## [2,]   19   28</code></pre>
+<p><br></p>
+<pre class="r"><code>A %*% C</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]   15   18   21
+## [2,]   33   40   47</code></pre>
+<p><br></p>
+<pre class="r"><code>C %*% A</code></pre>
+<pre><code>## Error in C %*% A: non-conformable arguments</code></pre>
+<p><br></p>
+<p>Transposta:</p>
+<pre class="r"><code>t(A)</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    1    3
+## [2,]    2    4</code></pre>
+<p><br></p>
+<p>Inversa:</p>
+<pre class="r"><code>solve(A)</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,] -2.0  1.0
+## [2,]  1.5 -0.5</code></pre>
+<p><br></p>
+<p>Determinante:</p>
+<pre class="r"><code>det(A)</code></pre>
+<pre><code>## [1] -2</code></pre>
+<p><br></p>
+</div>
+<div id="operações-relacionais" class="section level3">
+<h3>Operações relacionais</h3>
+<p><br></p>
+<pre class="r"><code>A &lt;- matrix(c(1,2,3,4), nrow=2)
+A</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    1    3
+## [2,]    2    4</code></pre>
+<p><br></p>
+<pre class="r"><code>B &lt;- matrix(c(1,3,2,4), nrow=2)
+B</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    1    2
+## [2,]    3    4</code></pre>
+<p><br></p>
+<pre class="r"><code>A &gt; B</code></pre>
+<pre><code>##       [,1]  [,2]
+## [1,] FALSE  TRUE
+## [2,] FALSE FALSE</code></pre>
+<p><br></p>
+<pre class="r"><code>A &lt; B</code></pre>
+<pre><code>##       [,1]  [,2]
+## [1,] FALSE FALSE
+## [2,]  TRUE FALSE</code></pre>
+<p><br></p>
+<pre class="r"><code>A &gt;= B</code></pre>
+<pre><code>##       [,1] [,2]
+## [1,]  TRUE TRUE
+## [2,] FALSE TRUE</code></pre>
+<p><br></p>
+<pre class="r"><code>A &lt;= B</code></pre>
+<pre><code>##      [,1]  [,2]
+## [1,] TRUE FALSE
+## [2,] TRUE  TRUE</code></pre>
+<p><br></p>
+<pre class="r"><code>A == B</code></pre>
+<pre><code>##       [,1]  [,2]
+## [1,]  TRUE FALSE
+## [2,] FALSE  TRUE</code></pre>
+<p><br></p>
+<pre class="r"><code>A != B</code></pre>
+<pre><code>##       [,1]  [,2]
+## [1,] FALSE  TRUE
+## [2,]  TRUE FALSE</code></pre>
+<p><br></p>
+</div>
+<div id="outras-operações" class="section level3">
+<h3>Outras operações</h3>
+<p><br></p>
+<pre class="r"><code>colSums(m_pacientes)</code></pre>
+<pre><code>## exame_a exame_b exame_c exame_d 
+##    2.77    6.78   11.32    5.45</code></pre>
+<p><br></p>
+<pre class="r"><code>rowSums(m_pacientes)</code></pre>
+<pre><code>## paciente1 paciente2 
+##     12.91     13.41</code></pre>
+<p><br></p>
+<pre class="r"><code>colMeans(m_pacientes)</code></pre>
+<pre><code>## exame_a exame_b exame_c exame_d 
+##   1.385   3.390   5.660   2.725</code></pre>
+<p><br></p>
+<pre class="r"><code>rowMeans(m_pacientes)</code></pre>
+<pre><code>## paciente1 paciente2 
+##    3.2275    3.3525</code></pre>
+</div>
+</div>
+<div id="indexação" class="section level2">
+<h2>Indexação</h2>
+<p><br></p>
+<p>Selecionando a segunda coluna:</p>
+<pre class="r"><code>C[,2]</code></pre>
+<pre><code>## [1] 4 7</code></pre>
+<p><br></p>
+<pre class="r"><code>class(C[,2])</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+<p>Selecionando a primeira linha:</p>
+<pre class="r"><code>C[1,]</code></pre>
+<pre><code>## [1] 3 4 5</code></pre>
+<p><br></p>
+<pre class="r"><code>class(C[1,])</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+<p>Selecionando a célula da primeira linha e segunda coluna:</p>
+<pre class="r"><code>C[1,2]</code></pre>
+<pre><code>## [1] 4</code></pre>
+<p><br></p>
+<pre class="r"><code>class(C[1,2])</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+</div>

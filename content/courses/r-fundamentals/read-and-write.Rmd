@@ -1,0 +1,241 @@
+---
+date: "2020-04-26"
+title: Leitura e Escrita de Arquivos
+type: book
+weight: 12
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE, warning = FALSE, message = FALSE)
+options(scipen=999)
+```
+
+## Escrita
+
+<br>
+
+```{r}
+head(iris)
+head(mtcars)
+```
+
+<br>
+
+### Arquivos de texto
+
+<br>
+
+```{r}
+write.csv(iris, "iris.csv", row.names = F) ## separado por vírgula
+write.csv2(iris, "iris-pontoevirgula.csv", row.names = F) ## separado por ponto e vírgula
+write.table(iris, "iris.txt", row.names = F) ## separado por espaço
+write.table(iris, "iris.tsv", row.names = F, sep ="\t") ## separado por tabulação
+write.table(iris, "iris-semcabecalho.csv", row.names = F, col.names = F, sep = ",") ## sem cabeçalho
+```
+
+<br>
+
+### Planilhas
+
+<br>
+
+#### Requisitos
+
+* Instalar o Java JDK:<br>
+https://www.oracle.com/technetwork/pt/java/javase/downloads/index.html
+
+* Configurar as variáveis de ambiente:<br>
+<b>JAVA_HOME</b>: diretório do Java JDK<br>
+<b>Path</b>: diretório bin do Java JDK (mover para cima)
+  
+* Instalar os pacotes <b>rJava</b>, <b>openxlsx</b>
+
+<br>
+
+Carregando os pacotes:
+```{r, eval=FALSE}
+library(rJava)
+```
+
+```{r}
+library(openxlsx)
+```
+
+<br>
+
+#### Excel
+
+<br>
+
+Exportando o dataset <b>iris</b> para Excel:
+```{r}
+write.xlsx(iris, "iris.xlsx")
+```
+
+<br>
+
+Exportando os datasets <b>iris</b> e <b>mtcars</b> para um mesmo arquivo Excel:
+```{r}
+planilhas <- list("Dataset Iris" = iris, "Dataset Mtcars" = mtcars)
+write.xlsx(planilhas, "iris-mtcars.xlsx")
+```
+
+<br>
+
+#### OpenDocuments
+
+<br>
+
+Exportando o dataset <b>iris</b> para OpenDocument:
+```{r}
+write.xlsx(iris, "iris.ods")
+```
+
+<br>
+
+Exportando os datasets <b>iris</b> e <b>mtcars</b> para um mesmo arquivo Excel:
+```{r}
+planilhas <- list("Dataset Iris" = iris, "Dataset Mtcars" = mtcars)
+write.xlsx(planilhas, "iris-mtcars.ods")
+```
+
+<br>
+
+## Leitura
+
+<br>
+
+### Arquivos de texto
+
+<br>
+
+Lendo uma base de dados separada por vírgula:
+```{r}
+df_csv <- read.csv("iris.csv")
+head(df_csv)
+```
+
+<br>
+
+Lendo uma base de dados separada por ponto e vírgula:
+```{r}
+df_csv2 <- read.csv2("iris-pontoevirgula.csv")
+head(df_csv2)
+```
+
+<br>
+
+Lendo uma base de dados separada por tabulação:
+```{r}
+df_tab <- read.table("iris.tsv")
+head(df_tab)
+```
+
+<br>
+
+```{r}
+df_tab <- read.table("iris.tsv", header = TRUE)
+head(df_tab)
+```
+
+<br>
+
+Lendo uma base de dados separada por tabulação, utilizando a função ao <code>read.csv()</code>::
+```{r}
+df_tab <- read.csv("iris.tsv")
+head(df_tab)
+```
+
+<br>
+
+```{r}
+df_tab <- read.csv("iris.tsv", sep = "\t")
+head(df_tab)
+```
+
+<br>
+
+Lendo uma base de dados separada por vírgula sem cabeçalho:
+```{r}
+df_csv3 <- read.csv("iris-semcabecalho.csv")
+head(df_csv3)
+```
+
+<br>
+
+```{r}
+df_csv3 <- read.csv("iris-semcabecalho.csv", header = F)
+head(df_csv3)
+```
+
+<br>
+
+```{r}
+df_csv3 <- read.csv("iris-semcabecalho.csv", header = F, 
+                    col.names = c("ComprSep", "LargSep", "ComprPet", "LargPet", "Esp"))
+head(df_csv3)
+```
+
+<br>
+
+```{r}
+df_csv3 <- read.csv("iris-semcabecalho.csv", header = F)
+colnames(df_csv3) <- c("ComprSep", "LargSep", "ComprPet", "LargPet", "Esp")
+head(df_csv3)
+```
+
+<br>
+
+### Planilhas
+
+<br>
+
+#### Excel
+
+<br>
+
+```{r}
+library(openxlsx)
+df_iris <- read.xlsx("iris-mtcars.xlsx") ## por padrão a primeira planilha é lida
+head(df_iris)
+```
+
+<br>
+
+```{r}
+df_mtcars <- read.xlsx("iris-mtcars.xlsx", sheet = 2)
+head(df_mtcars)
+```
+
+<br>
+
+```{r}
+arquivo_completo <- loadWorkbook("iris-mtcars.xlsx")
+```
+
+
+<br>
+
+#### OpenDocument
+
+<br>
+
+```{r}
+df_mtcars <- read.xlsx("iris-mtcars.ods", sheet = 2)
+head(df_mtcars)
+```
+
+<br>
+
+#### Arquivos online
+
+<br>
+
+https://archive.ics.uci.edu/ml/datasets/wine
+
+<br>
+
+```{r}
+df_wine <- read.csv("https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data")
+head(df_wine)
+```

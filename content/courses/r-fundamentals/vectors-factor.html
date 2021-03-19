@@ -1,0 +1,124 @@
+---
+date: "2020-04-26"
+title: Fatores
+type: book
+weight: 7
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="criação" class="section level2">
+<h2>Criação</h2>
+<p><br></p>
+<div id="fator-não-ordenado" class="section level3">
+<h3>Fator não ordenado</h3>
+<p><br></p>
+<pre class="r"><code>ufs &lt;- c(&quot;sp&quot;, &quot;sp&quot;, &quot;pr&quot;, &quot;sp&quot;, &quot;pr&quot;, &quot;pr&quot;, &quot;sp&quot;, &quot;sp&quot;, &quot;pr&quot;, &quot;pr&quot;)
+ufs</code></pre>
+<pre><code>##  [1] &quot;sp&quot; &quot;sp&quot; &quot;pr&quot; &quot;sp&quot; &quot;pr&quot; &quot;pr&quot; &quot;sp&quot; &quot;sp&quot; &quot;pr&quot; &quot;pr&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>uf &lt;- factor(ufs)
+uf</code></pre>
+<pre><code>##  [1] sp sp pr sp pr pr sp sp pr pr
+## Levels: pr sp</code></pre>
+<pre class="r"><code>uf &lt;- factor(ufs, levels = c(&quot;pr&quot;, &quot;sp&quot;), labels = c(&quot;Paraná&quot;, &quot;São Paulo&quot;))
+uf</code></pre>
+<pre><code>##  [1] São Paulo São Paulo Paraná    São Paulo Paraná    Paraná    São Paulo
+##  [8] São Paulo Paraná    Paraná   
+## Levels: Paraná São Paulo</code></pre>
+<p><br></p>
+</div>
+<div id="fator-ordenado" class="section level3">
+<h3>Fator ordenado</h3>
+<p><br></p>
+<pre class="r"><code>tamanho &lt;- c(&quot;p&quot;, &quot;m&quot;, &quot;m&quot;, &quot;p&quot;, &quot;g&quot;, &quot;m&quot;, &quot;g&quot;, &quot;p&quot;, &quot;g&quot;, &quot;m&quot;)
+tamanho</code></pre>
+<pre><code>##  [1] &quot;p&quot; &quot;m&quot; &quot;m&quot; &quot;p&quot; &quot;g&quot; &quot;m&quot; &quot;g&quot; &quot;p&quot; &quot;g&quot; &quot;m&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>tamanho &lt;- factor(tamanho, levels=c(&quot;p&quot;, &quot;m&quot;, &quot;g&quot;), ordered = T)
+tamanho</code></pre>
+<pre><code>##  [1] p m m p g m g p g m
+## Levels: p &lt; m &lt; g</code></pre>
+<p><br></p>
+<pre class="r"><code>tamanho &lt;- factor(tamanho, levels=c(&quot;p&quot;, &quot;m&quot;, &quot;g&quot;), labels = c(&quot;pequeno&quot;, &quot;médio&quot;, &quot;grande&quot;), ordered = T)
+tamanho</code></pre>
+<pre><code>##  [1] pequeno médio   médio   pequeno grande  médio   grande  pequeno grande 
+## [10] médio  
+## Levels: pequeno &lt; médio &lt; grande</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="classe-e-tipo" class="section level2">
+<h2>Classe e tipo</h2>
+<p><br></p>
+<pre class="r"><code>class(uf)</code></pre>
+<pre><code>## [1] &quot;factor&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>class(tamanho)</code></pre>
+<pre><code>## [1] &quot;ordered&quot; &quot;factor&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>typeof(uf)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>typeof(tamanho)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="teste" class="section level2">
+<h2>Teste</h2>
+<pre class="r"><code>is.factor(tamanho)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+<pre class="r"><code>is.vector(tamanho)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<p><br></p>
+</div>
+<div id="conversão" class="section level2">
+<h2>Conversão</h2>
+<p><br></p>
+<p>Conversão para <i>numeric</i>:</p>
+<pre class="r"><code>as.numeric(tamanho)</code></pre>
+<pre><code>##  [1] 1 2 2 1 3 2 3 1 3 2</code></pre>
+<p><br></p>
+<p>Conversão para <i>character</i>:</p>
+<pre class="r"><code>as.character(tamanho)</code></pre>
+<pre><code>##  [1] &quot;pequeno&quot; &quot;médio&quot;   &quot;médio&quot;   &quot;pequeno&quot; &quot;grande&quot;  &quot;médio&quot;   &quot;grande&quot; 
+##  [8] &quot;pequeno&quot; &quot;grande&quot;  &quot;médio&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="manipilação" class="section level2">
+<h2>Manipilação</h2>
+<p><br></p>
+<p>Obtendo os níveis:</p>
+<pre class="r"><code>levels(uf)</code></pre>
+<pre><code>## [1] &quot;Paraná&quot;    &quot;São Paulo&quot;</code></pre>
+<p><br></p>
+<p>Alterando os níveis:</p>
+<pre class="r"><code>levels(uf) &lt;- c(&quot;PR&quot;, &quot;SP&quot;)
+uf</code></pre>
+<pre><code>##  [1] SP SP PR SP PR PR SP SP PR PR
+## Levels: PR SP</code></pre>
+<p><br></p>
+<p>Alterando a ordem dos níveis (SP primeiro):</p>
+<pre class="r"><code>uf &lt;- relevel(uf, &quot;SP&quot;)
+uf</code></pre>
+<pre><code>##  [1] SP SP PR SP PR PR SP SP PR PR
+## Levels: SP PR</code></pre>
+<p><br></p>
+<p>Obtendo a quantidade de níveis:</p>
+<pre class="r"><code>nlevels(uf)</code></pre>
+<pre><code>## [1] 2</code></pre>
+<p><br></p>
+<p>Obtendo os valores mínimo e máximo:</p>
+<pre class="r"><code>min(uf)</code></pre>
+<pre><code>## Error in Summary.factor(structure(c(1L, 1L, 2L, 1L, 2L, 2L, 1L, 1L, 2L, : &#39;min&#39; not meaningful for factors</code></pre>
+<p><br></p>
+<pre class="r"><code>min(tamanho)</code></pre>
+<pre><code>## [1] pequeno
+## Levels: pequeno &lt; médio &lt; grande</code></pre>
+<p><br></p>
+<pre class="r"><code>max(tamanho)</code></pre>
+<pre><code>## [1] grande
+## Levels: pequeno &lt; médio &lt; grande</code></pre>
+</div>

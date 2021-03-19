@@ -1,0 +1,171 @@
+---
+date: "2020-04-26"
+title: Outras Funcionalidades dos Vetores
+type: book
+weight: 8
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
+```
+
+## Inclusão e remoção:
+
+```{r}
+uf <- c("TO", "MG", "AM", "PE")
+uf
+```
+
+<br>
+
+Incluindo o PR no final do vetor:
+```{r}
+uf <- append(uf, "PR")
+uf
+```
+
+<br>
+
+Substituindo o elemento da posição 2:
+```{r}
+uf[2] <- "CE"
+uf
+```
+
+<br>
+
+Removendo o elemento da posição 2:
+```{r}
+uf <- uf[-4]
+uf
+```
+
+<br>
+
+## Quantidade de elementos
+
+<br>
+
+```{r}
+length(uf)
+```
+
+<br>
+
+## Ordem dos elementos
+
+<br>
+
+Organizando os elementos em ordem crescente:
+```{r}
+sort(uf)
+```
+
+<br>
+
+Organizando os elementos em ordem decrescente:
+```{r}
+sort(uf, decreasing = TRUE)
+```
+
+<br>
+
+Exibindo os elementos em ordem reversa:
+```{r}
+rev(uf)
+```
+
+<br>
+
+Obtendo o terceiro UF (considerando o alfabeto):
+```{r}
+i <- order(uf)
+i
+```
+
+<br>
+
+```{r}
+uf[i[3]]
+```
+
+<br>
+
+## Valores únicos
+
+<br>
+
+```{r}
+x <- c("a", "b", "a", "c", "b", "c", "b", "a", "c", "b")
+unique(x)
+```
+
+<br>
+
+## Valores NA (missing)
+
+<br>
+
+Testando se os valores são NA:
+```{r}
+x <- c(1, 2, NA, 3, 4, 5, NA)
+is.na(x)
+```
+
+<br>
+
+Verificando se há ao menos um valor NA:
+```{r}
+any(is.na(x))
+```
+
+<br>
+
+## Repetindo valores
+
+<br>
+
+Repetindo a letra "a" 5 vezes:
+```{r}
+rep("a", 5)
+```
+
+<br>
+
+Criando um vetor com 5 elementos "a" e 5 elementos "b":
+```{r}
+v <- c(rep("a", 5), rep("b", 5))
+v
+```
+
+<br>
+
+Embaralhando os elementos:
+```{r}
+v <- sample(v)
+v
+```
+
+<br>
+
+## Nomes
+
+<br>
+
+```{r}
+MGLU3 <- c(59.7, 60.5, 62.9, 63.7, 62.2)
+MGLU3
+```
+
+<br>
+
+```{r}
+names(MGLU3) <- c("SEG", "TER", "QUA", "QUI", "SEX")
+MGLU3
+```
+
+<br>
+
+```{r}
+MGLU3["QUA"]
+```

@@ -1,0 +1,288 @@
+---
+date: "2020-04-26"
+title: Introdução à Lógica de Programação
+type: book
+weight: 14
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
+options(scipen=999)
+```
+
+## Estruturas de Repetição
+
+<br>
+
+```{r}
+data(mtcars)
+df <- mtcars
+```
+
+<br>
+
+### Instrução `for`:
+
+<br>
+
+```{r}
+for(i in 1:5) {
+  mensagem <- paste("Esta é a iteração número", i)
+  print(mensagem)
+}
+```
+
+<br>
+
+```{r}
+for(i in 1:nrow(df)) {
+  veiculo <- rownames(df)[i]
+  n_cilindros <- df$cyl[i]
+  mensagem <- paste("O veículo", veiculo, "possui", n_cilindros, "cilindros")
+  print(mensagem)
+}
+```
+
+<br>
+
+### Instrução `while`:
+
+<br>
+
+```{r}
+i <- 1
+while(i <= 5) {
+  mensagem <- paste("Esta é a iteração número", i)
+  print(mensagem)
+  i <- i + 1
+}
+```
+
+<br>
+
+```{r}
+i <- 1
+while(i <= nrow(df)) {
+  veiculo <- rownames(df)[i]
+  n_cilindros <- df$cyl[i]
+  mensagem <- paste("O veículo", veiculo, "possui", n_cilindros, "cilindros")
+  print(mensagem)
+  i <- i + 1
+}
+```
+
+<br>
+
+## Estruturas Condicionais
+
+<br>
+
+```{r}
+data(mtcars)
+df <- mtcars
+```
+
+<br>
+
+### Instrução `if`:
+
+<br>
+
+```{r}
+cilindros <- 4
+
+if(cilindros > 4) {
+  mensagem <- "Mais de 4 cilindros"
+} else {
+  mensagem <- "Até 4 cilindros"
+}
+
+print(mensagem)
+```
+
+<br>
+
+```{r}
+classificador_veiculo <- function(cilindros) {
+  if(cilindros > 4) {
+    mensagem <- "Mais de 4 cilindros"
+  } else {
+    mensagem <- "Até 4 cilindros"
+  }
+  
+  return(mensagem)
+}
+```
+
+<br>
+
+```{r}
+classificador_veiculo(2)
+```
+
+```{r}
+classificador_veiculo(6)
+```
+
+<br>
+
+```{r}
+cilindros <- 4
+carburadores <- 2
+
+if(cilindros <= 4 & carburadores <= 2) {
+  mensagem <- "Até 4 cilindros e até 2 carburadores"
+} else if(cilindros > 4 & carburadores <= 2) {
+  mensagem <- "Acima de 4 cilindros e até 2 carburadores"
+} else if(cilindros <= 4 & carburadores > 2) {
+  mensagem <- "Até 4 cilindros e acima de 2 carburadores"
+} else {
+  mensagem <- "Acima de 4 cilindros e acima de 2 carburadores"
+}
+
+print(mensagem)
+```
+
+<br>
+
+```{r}
+classificador_veiculo_2 <- function(cilindros, carburadores) {
+  if(cilindros <= 4 & carburadores <= 2) {
+    mensagem <- "Até 4 cilindros e até 2 carburadores"
+  } else if(cilindros > 4 & carburadores <= 2) {
+    mensagem <- "Acima de 4 cilindros e até 2 carburadores"
+  } else if(cilindros <= 4 & carburadores > 2) {
+    mensagem <- "Até 4 cilindros e acima de 2 carburadores"
+  } else {
+    mensagem <- "Acima de 4 cilindros e acima de 2 carburadores"
+  }
+  
+  return(mensagem)
+}
+```
+
+<br>
+
+```{r}
+classificador_veiculo_2(2,2)
+```
+
+```{r}
+classificador_veiculo_2(6,2)
+```
+
+```{r}
+classificador_veiculo_2(2,6)
+```
+
+```{r}
+classificador_veiculo_2(6,6)
+```
+
+<br>
+
+## Combinando estruturas de repetição e condicionais
+
+<br>
+
+```{r}
+df$classificacao_veiculo <- NA
+
+for(i in 1:nrow(df)) {
+  if(df$cyl[i] <= 4 & df$carb[i] <= 2) {
+    classificacao <- "Até 4 cilindros e até 2 carburadores"
+  } else if(df$cyl[i] > 4 & df$carb[i] <= 2) {
+    classificacao <- "Acima de 4 cilindros e até 2 carburadores"
+  } else if(df$cyl[i] <= 4 & df$carb[i] > 2) {
+    classificacao <- "Até 4 cilindros e acima de 2 carburadores"
+  } else {
+    classificacao <- "Acima de 4 cilindros e acima de 2 carburadores"
+  }
+  df$classificacao_veiculo[i] <- classificacao
+}
+
+table(df$classificacao_veiculo)
+```
+
+<br>
+
+```{r}
+df$score <- NA
+
+for(i in 1:nrow(df)) {
+  if(df$hp[i] > 150) {
+    coeficiente <- 1
+  } else {
+    coeficiente <- 2
+  }
+  score <- df$mpg[i] * coeficiente
+  df$score[i] <- score
+}
+
+head(df)
+```
+
+<br>
+
+```{r}
+calcula_score <- function(dataframe, col_score, var_referencia, valor_referencia, coef_1, coef_2, var_calculo) {
+  
+  dataframe[col_score] <- NA
+  
+  for(i in 1:nrow(dataframe)) {
+    if(dataframe[i, var_referencia] > valor_referencia) {
+      coeficiente <- coef_1
+    } else {
+      coeficiente <- coef_2
+    }
+    score <- dataframe[i, var_calculo] * coeficiente
+    dataframe[i, col_score] <- score
+  }
+  
+  return(dataframe)
+}
+```
+
+<br>
+
+```{r}
+df_2 <- calcula_score(dataframe = df, 
+                      col_score = "score2", 
+                      var_referencia = "hp",
+                      valor_referencia = 150,
+                      coef_1 = 1, 
+                      coef_2 = 2, 
+                      var_calculo = "mpg")
+
+head(df_2)
+```
+
+<br>
+
+## Outras funções
+
+<br>
+
+### Função `ifelse()`
+
+```{r}
+df$class_cyl <- ifelse(df$cyl > 4, 
+                       "acima de 4", 
+                       "4 ou menos")
+table(df$class_cyl)
+```
+
+<br>
+
+```{r}
+df$class_hp <- ifelse(df$hp <= 150, 
+                      "até 150",
+                      ifelse(df$hp < 250, "entre 151 e 250", "acima de 250"))
+table(df$class_hp)
+```
+
+<br>
+
+<br>
+
+### Função `switch()`

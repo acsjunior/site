@@ -1,0 +1,119 @@
+---
+date: "2020-04-26"
+title: Introdução a Vetores
+type: book
+weight: 3
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="criação" class="section level2">
+<h2>Criação</h2>
+<p><br></p>
+<div id="função-c" class="section level3">
+<h3>Função <code>c()</code></h3>
+<p><br></p>
+<p>Vetor numérico real:</p>
+<pre class="r"><code>reais &lt;- c(1, 2, 3.5)
+reais</code></pre>
+<pre><code>## [1] 1.0 2.0 3.5</code></pre>
+<p><br></p>
+<pre class="r"><code>class(reais)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+<p>Vetor numérico inteiro:</p>
+<pre class="r"><code>inteiros &lt;- c(1L, 2L, 3L)
+inteiros</code></pre>
+<pre><code>## [1] 1 2 3</code></pre>
+<p><br></p>
+<pre class="r"><code>class(inteiros)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+<p>Vetor de texto:</p>
+<pre class="r"><code>estados &lt;- c(&quot;São Paulo&quot;, &quot;Rio Grande do Norte&quot;, &quot;Minas Gerais&quot;, &quot;Mato Grosso do Sul&quot;)
+estados</code></pre>
+<pre><code>## [1] &quot;São Paulo&quot;           &quot;Rio Grande do Norte&quot; &quot;Minas Gerais&quot;       
+## [4] &quot;Mato Grosso do Sul&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>class(estados)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p><br></p>
+<p>Vetor lógico:</p>
+<pre class="r"><code>logicos &lt;- c(TRUE, TRUE, FALSE, T, F, F)
+logicos</code></pre>
+<pre><code>## [1]  TRUE  TRUE FALSE  TRUE FALSE FALSE</code></pre>
+<p><br></p>
+<pre class="r"><code>class(logicos)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="operador" class="section level3">
+<h3>Operador <code>:</code></h3>
+<p><br></p>
+<p>Criando uma sequência de 1 a 10:</p>
+<pre class="r"><code>sequencia_1 &lt;- 1:10
+sequencia_1</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<p><br></p>
+<pre class="r"><code>class(sequencia_1)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="função-seq" class="section level3">
+<h3>Função <code>seq()</code></h3>
+<p><br></p>
+<p>Criando uma sequência de 1 a 10:</p>
+<pre class="r"><code>sequencia_2 &lt;- seq(1, 10, by = 1)
+sequencia_2</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<p><br></p>
+<pre class="r"><code>class(sequencia_2)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+<p>Criando uma sequência de 5 a 50, de 5 em 5:</p>
+<pre class="r"><code>sequencia_3 &lt;- seq(5, 50, by = 5)
+sequencia_3</code></pre>
+<pre><code>##  [1]  5 10 15 20 25 30 35 40 45 50</code></pre>
+<p><br></p>
+<pre class="r"><code>class(sequencia_3)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="teste" class="section level2">
+<h2>Teste</h2>
+<hr>
+<p>É vetor?</p>
+<pre class="r"><code>continente &lt;- &quot;América do Sul&quot;
+is.vector(continente)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+<pre class="r"><code>idades &lt;- c(28, 31, 17)
+is.vector(idades)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+</div>
+<div id="nomes" class="section level2">
+<h2>Nomes</h2>
+<p><br></p>
+<pre class="r"><code>notas &lt;- c(9.8, 7.4, 6, 10)
+notas</code></pre>
+<pre><code>## [1]  9.8  7.4  6.0 10.0</code></pre>
+<p><br></p>
+<pre class="r"><code>names(notas) &lt;- c(&quot;Matemática&quot;, &quot;Português&quot;, &quot;Geografia&quot;, &quot;História&quot;)
+notas</code></pre>
+<pre><code>## Matemática  Português  Geografia   História 
+##        9.8        7.4        6.0       10.0</code></pre>
+<p><br></p>
+</div>
+<div id="contagem-de-elementos" class="section level2">
+<h2>Contagem de Elementos</h2>
+<pre class="r"><code>continente &lt;- &quot;América do Sul&quot;
+length(continente)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p><br></p>
+<pre class="r"><code>disciplinas &lt;- c(&quot;Matemática&quot;, &quot;Português&quot;, &quot;Geografia&quot;, &quot;História&quot;)
+length(disciplinas)</code></pre>
+<pre><code>## [1] 4</code></pre>
+</div>

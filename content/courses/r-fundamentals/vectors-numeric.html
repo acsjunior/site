@@ -1,0 +1,175 @@
+---
+date: "2020-04-26"
+title: Vetores Numéricos
+type: book
+weight: 4
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="criação" class="section level2">
+<h2>Criação</h2>
+<hr>
+<pre class="r"><code>reais &lt;- c(1, 2, 3.5, 4.9, 5.1, 6)
+reais</code></pre>
+<pre><code>## [1] 1.0 2.0 3.5 4.9 5.1 6.0</code></pre>
+<p><br></p>
+<pre class="r"><code>inteiros &lt;- 1:6
+inteiros</code></pre>
+<pre><code>## [1] 1 2 3 4 5 6</code></pre>
+<p><br></p>
+</div>
+<div id="classe-e-tipo" class="section level2">
+<h2>Classe e tipo</h2>
+<hr>
+<pre class="r"><code>class(reais)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>class(inteiros)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>typeof(reais)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>typeof(inteiros)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="teste" class="section level2">
+<h2>Teste</h2>
+<hr>
+<p>É numérico?</p>
+<pre class="r"><code>is.numeric(reais)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+<pre class="r"><code>is.numeric(inteiros)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+<p>É inteiro?</p>
+<pre class="r"><code>is.integer(reais)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<p><br></p>
+<pre class="r"><code>is.integer(inteiros)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+</div>
+<div id="conversão" class="section level2">
+<h2>Conversão</h2>
+<hr>
+<p>De <i>numeric</i> para <i>integer</i>:</p>
+<pre class="r"><code>int &lt;- as.integer(reais)
+int</code></pre>
+<pre><code>## [1] 1 2 3 4 5 6</code></pre>
+<p><br></p>
+<pre class="r"><code>class(int)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p><br></p>
+<p>De <i>integer</i> para <i>numeric</i>:</p>
+<pre class="r"><code>num &lt;- as.numeric(inteiros)
+num</code></pre>
+<pre><code>## [1] 1 2 3 4 5 6</code></pre>
+<p><br></p>
+<pre class="r"><code>class(num)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="matemática-e-estatística" class="section level2">
+<h2>Matemática e estatística</h2>
+<hr>
+<div id="operações-básicas" class="section level3">
+<h3>Operações básicas</h3>
+<p><br></p>
+<p>Entre vetores com o mesmo número de elementos:</p>
+<pre class="r"><code>v1 &lt;- c(1, 2, 3, 4)
+v2 &lt;- c(2, 3, 4, 5)
+v1 + v2</code></pre>
+<pre><code>## [1] 3 5 7 9</code></pre>
+<p><br></p>
+<pre class="r"><code>v1 * v2</code></pre>
+<pre><code>## [1]  2  6 12 20</code></pre>
+<p><br></p>
+<p>Entre vetores com número diferente de elementos (múltiplos):</p>
+<pre class="r"><code>v1 &lt;- c(1, 2, 3, 4)
+v2 &lt;- c(2, 3)
+v1 + v2</code></pre>
+<pre><code>## [1] 3 5 5 7</code></pre>
+<p><br></p>
+<p>Entre vetores com número diferente de elementos (não múltiplos):</p>
+<pre class="r"><code>v1 &lt;- c(1, 2, 3, 4)
+v2 &lt;- c(2, 3, 4)
+v1 * v2</code></pre>
+<pre><code>## Warning in v1 * v2: longer object length is not a multiple of shorter object
+## length</code></pre>
+<pre><code>## [1]  2  6 12  8</code></pre>
+<p><br></p>
+<p>Somatório:</p>
+<pre class="r"><code>sum(v1)</code></pre>
+<pre><code>## [1] 10</code></pre>
+<p><br></p>
+<p>Produto:</p>
+<pre class="r"><code>prod(v1)</code></pre>
+<pre><code>## [1] 24</code></pre>
+<p><br></p>
+</div>
+<div id="álgebra-linear" class="section level3">
+<h3>Álgebra linear</h3>
+<p><br></p>
+<p>Multiplicação por escalar (<span class="math inline">\(2v\)</span>):</p>
+<pre class="r"><code>v &lt;- c(2, 3, 4)
+2 * v</code></pre>
+<pre><code>## [1] 4 6 8</code></pre>
+<p><br></p>
+<p>Produto interno (<span class="math inline">\(v \bullet u\)</span>):</p>
+<pre class="r"><code>v &lt;- c(2, 3, 4)
+u &lt;- c(1, 2, 3)
+v %*% u</code></pre>
+<pre><code>##      [,1]
+## [1,]   20</code></pre>
+<p><br></p>
+<pre class="r"><code>class(v %*% u)</code></pre>
+<pre><code>## [1] &quot;matrix&quot; &quot;array&quot;</code></pre>
+<p><br></p>
+<p>Produto vetorial (<span class="math inline">\(v \times u\)</span>):</p>
+<pre class="r"><code>v %o% u</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    2    4    6
+## [2,]    3    6    9
+## [3,]    4    8   12</code></pre>
+<p><br></p>
+<pre class="r"><code>class(v %o% u)</code></pre>
+<pre><code>## [1] &quot;matrix&quot; &quot;array&quot;</code></pre>
+<p><br></p>
+<p>Norma (<span class="math inline">\(\lVert v \rVert\)</span>)</p>
+<pre class="r"><code>sqrt(sum(v^2))</code></pre>
+<pre><code>## [1] 5.385165</code></pre>
+<p><br></p>
+</div>
+<div id="estatística-básica" class="section level3">
+<h3>Estatística básica</h3>
+<p>Média:</p>
+<pre class="r"><code>v &lt;- c(1,2,2,3,4,4,4,5,6,6)
+mean(v)</code></pre>
+<pre><code>## [1] 3.7</code></pre>
+<p><br></p>
+<p>Mediana:</p>
+<pre class="r"><code>median(v)</code></pre>
+<pre><code>## [1] 4</code></pre>
+<p><br></p>
+<p>Mínimo:</p>
+<pre class="r"><code>min(v)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p><br></p>
+<p>Máximo:</p>
+<pre class="r"><code>max(v)</code></pre>
+<pre><code>## [1] 6</code></pre>
+<p><br></p>
+<p>Variância</p>
+<pre class="r"><code>var(v)</code></pre>
+<pre><code>## [1] 2.9</code></pre>
+<p><br></p>
+<p>Desvio padrão:</p>
+<pre class="r"><code>sd(v)</code></pre>
+<pre><code>## [1] 1.702939</code></pre>
+</div>
+</div>

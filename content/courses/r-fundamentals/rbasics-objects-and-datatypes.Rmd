@@ -1,0 +1,346 @@
+---
+date: "2020-04-26"
+title: Objetos e Principais Tipos de Dados
+type: book
+weight: 2
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
+```
+
+## Objetos
+
+<hr>
+
+Regras para criar os nomes dos objetos:
+
+  * Não pode iniciar com número;
+  * Não pode iniciar com símbolos, como ^, !, $, @, +, -, /, ou *.
+  
+Principais objetos do R:
+
+  * Vetores
+  * Matrizes
+  * Listas
+  * Data frames
+  * Funções
+  
+<br>
+
+Atribuindo o valor <i>papagaio</i> ao objeto <b>animal</b>:
+```{r}
+animal <- "papagaio"
+```
+
+<br>
+
+Imprimindo <b>animal</b>:
+```{r}
+animal
+print(animal)
+```
+
+
+<br>
+
+Atribuindo o valor <i>Rio Grande do Norte</i> ao objeto <b>1estado</b>:
+```{r}
+1estado <- "Rio Grande do Norte"
+```
+
+<br>
+
+Atribuindo o valor <i>Rio Grande do Norte</i> ao objeto <b>estado1</b>:
+```{r}
+estado1 <- "Rio Grande do Norte"
+```
+
+<br>
+
+Imprimindo <b>estado1</b>:
+```{r}
+estado1
+```
+
+<br>
+
+Atribuindo o valor $2$ ao objeto <b>numero_1</b>:
+```{r}
+numero_1 <- 2
+```
+
+<br>
+
+Atribuindo o valor $4$ ao mesmo objeto <b>numero_1</b>:
+```{r}
+numero_1 <- 4
+```
+
+<br>
+
+Imprimindo <b>numero_1</b>:
+```{r}
+numero_1
+```
+
+<br>
+
+### Gerenciando objetos
+
+<br>
+
+Listando os objetos criados:
+```{r}
+obj1 <- 1
+obj2 <- 2
+obj3 <- 3
+obj4 <- 4
+ls()
+```
+
+<br>
+
+Removendo um objeto:
+```{r}
+rm(animal)
+ls()
+```
+
+<br>
+
+Removendo vários objetos:
+```{r}
+rm(obj2, obj3, obj4)
+ls()
+```
+
+<br>
+
+Removendo todos os objetos:
+```{r}
+rm(list = ls())
+ls()
+```
+
+<br>
+
+## Principais Tipos de Dados
+
+<hr>
+
+### Numérico (conjunto dos reais):
+
+<br>
+
+```{r}
+n1 <- 5
+n1
+```
+
+<br>
+
+```{r}
+class(n1)
+```
+
+<br>
+
+```{r}
+n2 <- 2.76
+n2
+```
+
+<br>
+
+```{r}
+class(n2)
+```
+
+<br>
+
+### Numérico (conjunto dos inteiros)
+
+<br>
+
+
+```{r}
+n3 <- 5L
+n3
+```
+
+<br>
+
+```{r}
+class(n3)
+```
+
+<br>
+
+### Texto:
+
+<br>
+
+```{r}
+t1 <- "a"
+t1
+```
+
+<br>
+
+```{r}
+class(t1)
+```
+
+<br>
+
+```{r}
+t2 <- "fundamentos da linguagem R"
+t2
+```
+
+<br>
+
+```{r}
+class(t2)
+```
+
+<br>
+
+### Lógico:
+
+<br>
+
+
+```{r}
+l1 <- TRUE
+l1
+```
+
+<br>
+
+```{r}
+class(l1)
+```
+
+<br>
+
+```{r}
+l2 <- FALSE
+l2
+```
+
+<br>
+
+```{r}
+class(l2)
+```
+
+<br>
+
+```{r}
+l3 <- T
+l3
+```
+
+<br>
+
+```{r}
+class(l3)
+```
+
+<br>
+
+```{r}
+l4 <- F
+l4
+```
+
+<br>
+
+```{r}
+class(l4)
+```
+
+<br>
+
+### Data
+
+<br>
+
+
+```{r}
+d1 <- Sys.Date()
+d1
+```
+
+<br>
+
+```{r}
+class(d1)
+```
+
+<br>
+
+### Data e Hora:
+
+<br>
+
+```{r}
+d2 <- Sys.time()
+d2
+class(d2)
+```
+
+<br>
+
+### Casos especiais
+
+<br>
+
+```{r}
+i <- 4 / 0
+i
+```
+
+<br>
+
+```{r}
+1 + i
+```
+
+<br>
+
+```{r}
+class(i)
+```
+
+<br>
+
+```{r}
+sq <- sqrt(-1)
+sq
+```
+
+<br>
+
+```{r}
+1 + sq
+```
+
+<br>
+
+```{r}
+class(sq)
+```
+
+<br>
+
+```{r}
+1 + NA
+```
+
+<br>
+
+```{r}
+class(NA)
+```

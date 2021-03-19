@@ -1,0 +1,147 @@
+---
+date: "2020-04-26"
+title: Vetores Lógicos
+type: book
+weight: 6
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="criação" class="section level2">
+<h2>Criação</h2>
+<hr>
+<pre class="r"><code>logicos &lt;- c(TRUE, TRUE, TRUE, FALSE, FALSE, TRUE)
+logicos</code></pre>
+<pre><code>## [1]  TRUE  TRUE  TRUE FALSE FALSE  TRUE</code></pre>
+<p><br></p>
+<pre class="r"><code>logicos &lt;- c(T, T, T, F, F, T)
+logicos</code></pre>
+<pre><code>## [1]  TRUE  TRUE  TRUE FALSE FALSE  TRUE</code></pre>
+</div>
+<div id="classe-e-tipo" class="section level2">
+<h2>Classe e tipo</h2>
+<hr>
+<pre class="r"><code>class(logicos)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>typeof(logicos)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="teste" class="section level2">
+<h2>Teste</h2>
+<hr>
+<p>É lógico?</p>
+<pre class="r"><code>is.logical(logicos)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><br></p>
+</div>
+<div id="conversão" class="section level2">
+<h2>Conversão</h2>
+<hr>
+<p>De <i>logical</i> para <i>numeric</i>:</p>
+<pre class="r"><code>num &lt;- as.numeric(logicos)
+num</code></pre>
+<pre><code>## [1] 1 1 1 0 0 1</code></pre>
+<p><br></p>
+<pre class="r"><code>class(num)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p><br></p>
+<p>De <i>numeric</i> para <i>logical</i>:</p>
+<pre class="r"><code>num &lt;- c(0,1,2,3,4,5)
+logi &lt;- as.logical(num)
+logi</code></pre>
+<pre><code>## [1] FALSE  TRUE  TRUE  TRUE  TRUE  TRUE</code></pre>
+<p><br></p>
+<pre class="r"><code>class(logi)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p><br></p>
+<p>De <i>logical</i> para <i>character</i>:</p>
+<pre class="r"><code>char &lt;- as.character(logicos)
+char</code></pre>
+<pre><code>## [1] &quot;TRUE&quot;  &quot;TRUE&quot;  &quot;TRUE&quot;  &quot;FALSE&quot; &quot;FALSE&quot; &quot;TRUE&quot;</code></pre>
+<p><br></p>
+<pre class="r"><code>class(char)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p><br></p>
+<p>De <i>character</i> para <i>lógico</i> (formato lógico):</p>
+<pre class="r"><code>char &lt;- c(&quot;TRUE&quot;, &quot;TRUE&quot;, &quot;FALSE&quot;, &quot;TRUE&quot;)
+logi &lt;- as.logical(char)
+logi</code></pre>
+<pre><code>## [1]  TRUE  TRUE FALSE  TRUE</code></pre>
+<p><br></p>
+<pre class="r"><code>class(logi)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p><br></p>
+<p>De <i>character</i> para <i>lógico</i> (outros formatos):</p>
+<pre class="r"><code>char &lt;- c(&quot;0&quot;, &quot;1&quot;, &quot;uva&quot;, &quot;pêssego&quot;)
+logi &lt;- as.logical(char)
+logi</code></pre>
+<pre><code>## [1] NA NA NA NA</code></pre>
+<p><br></p>
+<pre class="r"><code>class(logi)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p><br></p>
+</div>
+<div id="operações-relacionais" class="section level2">
+<h2>Operações relacionais</h2>
+<hr>
+<pre class="r"><code>salarios_sp &lt;- c(1800, 2350, 3410, 4285, 5188)
+salarios_pr &lt;- c(1760, 2350, 3190, 4285, 5095)</code></pre>
+<p><br></p>
+<p><b>salarios_sp</b> é igual a <b>salario_pr</b>?</p>
+<pre class="r"><code>salarios_sp == salarios_pr</code></pre>
+<pre><code>## [1] FALSE  TRUE FALSE  TRUE FALSE</code></pre>
+<p><br></p>
+<p><b>salarios_sp</b> é diferente de <b>salario_pr</b>?</p>
+<pre class="r"><code>salarios_sp != salarios_pr</code></pre>
+<pre><code>## [1]  TRUE FALSE  TRUE FALSE  TRUE</code></pre>
+<p><br></p>
+<p><b>salarios_sp</b> é maior que <b>salario_pr</b>?</p>
+<pre class="r"><code>salarios_sp &gt; salarios_pr</code></pre>
+<pre><code>## [1]  TRUE FALSE  TRUE FALSE  TRUE</code></pre>
+<p><br></p>
+<p><b>salarios_sp</b> é menor que <b>salario_pr</b>?</p>
+<pre class="r"><code>salarios_sp &lt; salarios_pr</code></pre>
+<pre><code>## [1] FALSE FALSE FALSE FALSE FALSE</code></pre>
+<p><br></p>
+<p><b>salarios_sp</b> é maior ou igual a <b>salario_pr</b>?</p>
+<pre class="r"><code>salarios_sp &gt;= salarios_pr</code></pre>
+<pre><code>## [1] TRUE TRUE TRUE TRUE TRUE</code></pre>
+<p><br></p>
+<p><b>salarios_sp</b> é menor ou igual a <b>salario_pr</b>?</p>
+<pre class="r"><code>salarios_sp &lt;= salarios_pr</code></pre>
+<pre><code>## [1] FALSE  TRUE FALSE  TRUE FALSE</code></pre>
+<p><br></p>
+</div>
+<div id="operações-lógicas" class="section level2">
+<h2>Operações lógicas</h2>
+<hr>
+<div id="operador-and" class="section level3">
+<h3>Operador AND</h3>
+<p>Retorna verdadeiro quando todos os valores de entrada são verdadeiros.</p>
+<p><br></p>
+<p><b>salarios_sp</b> é maior que 2000 e (AND) menor que 4000:</p>
+<pre class="r"><code>salarios_sp &gt; 2000 &amp; salarios_sp &lt; 4000</code></pre>
+<pre><code>## [1] FALSE  TRUE  TRUE FALSE FALSE</code></pre>
+<p><br></p>
+</div>
+<div id="operador-or" class="section level3">
+<h3>Operador OR</h3>
+<p>Retorna verdadeiro quando pelo menos um dos valores de entrada é verdadeiro.</p>
+<p><br></p>
+<p><b>salarios_sp</b> é menor que 3000 ou (OR) maior que 4000:</p>
+<pre class="r"><code>salarios_sp &lt; 3000 | salarios_sp &gt; 4000</code></pre>
+<pre><code>## [1]  TRUE  TRUE FALSE  TRUE  TRUE</code></pre>
+<p><br></p>
+</div>
+<div id="operador-not" class="section level3">
+<h3>Operador NOT</h3>
+<p>Inverte o estado lógico.</p>
+<p><br></p>
+<p><b>salarios_sp</b> não (NOT) é menor que 3000:</p>
+<pre class="r"><code>!salarios_sp &lt; 3000 </code></pre>
+<pre><code>## [1] FALSE FALSE  TRUE  TRUE  TRUE</code></pre>
+</div>
+</div>

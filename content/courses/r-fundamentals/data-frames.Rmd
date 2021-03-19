@@ -1,0 +1,560 @@
+---
+date: "2020-04-26"
+title: Data Frames
+type: book
+weight: 10
+---
+
+## Criação
+
+<br>
+
+```{r}
+nome <- c("Carlos", "Bruna", "Jéssica", "Tiago", "Marta")
+cidade <- c("Goiânia", "Belo Horizonte", "São Paulo", "Maceió", "Belo Horizonte")
+idade <- c(20, 33, 18, 45, 27)
+salario <- c(2500, 3800, 4100, 2900, 3000)
+df <- data.frame(nome, cidade, idade, salario)
+df
+```
+
+<br>
+
+```{r}
+df <- data.frame(NOME = nome, CIDADE = cidade, IDADE = idade, SALARIO = salario)
+df
+```
+
+<br>
+
+## Datasets built-in
+
+<br>
+
+Carregando o dataset <b>iris</b>:
+```{r}
+data(iris)
+head(iris)
+```
+
+<i>Para visualizar a lista de datasets built-in do R, execute</i> <code>data()</code>.
+
+<br>
+
+## Informações
+
+
+Visualizando as dimensões do dataset:
+```{r}
+dim(df)
+```
+
+<br>
+
+Visualizando o número de linhas dataset:
+```{r}
+nrow(df)
+```
+
+<br>
+
+Visualizando o número de colunas dataset:
+```{r}
+ncol(df)
+```
+
+<br>
+
+Visualizando a estrutura do dataset:
+```{r}
+str(df)
+```
+
+<br>
+
+Visualizando as 6 primeiras linhas:
+```{r}
+head(df)
+```
+
+<br>
+
+Visualizando as 3 primeiras linhas:
+```{r}
+head(df, 3)
+```
+
+<br>
+
+Visualizando as 6 últimas linhas:
+```{r}
+tail(df)
+```
+
+<br>
+
+Visualizando as 3 últimas linhas:
+```{r}
+tail(df, 3)
+```
+
+<br>
+
+Resumindo as variáveis:
+```{r}
+summary(df)
+```
+
+<br>
+
+## Indexação
+
+<br>
+
+### Colunas
+
+<br>
+
+Selecionando a terceira coluna:
+```{r}
+df[,3] ## retorna um vetor
+```
+
+<br>
+
+Selecionando a coluna <b>IDADE</b>:
+```{r}
+df$IDADE ## retorna um vetor
+```
+
+<br>
+
+```{r}
+df[,"IDADE"] ## retorna um vetor
+```
+
+<br>
+
+```{r}
+df[["IDADE"]] ## retorna um vetor
+```
+
+<br>
+
+```{r}
+df["IDADE"] ## retorna uma data.frame
+```
+
+<br>
+
+
+Selecionando as três primeiras colunas:
+```{r}
+df[,1:3]
+```
+
+<br>
+
+```{r}
+df[,c(1,2,3)]
+```
+
+<br>
+
+```{r}
+df[, c(TRUE, TRUE, TRUE, FALSE)]
+```
+
+<br>
+
+### Linhas
+
+<br>
+
+Selecionando a segunda linha:
+```{r}
+df[2,]
+```
+
+<br>
+
+Selecionando as três primeiras linhas:
+```{r}
+df[1:3,]
+```
+
+<br>
+
+```{r}
+df[c(1,2,3),]
+```
+
+<br>
+
+```{r}
+df[c(TRUE, TRUE, TRUE, FALSE, FALSE),]
+```
+
+<br>
+
+### Células
+
+<br>
+
+Selecionando a célula localizada na primeira linha e segunda coluna:
+```{r}
+df[1,2]
+```
+
+<br>
+
+Selecionando a célula localizada na primeira linha e na coluna <b>CIDADE</b>:
+```{r}
+df[1, "CIDADE"]
+```
+
+<br>
+
+```{r}
+df$CIDADE[1]
+```
+
+<br>
+
+Selecionando as células localizadas na primeira linha e segunda e quarta colunas:
+```{r}
+df[1, c(2,4)]
+```
+
+<br>
+
+Selecionando as células localizadas as três primeiras linhas e três primeiras colunas:
+```{r}
+df[1:3, 1:3]
+```
+
+<br>
+
+## Adição
+
+<br>
+
+### Coluna
+
+<br>
+
+Adicionando a coluna <b>SOBRENOME</b>:
+```{r}
+nova_coluna <- c("Santana", "Oliveira", "dos Santos", "da Cruz", "Fonseca")
+df$SOBRENOME <- nova_coluna
+df
+```
+
+<br>
+
+Adicionando a coluna <b>STATUS</b>:
+```{r}
+status <- c("ativo", "ativo", "inativo", "ativo", "inativo")
+df[, "STATUS"] <- status
+df
+```
+
+<br>
+
+Adicionando a coluna <b>IDADE_x2</b>:
+```{r}
+df$IDADE_x2 <- df$IDADE * 2
+df
+```
+
+<br>
+
+### Linha
+
+<br>
+
+Adicionando uma nova linha:
+```{r}
+nova_linha <- data.frame(NOME = "Joana", CIDADE = "Porto Alegre", IDADE = 62, SALARIO = 3600, SOBRENOME = "da Silva", STATUS = "ativo", IDADE_x2 = 124)
+nova_linha
+```
+
+<br>
+
+```{r}
+df <- rbind(df, nova_linha)
+df
+```
+
+<br>
+
+## Colunas são vetores?
+
+<br>
+
+```{r}
+is.vector(df$IDADE)
+```
+
+<br>
+
+```{r}
+class(df$IDADE)
+```
+
+<br>
+
+## Medidas estatísticas
+
+<br>
+
+Média:
+```{r}
+mean(df$SALARIO)
+```
+
+<br>
+
+Mediana:
+```{r}
+median(df$SALARIO)
+```
+
+<br>
+
+Mínimo:
+```{r}
+min(df$SALARIO)
+```
+
+<br>
+
+Máximo:
+```{r}
+max(df$SALARIO)
+```
+
+<br>
+
+Variância:
+```{r}
+var(df$SALARIO)
+```
+
+<br>
+
+Desvio padrão:
+```{r}
+sd(df$SALARIO)
+```
+
+<br>
+
+Quartis:
+```{r}
+quantile(df$SALARIO)
+```
+
+<br>
+
+Decis:
+```{r}
+quantile(df$SALARIO, probs = seq(0, 1, 0.1))
+```
+
+<br>
+
+Frequência:
+```{r}
+table(df$STATUS)
+```
+
+<br>
+
+```{r}
+prop.table(table(df$STATUS))
+```
+
+<br>
+
+## Nomes
+
+<br>
+
+### Colunas
+
+<br>
+
+Exibindo os nomes das colunas:
+```{r}
+colnames(df)
+```
+
+<br>
+
+Alterando o nome da segunda coluna:
+```{r}
+colnames(df)[2] <- "cidade"
+head(df)
+```
+
+<br>
+
+Alterando o nome de todas as colunas:
+```{r}
+novos_nomes <- c("Nome", "Cidade", "Idade", "Salario", "Sobrenome", "Status", "Idade_x2")
+colnames(df) <- novos_nomes
+head(df)
+```
+
+<br>
+
+Transformando todos os nomes em letras maiúsculas:
+```{r}
+colnames(df) <- toupper(colnames(df))
+head(df)
+```
+
+<br>
+
+### Linhas
+
+<br>
+
+Exibindo os nomes das linhas:
+```{r}
+rownames(df)
+```
+
+<br>
+
+Alternado o nome da segunda linha:
+```{r}
+rownames(df)[2] <- "linha_2"
+head(df)
+```
+
+<br>
+
+Alterando o nome de todas as linhas:
+```{r}
+novos_nomes <- c("linha1", "linha2", "linha3", "linha4", "linha5", "linha6")
+rownames(df) <- novos_nomes
+head(df)
+```
+
+<br>
+
+```{r}
+rownames(df) <- 1:nrow(df)
+head(df)
+```
+
+<br>
+
+## Remoção
+
+<br>
+
+### Colunas
+
+<br>
+
+```{r}
+head(df)
+```
+
+<br>
+
+Removendo sexta coluna:
+```{r}
+df <- df[, -6]
+head(df)
+```
+
+<br>
+
+Removendo a segunda e quarta coluna:
+```{r}
+df <- df[, c(-2, -4)]
+head(df)
+```
+
+<br>
+
+Removendo a coluna <b>IDADE</b>:
+```{r}
+df$IDADE <- NULL
+```
+
+<br>
+
+### Linhas
+
+<br>
+
+Removendo a primeira linha:
+```{r}
+df <- df[-1,]
+head(df)
+```
+
+<br>
+
+Removendo a terceira e quinta linha:
+```{r}
+df <- df[c(-3,-5),]
+head(df)
+```
+
+<br>
+
+## Combinando data frames
+
+<br>
+
+```{r}
+df_a <- data.frame(nome = c("Roberto", "Maria", "Andressa"),
+                   sobrenome = c("Santos", "Andrade", "Fonseca"))
+df_a
+```
+
+<br>
+
+```{r}
+df_b <- data.frame(nome = c("Rosana", "Júlio", "Edson"),
+                   sobrenome = c("Ferreira", "da Cruz", "Silva"))
+df_b
+```
+
+<br>
+
+Unindo os datasets <b>df_a</b> e <b>df_b</b> linha a linha:
+```{r}
+df_linha <- rbind(df_a, df_b)
+df_linha
+```
+
+<br>
+
+```{r}
+df_c <- data.frame(nome = c("Roberto", "Maria", "Andressa"),
+                   idade = c(30, 41, 17))
+df_c
+```
+
+<br>
+
+Unindo os datasets <b>df_a</b> e <b>df_c</b> coluna a coluna:
+```{r}
+df_coluna <- cbind(df_a, df_c)
+df_coluna
+```
+
+<br>
+
+Combinando os datasets <b>df_a</b> e <b>df_c</b>:
+```{r}
+df_comb <- merge(df_a, df_c, by = "nome")
+df_comb
+```
