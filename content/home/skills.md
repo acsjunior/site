@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 30
 
-title: Skills
+title: Habilidades
 subtitle:
 
 # Showcase personal skills or business features.
@@ -20,14 +20,50 @@ feature:
   icon: r-project
   icon_pack: fab
   name: R
-- description: 100%
+- description: 80%
+  icon: database
+  icon_pack: fas
+  name: SQL
+- description: 70%
+  icon: python
+  icon_pack: fab
+  name: Python
+- description: 90%
+  icon: broom
+  icon_pack: fas
+  name: Data cleaning
+- description: 70%
   icon: chart-line
   icon_pack: fas
-  name: Statistics
-- description: 10%
-  icon: camera-retro
+  name: Modelagem preditiva
+- description: 50%
+  icon: chart-pie
   icon_pack: fas
-  name: Photography
+  name: Clustering
+- description: 60%
+  icon: chart-bar
+  icon_pack: fas
+  name: Visualização de dados
+- description: 50%
+  icon: project-diagram
+  icon_pack: fas
+  name: Modelagem dimensional
+- description: 40%
+  icon: share-alt
+  icon_pack: fas
+  name: Otimização
+- description: 90%
+  icon: file-excel
+  icon_pack: fas
+  name: Excel
+- description: 50%
+  icon: file-code
+  icon_pack: fas
+  name: HTML
+- description: 40%
+  icon: hashtag
+  icon_pack: fas
+  name: C#
 
 # Uncomment to use emoji icons.
 #- icon = ":smile:"

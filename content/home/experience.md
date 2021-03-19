@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 40
 
-title: Experience
+title: Últimas experiências
 subtitle:
 
 # Date format for experience
@@ -22,24 +22,35 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: CEO
-    company: GenCoin
-    company_url: ''
-    location: California
-    date_start: '2017-01-01'
+  - title: Cientista de dados III
+    company: Grupo Boticário
+    company_url: 'https://www.grupoboticario.com.br/'
+    location: São José dos Pinhais - PR
+    date_start: '2020-09-01'
     date_end: ''
-    description: |2-
-        Responsibilities include:
+    description: ''
+    
+  - title: Pesquisador
+    company: Universidade Federal do Paraná (GTAO - Grupo de Tecnologia Aplicada à Otimização)
+    company_url: 'https://gtao-ufpr.herokuapp.com'
+    location: Curitiba - PR
+    date_start: '2020-09-01'
+    date_end: ''
+    description: ''
         
-        * Analysing
-        * Modelling
-        * Deploying
-        
-  - title: Professor
-    company: University X
-    company_url: ''
-    location: California
-    date_start: '2016-01-01'
-    date_end: '2016-12-31'
-    description: Taught electronic engineering and researched semiconductor physics.
+  - title: Cientista de dados PL
+    company: Olist
+    company_url: 'https://olist.com'
+    location: Curitiba - PR
+    date_start: '2019-09-01'
+    date_end: '2020-09-01'
+    description: ''
+    
+  - title: Analista de dados
+    company: Hilab
+    company_url: 'https://hilab.com.br'
+    location: Curitiba - PR
+    date_start: '2018-08-01'
+    date_end: '2019-09-01'
+    description: ''
 ---
