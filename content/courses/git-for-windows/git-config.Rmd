@@ -1,0 +1,34 @@
+---
+date: "2020-02-19"
+title: Configurando o Git
+type: book
+weight: 3
+---
+
+Abra o *Git Bash*:
+
+![](/courses/git-for-windows/img/git-015.png)
+
+<br>
+
+Execute o comando `git version` para verificar se a instalação foi realizada corretamente:
+
+![](/courses/git-for-windows/img/git-017.png)
+
+<br>
+
+Execute o comando `git config --global user.name "SEU_NOME_DE_USUÁRIO_DO_GITHUB"`:
+
+![](/courses/git-for-windows/img/git-018.png)
+
+<br>
+
+Execute o comando `git config --global user.email "SEU_EMAIL_DO_GITHUB"`:
+
+![](/courses/git-for-windows/img/git-019.png)
+
+<br>
+
+Execute os comandos `git config user.name` e `git config user.email` para verificar se o seu nome de usuário e e-mail foram configurados corretamente:
+
+![](/courses/git-for-windows/img/git-020.png)

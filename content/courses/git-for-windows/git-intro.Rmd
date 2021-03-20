@@ -1,0 +1,83 @@
+---
+date: "2020-02-19"
+title: Primeiros passos com o Git
+type: book
+weight: 4
+---
+
+## O que é Git?
+
+<b>Git</b> é um sistema de controle de versões. Tem como objetivo documentar e armazenar todas as alterações de um projeto.
+
+## O que é GitHub?
+
+<b>GitHub</b> é uma rede social de projetos que tem como objetivo hospedar remotamente e compartilhar projetos. Além disso, permite o trabalho em equipe, tirar dúvidas, relatar problemas e etc.
+
+## Vantagens
+
+Trabalhar com Git e GitHub nos permite realizar o backup do nosso projeto, recuperar versões anteriores, unificar todas as alterações realizadas pela equipe e construir um portfólio.
+
+## Comandos básicos
+
+Crie o diretório do projeto, nomeie <b>Projeto1</b> e habilite a exibição de arquivos ocultos:
+
+![](/courses/git-for-windows/img/git-commands-001.png)
+
+<br>
+
+Acesse o diretório criado, clique com o botão direito do mouse no fundo e acesse a opção *Git Bash Here*</b>* para abrir o terminal do git:
+
+![](/courses/git-for-windows/img/git-commands-002.png)
+![](/courses/git-for-windows/img/git-commands-003.png)
+
+<br>
+
+Execute o comando `git init` para inicializar o repositório git:
+
+![](/courses/git-for-windows/img/git-commands-004.png)
+
+<br>
+
+Para simular um projeto, crie um arquivo de texto chamado <b>Exemplo.txt</b>, digite a linha <i>Exemplo</i>, salve e feche o arquivo:
+
+![](/courses/git-for-windows/img/git-commands-005.png)
+
+<br>
+
+Execute o comando `git status` para verificar o status do repositório:
+
+![](/courses/git-for-windows/img/git-commands-006.png)
+
+<br>
+
+Execute o comando `git add --all` para adicionar as alterações na <i>staging area</i>. Em seguida verifique novamente o status do repositório:
+
+![](/courses/git-for-windows/img/git-commands-007.png)
+
+<br>
+
+Execute o comando `git commit -m "criando o arquivo Exemplo.txt"` para salvar as alterações adicionadas na <i>staging area</i>:
+
+![](/courses/git-for-windows/img/git-commands-008.png)
+
+<br>
+
+Execute o comando `git status` para verificar novamente o status do repositório:
+
+![](/courses/git-for-windows/img/git-commands-009.png)
+
+<br>
+
+Execute o comando `git log` verificar o histórico do respositório:
+
+![](/courses/git-for-windows/img/git-commands-010.png)
+
+<br>
+
+<hr>
+
+### Comandos utilizados
+* `git init`: inicializa o repositório git
+* `git status`: verifica o status do repositório
+* `git add –all`: adiciona todas as alterações na <i>staging area</i>
+* `git commit -m "mensagem"`: salva as alterações

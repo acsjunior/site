@@ -15,4 +15,4 @@ type: book
 {{< list_children >}}
 
 
-{{< cta cta_text="Iniciar o curso" cta_link="rbasics-math.rmd" >}}
+{{< cta cta_text="Iniciar o curso" cta_link="rbasics-math.Rmd" >}}

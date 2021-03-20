@@ -1,0 +1,53 @@
+---
+date: "2020-02-19"
+title: Criando uma conta no GitHub
+type: book
+weight: 1
+---
+
+## Criando uma conta no GitHub
+
+Acesse https://github.com e preencha o formulário:
+
+![](/courses/git-for-windows/img/github-001.png){width=50% height=50%}
+
+<br>
+
+Siga as instruções:
+
+![](/courses/git-for-windows/img/github-002.png){width=70% height=70%}
+
+<br>
+
+Escolha o plano *Free*:
+
+![](/courses/git-for-windows/img/github-003.png){width=80% height=80%}
+
+<br>
+
+Personalize as suas preferências e clique em *Complete setup* ou clique em *Skip this step*:
+
+![](/courses/git-for-windows/img/github-004.png){width=80% height=80%}
+![](/courses/git-for-windows/img/github-005.png){width=80% height=80%}
+
+<br>
+
+Verifique o seu e-mail:
+
+![](/courses/git-for-windows/img/github-006.png){width=80% height=80%}
+![](/courses/git-for-windows/img/github-007.png){width=80% height=80%}
+![](/courses/git-for-windows/img/github-008.png){width=80% height=80%}
+
+<br>
+
+No menu do canto superior clique em *Your profile* :
+
+![](/courses/git-for-windows/img/github-009.png)
+
+<br>
+
+Personalize o seu perfil:
+
+![](/courses/git-for-windows/img/github-010.png)
+
+
