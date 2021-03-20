@@ -22,9 +22,9 @@ main:
   - name: Cursos
     url: courses/
     weight: 60
-  - name: Ciência com Dados
-    url: https://cienciacomdados.com.br/
-    weight: 70
+  #- name: Ciência com Dados
+  #  url: https://cienciacomdados.com.br/
+  #  weight: 70
   - name: Contato
     url: '#contact'
     weight: 80
