@@ -30,4 +30,6 @@ De acordo com a documentação do pacote, o esquisse é um *add-in* que nos perm
 
 Vamos ver como esta mágica funciona.
 
-*[Clique aqui](https://www.linkedin.com/pulse/interface-drag-drop-para-construção-de-gráficos-r-da-silva-júnior/) para acessar a publicação completa realizada no Linkedin.*
+{{% callout note %}}
+[Acesse a publicação completa no **Blog Ciência com Dados**](https://cienciacomdados.com.br/blog/2019-12-20-interface-drag-and-drop-para-constru%C3%A7%C3%A3o-de-gr%C3%A1ficos-no-r/).
+{{% /callout %}}

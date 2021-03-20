@@ -29,4 +29,6 @@ A competição funciona da seguinte forma: o Kaggle fornece os dados sobre os pa
 A proposta deste artigo é apresentar aos ̶m̶a̶r̶i̶n̶h̶e̶i̶r̶o̶s̶ cientistas de dados de primeira viagem uma abordagem didática, através da linguagem R, no processo de exploração e preparação dos dados, incluindo a criação de novas variáveis e a imputação de dados ausentes, de modo que ao término do processo tenhamos um conjunto de dados adequado para modelagem preditiva.
 
 
-*[Clique aqui](https://juniorssz.medium.com/desafio-do-titanic-do-kaggle-uma-abordagem-didática-na-exploração-e-preparação-dos-dados-ec5988d2d33) para acessar a publicação completa realizada no Medium.*
+{{% callout note %}}
+[Acesse a publicação completa no **Medium**](https://juniorssz.medium.com/desafio-do-titanic-do-kaggle-uma-abordagem-did%C3%A1tica-na-explora%C3%A7%C3%A3o-e-prepara%C3%A7%C3%A3o-dos-dados-ec5988d2d33).
+{{% /callout %}}

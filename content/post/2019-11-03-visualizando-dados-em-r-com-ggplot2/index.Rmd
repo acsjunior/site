@@ -24,4 +24,6 @@ projects: []
 
 Seja na apresentação de informações, na análise exploratória de dados ou no diagnóstico de um modelo, a visualização de dados se faz sempre necessária. Uma das principais bibliotecas para criação de visuais em R é o ggplot2 e neste artigo eu vou demonstrar como trabalhar com os principais recursos deste pacote.
 
-*[Clique aqui](https://www.linkedin.com/pulse/visualizando-dados-em-r-com-ggplot2-antonio-c-da-silva-júnior/) para acessar a publicação completa realizada no Linkedin.*
+{{% callout note %}}
+[Acesse a publicação completa no **Blog Ciência com Dados**](https://cienciacomdados.com.br/blog/2019-11-03-visualizando-dados-em-r-com-ggplot2/).
+{{% /callout %}}

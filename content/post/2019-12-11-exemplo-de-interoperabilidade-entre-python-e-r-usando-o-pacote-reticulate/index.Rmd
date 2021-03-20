@@ -27,4 +27,6 @@ De acordo com a definição encontrada na página do pacote, o reticulate fornec
 
 Vou dar um pequeno exemplo de uso. 
 
-*[Clique aqui](https://www.linkedin.com/pulse/exemplo-de-interoperabilidade-entre-python-e-r-usando-antonio-c-/) para acessar a publicação completa realizada no Linkedin.*
+{{% callout note %}}
+[Acesse a publicação completa no **Blog Ciência com Dados**](https://cienciacomdados.com.br/blog/2019-12-11-exemplo-de-interoperabilidade-entre-python-e-r-usando-o-pacote-reticulate/).
+{{% /callout %}}
