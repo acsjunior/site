@@ -7,7 +7,11 @@ date_end: "2020-12-14T21:30:00Z"
 featured: false
 location: Casa da Pesquisa Operacional (YouTube)
 summary: Live realizada na Casa da Pesquisa Operacional apresentando um case de classificação de churn através de um modelo de regressão logística.
-tags: []
+tags:
+  - classificação
+  - churn
+  - modelos lineares generalizados
+  - regressão logística
 title: Modelo de Regressão Logística para Previsão de Abandono de Clientes
 image:
   caption:

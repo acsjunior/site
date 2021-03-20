@@ -35,4 +35,4 @@ De acordo com a definição da própria documentação, dplyr é uma gramática 
 
 Neste post serão demonstradas algumas das principais funcionalidades deste poderoso pacote, fazendo um paralelo com a linguagem SQL para facilitar a absorção.
 
-*[Clique aqui](https://www.linkedin.com/pulse/traduzindo-instruções-sql-para-r-utilizando-o-dplyr-da-silva-júnior/) para acessar a publicação completa realizada no Linkedin*
+*[Clique aqui](https://www.linkedin.com/pulse/traduzindo-instruções-sql-para-r-utilizando-o-dplyr-da-silva-júnior/) para acessar a publicação completa realizada no Linkedin.*

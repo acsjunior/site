@@ -27,4 +27,4 @@ O ggplot2 é um recurso que utilizo diariamente para produzir gráficos, entreta
 
 A idéia deste post é demonstrar como crio e faço uso de funções personalizadas para plotar gráficos do ggplot2.
 
-*[Clique aqui](https://www.linkedin.com/pulse/dica-de-produtividade-com-ggplot2-através-funções-da-silva-júnior/) para acessar a publicação completa realizada no Linkedin*
+*[Clique aqui](https://www.linkedin.com/pulse/dica-de-produtividade-com-ggplot2-através-funções-da-silva-júnior/) para acessar a publicação completa realizada no Linkedin.*

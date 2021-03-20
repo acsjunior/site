@@ -1,0 +1,87 @@
+---
+date: "2020-02-19"
+title: Trabalhando em equipe
+type: book
+weight: 9
+---
+
+
+Supondo que até o momento somente o <b>usuário 1</b> trabalhou no projeto e a partir de agora o <b>usuário 2</b> também participará.
+
+**Usuário 2**: abra o terminal do Git no diretório criado para o projeto:
+
+![](/courses/git-for-windows/img/squad-002.png)
+
+<br>
+
+**Usuário 2**: acesse a página do projeto no GitHub, clique em *Clone or download* e copie a url do repositório
+
+![](/courses/git-for-windows/img/squad-001.png)
+
+<br>
+
+**Usuário 2**: realize o comando `git clone xxxx` para clonar o projeto que está no respositório remoto (xxxx é a url do repositório remoto)
+
+![](/courses/git-for-windows/img/squad-003.png)
+![](/courses/git-for-windows/img/squad-004.png)
+
+<br>
+
+**Usuário 2**: crie um arquivo chamado <b>arquivo-usuário2</b> e adicione uma linha:
+
+![](/courses/git-for-windows/img/squad-005.png)
+
+<br>
+
+**Usuário 2**: adicione as alterações na <i>staging area</i>, salve e faça o upload no repositório remoto:
+
+![](/courses/git-for-windows/img/squad-006.png)
+
+<br>
+
+**Usuário 1**: adicione mais uma linha no arquivo <b>Exemplo.txt</b>:
+
+![](/courses/git-for-windows/img/squad-007.png)
+
+<br>
+
+**Usuário 1**: adicione especificamente as alterações do arquivo <b>Exemplo.txt</b> na <i>staging area</i>, através do comamdo `git add xxxx`, onde `xxxx` é o nome do arquivo:
+
+![](/courses/git-for-windows/img/squad-008.png)
+
+<br>
+
+**Usuário 1**: salve as alterações:
+
+![](/courses/git-for-windows/img/squad-009.png)
+
+<br>
+
+**Usuário 1**: faça o upload das alterações no repositório remoto:
+
+![](/courses/git-for-windows/img/squad-010.png)
+
+<br>
+
+**Usuário 1**: é necessário antes integrar as alterações com o repositório remoto através do comando `git pull origin master`:
+
+![](/courses/git-for-windows/img/squad-011.png)
+
+<br>
+
+**Usuário 1**: verifique o status do respositório:
+
+![](/courses/git-for-windows/img/squad-012.png)
+
+<br>
+
+**Usuário 1**: faça o upload das alterações para o repositório remoto:
+
+![](/courses/git-for-windows/img/squad-013.png)
+
+<br>
+
+### Comandos utilizados:
+* `git clone xxxx`: copia um projeto de um repositório remoto (xxxx é a url do repositório remoto)
+* `git add yyyy`: adiciona as alterações de um arquivo específico na <i>staging area</i>
+* `git pull origin master`: integra o projeto local com o projeto remoto

@@ -7,7 +7,11 @@ date_end: "2021-02-23T22:00:00Z"
 featured: false
 location: Casa da Pesquisa Operacional (YouTube)
 summary: Palestra realizada na III Semana da Pesquisa Operacional sobre o método MODI Tree para resolução do Problema do Transporte.
-tags: []
+tags:
+  - otimização
+  - programação linear
+  - problema do transporte
+  - MODI
 title: Resolvendo o Problema do Transporte com o método MODI Tree
 image:
   caption:

@@ -7,7 +7,11 @@ date_end: "2020-05-14T21:30:00Z"
 featured: false
 location: Estatidados (YouTube)
 summary: Live realizada no canal Estatidados sobre análises gráficas no R com o pacote **esquisse**.
-tags: []
+tags:
+  - R
+  - ggplot2
+  - esquisse
+  - visualização de dados
 title: Análises gráficas "point and click" no R
 image:
   caption:

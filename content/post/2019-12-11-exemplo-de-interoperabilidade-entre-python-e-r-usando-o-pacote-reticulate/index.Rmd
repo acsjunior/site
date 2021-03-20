@@ -27,4 +27,4 @@ De acordo com a definição encontrada na página do pacote, o reticulate fornec
 
 Vou dar um pequeno exemplo de uso. 
 
-*[Clique aqui](https://www.linkedin.com/pulse/exemplo-de-interoperabilidade-entre-python-e-r-usando-antonio-c-/) para acessar a publicação completa realizada no Linkedin*
+*[Clique aqui](https://www.linkedin.com/pulse/exemplo-de-interoperabilidade-entre-python-e-r-usando-antonio-c-/) para acessar a publicação completa realizada no Linkedin.*

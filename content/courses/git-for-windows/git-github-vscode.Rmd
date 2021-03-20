@@ -1,0 +1,147 @@
+---
+date: "2020-02-19"
+title: Trabalhando com o Visual Studio Code
+type: book
+weight: 10
+---
+
+## Clonando um projeto
+
+<br>
+
+Pressione `ctrl + shift + p`, digite *Clone* e clique em *Git:Clone*:
+
+![](/courses/git-for-windows/img/vscode-git-001.png)
+
+<br>
+
+Cole a url do projeto e presione *Enter*:
+
+![](/courses/git-for-windows/img/vscode-git-002.png)
+
+<br>
+
+Escolha o diretório que deseja fazer o download e clique em *Select Repository Location*:
+
+![](/courses/git-for-windows/img/vscode-git-003.png)
+
+## Abrindo um projeto local
+
+<br>
+
+Em <b>File</b> selecione a opção *Add Folder to Workspace*:
+
+![](/courses/git-for-windows/img/vscode-git-004.png)
+
+<br>
+
+Localize a pasta do projeto e clique em *Add*:
+
+![](/courses/git-for-windows/img/vscode-git-005.png)
+
+## Operando o Git
+
+<br>
+
+Adicione uma nova linha no arquivo <b>Exemplo.txt</b>:
+
+![](/courses/git-for-windows/img/vscode-git-006.png)
+
+<br>
+
+Em <b>View</b> selecione a opção *SCM*:
+
+![](/courses/git-for-windows/img/vscode-git-007.png)
+
+<br>
+
+Para adicionar as alterações na <i>staging area</i> e salvá-las, digite a mensagem desejada e efetue o commit:
+
+![](/courses/git-for-windows/img/vscode-git-009.png)
+
+<br>
+
+Para fazer o upload das alterações no repositório remoto, clique nos 3 pontinhos e selecione a opção *Push*:
+
+![](/courses/git-for-windows/img/vscode-git-011.png)
+
+<br>
+
+Para integrar o projeto local com o remoto, clique nos 3 pontinhos e selecione a opção *Pull*:
+
+![](/courses/git-for-windows/img/vscode-git-012.png)
+
+<br>
+
+Para restaurar uma versão anterior, clique nos 3 pontinhos e selecione a opção *Checkout to*:
+
+![](/courses/git-for-windows/img/vscode-git-013.png)
+
+<br>
+
+Em seguida digite o id do commit desejado:
+
+![](/courses/git-for-windows/img/vscode-git-014.png)
+
+<br>
+
+Para criar um novo ramo, selecione o ramo master na parte inferior esquerda da aplicação:
+
+![](/courses/git-for-windows/img/vscode-git-016.png)
+
+<br>
+
+Em seguida digite o nome do novo ramo:
+
+![](/courses/git-for-windows/img/vscode-git-017.png)
+![](/courses/git-for-windows/img/vscode-git-018.png)
+
+## Ignorando arquivos
+
+Clique com o botão direito em <b>Projeto1</b> e selecione a opção *New File*:
+
+![](/courses/git-for-windows/img/gitignore-001.png)
+
+<br>
+
+Crie os arquivos <b>.gitignore</b>, <b>database.csv</b> e </b>database2.csv</b>:
+
+![](/courses/git-for-windows/img/gitignore-002.png)
+
+<br>
+
+No arquivo <b>.gitignore</b> inclua a linha `*.csv` para ignorar todos os arquivos com a extensão <b>csv</b> do projeto:
+
+![](/courses/git-for-windows/img/gitignore-003.png)
+
+<br>
+
+Faça o commit e o push:
+
+![](/courses/git-for-windows/img/gitignore-004.png)
+![](/courses/git-for-windows/img/gitignore-005.png)
+
+<br>
+
+Observe no GitHub que os arquivos ignorados não foram carregados:
+
+![](/courses/git-for-windows/img/gitignore-006.png)
+
+<br>
+
+No arquivo <b>.gitignore</b>, altere a linha atual por <b>database2.csv</b> para ignorar o arquivo específico:
+
+![](/courses/git-for-windows/img/gitignore-007.png)
+
+<br>
+
+Faça o commit e o push:
+
+![](/courses/git-for-windows/img/gitignore-008.png)
+![](/courses/git-for-windows/img/gitignore-009.png)
+
+<br>
+
+Observe no GitHub que foi carregado somente o arquivo <b>database.csv</b>:
+
+![](/courses/git-for-windows/img/gitignore-010.png)

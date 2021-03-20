@@ -1,6 +1,0 @@
----
-date: "2020-02-19"
-title: Lidando com ramificações I
-type: book
-weight: 7
----

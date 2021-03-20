@@ -7,7 +7,11 @@ date_end: "2020-01-20T20:30:00Z"
 featured: false
 location: Estatidados (YouTube)
 summary: Mini treinamento do pacote **esquisse** publicado no canal Estatidados.
-tags: []
+tags:
+  - R
+  - ggplot2
+  - esquisse
+  - visualização de dados
 title: Gráficos "point and click" no R com o pacote Esquisse
 image:
   caption:

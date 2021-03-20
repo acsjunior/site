@@ -1,0 +1,134 @@
+---
+date: "2020-02-19"
+title: Lidando com ramificações
+type: book
+weight: 7
+---
+
+Execute o comando `git branch` para visualizar os ramos do projeto:
+
+![](/courses/git-for-windows/img/git-commands-038.png)
+
+<br>
+
+Execute o comando `git checkout -b xxxx` para criar um novo ramo, onde `xxxx` é o nome do novo ramo:
+
+![](/courses/git-for-windows/img/git-commands-039.png)
+
+<br>
+
+Verifique o histórico do repositório:
+
+![](/courses/git-for-windows/img/git-commands-040.png)
+
+<br>
+
+Verifique os ramos do projeto:
+
+![](/courses/git-for-windows/img/git-commands-041.png)
+![](/courses/git-for-windows/img/git-commands-043.png)
+
+<br>
+
+Adicione uma nova linha no arquivo <b>Example.txt</b>:
+
+![](/courses/git-for-windows/img/git-commands-050.png)
+
+<br>
+
+Adicione as alterações na <i>staging area</i> e salve:
+
+![](/courses/git-for-windows/img/git-commands-044.png)
+
+<br>
+
+Verifique novamente o histórico:
+
+![](/courses/git-for-windows/img/git-commands-045.png)
+![](/courses/git-for-windows/img/git-commands-046.png)
+
+<br>
+
+Retorne o projeto para a última versão do ramo principal:
+
+![](/courses/git-for-windows/img/git-commands-047.png)
+
+<br>
+
+Verifique o histórico:
+
+![](/courses/git-for-windows/img/git-commands-048.png)
+![](/courses/git-for-windows/img/git-commands-049.png)
+
+<br>
+
+Inclua uma nova linha no arquivo <b>Exemplo.txt</b>:
+
+![](/courses/git-for-windows/img/git-commands-051.png)
+
+<br>
+
+Adicione na <i>staging area</i> e salve as alterações:
+
+![](/courses/git-for-windows/img/git-commands-052.png)
+![](/courses/git-for-windows/img/git-commands-053.png)
+
+<br>
+
+Verifique o ramo atual:
+
+![](/courses/git-for-windows/img/git-commands-055.png)
+
+<br>
+
+Execute o comando `git merge xxxx`, onde <b>xxxx</b> é o nome do ramo que não está ativado no momento:
+
+![](/courses/git-for-windows/img/git-commands-056.png)
+
+<br>
+
+Verifique os conflitos no arquivo <b>Exemplo.txt</b>:
+
+![](/courses/git-for-windows/img/git-commands-057.png)
+
+<br>
+
+Faça as alterações necessárias:
+
+![](/courses/git-for-windows/img/git-commands-058.png)
+
+<br>
+
+Verifique o status do repositório:
+
+![](/courses/git-for-windows/img/git-commands-059.png)
+
+<br>
+
+Adicione as alterações na <i>staging area</i>:
+
+![](/courses/git-for-windows/img/git-commands-060.png)
+
+<br>
+
+Salve as alterações:
+
+![](/courses/git-for-windows/img/git-commands-061.png)
+
+<br>
+
+Verifique o histórico:
+
+![](/courses/git-for-windows/img/git-commands-062.png)
+
+<br>
+
+Verifique o grafo das alterações:
+
+![](/courses/git-for-windows/img/git-commands-063.png)
+![](/courses/git-for-windows/img/git-commands-064.png)
+
+<br>
+
+### Comando utilizado:
+* `git merge xxxx`: mescla o ramo atual com o ramo xxxx

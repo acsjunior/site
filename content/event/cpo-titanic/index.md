@@ -7,7 +7,12 @@ date_end: "2020-09-25T22:00:00Z"
 featured: false
 location: Casa da Pesquisa Operacional (YouTube)
 summary: Live realizada na Casa da Pesquisa Operacional sobre exploração e preparação dos dados do Desafio do Titanic da Kaggle.
-tags: []
+tags:
+  - kaggle
+  - data wrangling
+  - R
+  - KNN
+  - missing data
 title: Análise Exploratória de Dados - O Desafio do Titanic
 image:
   caption:
