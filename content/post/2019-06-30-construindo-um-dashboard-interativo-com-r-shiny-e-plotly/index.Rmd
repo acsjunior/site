@@ -8,7 +8,6 @@ categories:
 tags:
   - R
   - shiny
-  - shinydashboard
   - ggplot2
   - plotly
   - visualização de dados
