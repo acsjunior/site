@@ -28,5 +28,5 @@ Um dia desses um colega me perguntou como criar uma função summary() personali
 Entre as formas possíveis, escolhi dar um exemplo fazendo uso do pacote dplyr, devido a versatilidade e praticidade que ele nos provê, e abaixo demonstro passo a passo como criar a função.
 
 {{% callout note %}}
-[Acesse a publicação completa no **Blog Ciência com Dados**](https://cienciacomdados.com.br/blog/2020-03-29-utilizando-colunas-do-data-frame-como-argumento-em-fun%C3%A7%C3%B5es-personalizadas-com-dplyr/).
+[Acesse a publicação completa no **LinkedIn**](https://www.linkedin.com/pulse/utilizando-colunas-do-data-frame-como-argumento-em-da-silva-júnior/).
 {{% /callout %}}

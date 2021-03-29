@@ -27,5 +27,5 @@ Mesmo com todos os recursos disponíveis no Power BI para construção de visuai
 Neste artigo vou demonstrar como levar os belos visuais do pacote Ggplot2 do R para o Power BI.
 
 {{% callout note %}}
-[Acesse a publicação completa no **Blog Ciência com Dados**](https://cienciacomdados.com.br/blog/2019-08-31-construindo-um-visual-do-r-com-ggplot2-no-power-bi/).
+[Acesse a publicação completa no **LinkedIn**](https://www.linkedin.com/pulse/construindo-um-visual-do-r-com-ggplot2-power-bi-da-silva-júnior/).
 {{% /callout %}}
