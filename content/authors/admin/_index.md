@@ -45,7 +45,7 @@ social:
   icon_pack: ai
   link: https://www.researchgate.net/profile/Antonio-Carlos-Da-Silva-Junior
 superuser: true
-title: Antonio C. da Silva Júnior
+title: António C. da Silva Júnior
 ---
 
 Trabalhei 9 anos nas áreas de Comissionamento e Planejamento, em projetos de construção e montagem na indústria de Óleo & Gás, até me apaixonar por Ciência de Dados, área que atuo desde 2018 desenvolvendo produtos para diversos segmentos, tais como Health Tech, E-commerce e Cosméticos/Perfumaria.
