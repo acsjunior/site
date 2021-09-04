@@ -16,18 +16,18 @@ subtitle:
 # - Add/remove as many `feature` blocks below as you like.
 # - For available icons, see: https://wowchemy.com/docs/page-builder/#icons
 feature:
-- description: 90%
+- description: 80%
   icon: r-project
   icon_pack: fab
   name: R
 - description: 80%
-  icon: database
-  icon_pack: fas
-  name: SQL
-- description: 70%
   icon: python
   icon_pack: fab
   name: Python
+- description: 80%
+  icon: database
+  icon_pack: fas
+  name: SQL
 - description: 90%
   icon: broom
   icon_pack: fas
@@ -48,7 +48,7 @@ feature:
   icon: project-diagram
   icon_pack: fas
   name: Modelagem dimensional
-- description: 40%
+- description: 50%
   icon: share-alt
   icon_pack: fas
   name: Otimização
