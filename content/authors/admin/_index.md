@@ -11,14 +11,14 @@ education:
   - course: Tecg. Análise e Desenvolvimento de Sistemas
     institution: Universidade Paulista
     year: 2015
-  - course: Tec. Eletrônica
+  - course: Tec. Automação Industrial
     institution: Instituto Federal de São Paulo
     year: 2007
 email: "juniorssz@gmail.com"
 highlight_name: false
 interests:
+- Problemas de Otimização
 - Modelos Lineares Generalizados
-- Programação Matemática
 organizations:
 - name: Grupo Boticário
   url: https://www.grupoboticario.com.br/
@@ -48,9 +48,9 @@ superuser: true
 title: António C. da Silva Júnior
 ---
 
-Trabalhei 9 anos nas áreas de Comissionamento e Planejamento, em projetos de construção e montagem na indústria de Óleo & Gás, até me apaixonar por Ciência de Dados, área que atuo desde 2018 desenvolvendo produtos para diversos segmentos, tais como Health Tech, E-commerce e Cosméticos/Perfumaria.
+Atua como Cientista de Dados no Grupo Boticário e é mestrando em Métodos Numéricos em Engenharia pela Universidade Federal do Paraná, com linha de pesquisa em problemas de otimização. Trabalhou por 9 anos nas áreas de Instrumentação e Automação Industrial, em projetos de engenharia no setor de Óleo e Gás, até migrar para a Ciência de Dados em 2018. Na área de dados possui perfil generalista, com afinidade desde a estruturação de bases de dados, data quality, análises descritiva e diagnóstica, até o desenvolvimento de modelos preditivos e prescritivos.
 
-Sou nascido em Santos-SP, resido em Curitiba-PR desde 2018 e possuo dupla nacionalidade (brasileira / portuguesa).
+É brasileiro natural de Santos-SP e possui cidadania portuguesa.
 
 <!--
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
