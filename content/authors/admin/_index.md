@@ -32,18 +32,21 @@ social:
   icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/juniorssz/
-- icon: medium
-  icon_pack: fab
-  link: https://juniorssz.medium.com
 - icon: github
   icon_pack: fab
   link: https://github.com/juniorssz
+- icon: instagram
+  icon_pack: fab
+  link: 'https://www.instagram.com/juniorssz/'
+- icon: medium
+  icon_pack: fab
+  link: https://juniorssz.medium.com
 - icon: lattes
   icon_pack: ai
   link: http://lattes.cnpq.br/9538279526734312
-- icon: researchgate
-  icon_pack: ai
-  link: https://www.researchgate.net/profile/Antonio-Carlos-Da-Silva-Junior
+# - icon: researchgate
+#   icon_pack: ai
+#   link: https://www.researchgate.net/profile/Antonio-Carlos-Da-Silva-Junior
 superuser: true
 title: António C. da Silva Júnior
 ---

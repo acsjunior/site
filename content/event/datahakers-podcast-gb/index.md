@@ -8,7 +8,7 @@ featured: false
 location: Data Hackers
 summary: Participação no podcast do Data Hackers, contando sobre o dia a dia atuando no time de dados do Grupo Boticário.
 tags:
-title: Trabalhando com Dados no Grupo Boticário
+title: Trabalhando com dados no Grupo Boticário
 image:
   caption:
   focal_point: ''
