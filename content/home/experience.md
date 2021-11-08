@@ -22,12 +22,20 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: Cientista de dados III
+  - title: Cientista de Dados Especialista
+    company: Grupo Boticário
+    company_url: 'https://www.grupoboticario.com.br/'
+    location: São José dos Pinhais - PR
+    date_start: '2021-10-01'
+    date_end: ''
+    description: ''
+    
+  - title: Cientista de Dados III
     company: Grupo Boticário
     company_url: 'https://www.grupoboticario.com.br/'
     location: São José dos Pinhais - PR
     date_start: '2020-09-01'
-    date_end: ''
+    date_end: '2021-10-01'
     description: ''
     
   - title: Aluno pesquisador
