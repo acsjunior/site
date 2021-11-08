@@ -22,7 +22,7 @@ interests:
 organizations:
 - name: Grupo Boticário
   url: https://www.grupoboticario.com.br/
-role: Cientista de dados
+role: Cientista de Dados Especialista
 social:
 - icon: envelope
   icon_pack: fas
