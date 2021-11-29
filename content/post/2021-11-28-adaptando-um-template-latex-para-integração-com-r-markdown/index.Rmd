@@ -1,0 +1,30 @@
+---
+title: Adaptando um template LaTeX para integração com R Markdown
+author: acsjunior
+date: '2021-11-28'
+slug: []
+categories:
+  - Tutoriais
+tags:
+  - R
+  - R Markdown
+  - LaTeX
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2021-11-28T17:19:32-03:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+A linguagem R pode ser uma forte aliada em qualquer produção acadêmica, uma vez que provê recursos para execução desde um simples teste de hipóteses até os mais sofisticados modelos estatísticos e de aprendizado de máquina. É muito comum pesquisadores nas mais diversas áreas de atuação fazerem uso do R, mas o que muitos desconhecem é a possibilidade de integrar código e artigo em um único projeto.
+
+Neste tutorial demonstro como adaptar um template LaTeX para integração com R Markdown.
+
+{{% callout note %}}
+[Acesse a publicação completa no **Medium**](https://juniorssz.medium.com/adaptando-um-template-latex-para-integração-com-r-markdown-b74f40894aad).
+{{% /callout %}}
