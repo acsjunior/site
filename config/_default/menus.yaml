@@ -19,8 +19,8 @@ main:
   #- name: Publications
   #  url: '#featured'
   #  weight: 50
-  - name: Cursos
-    url: courses/
+  - name: Materiais
+    url: materials/
     weight: 60
   #- name: Ciência com Dados
   #  url: https://cienciacomdados.com.br/

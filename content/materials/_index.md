@@ -2,7 +2,7 @@
 header:
   caption: ""
   image: ""
-title: Cursos
+title: Materiais didáticos
 type: page
 ---
 

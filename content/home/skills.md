@@ -17,13 +17,13 @@ subtitle:
 # - For available icons, see: https://wowchemy.com/docs/page-builder/#icons
 feature:
 - description: 80%
-  icon: r-project
-  icon_pack: fab
-  name: R
-- description: 80%
   icon: python
   icon_pack: fab
   name: Python
+- description: 80%
+  icon: r-project
+  icon_pack: fab
+  name: R
 - description: 80%
   icon: database
   icon_pack: fas
@@ -32,11 +32,15 @@ feature:
   icon: broom
   icon_pack: fas
   name: Data cleaning
-- description: 70%
+- description: 80%
   icon: chart-line
   icon_pack: fas
   name: Modelagem preditiva
-- description: 50%
+- description: 70%
+  icon: share-alt
+  icon_pack: fas
+  name: Otimização
+- description: 60%
   icon: chart-pie
   icon_pack: fas
   name: Clustering
@@ -48,10 +52,6 @@ feature:
   icon: project-diagram
   icon_pack: fas
   name: Modelagem dimensional
-- description: 50%
-  icon: share-alt
-  icon_pack: fas
-  name: Otimização
 - description: 90%
   icon: file-excel
   icon_pack: fas
@@ -60,7 +60,7 @@ feature:
   icon: file-code
   icon_pack: fas
   name: HTML
-- description: 40%
+- description: 50%
   icon: hashtag
   icon_pack: fas
   name: C#
