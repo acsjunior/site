@@ -15,12 +15,3 @@ image:
 ---
 
 {{< youtube sgiSUcw8KFo >}}
-
-<hr>
-
-Material de apoio:
-
-- [Script utilizado (GitHub)](https://github.com/juniorssz/esquisse-example)
-- [Artigo *Interface "drag and drop"​ para construção de gráficos no R*](../../../post/2019-12-20-interface-drag-and-drop-para-construcao-de-graficos-no-r/)
-- [Documentação do Esquisse](https://dreamrs.github.io/esquisse/index.html)
-- [XQuartz (requisito para Mac OSX)](https://www.xquartz.org)
