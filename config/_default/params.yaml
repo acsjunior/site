@@ -21,35 +21,19 @@ twitter: ''
 # Contact (edit or remove options as required)
 
 email: juniorssz@gmail.com
-#phone: 888 888 88 88
 address:
-  #street: 450 Serra Mall
   city: Curitiba
   region: PR
-  #postcode: '94305'
   country: Brasil
   country_code: BR
 coordinates:
   latitude: '-25.4321587'
   longitude: '-49.2796458'
-#directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
-#office_hours:
-#  - 'Monday 10:00 to 13:00'
-#  - 'Wednesday 09:00 to 10:00'
-# appointment_url: 'https://calendly.com'
 contact_links:
   - icon: linkedin
     icon_pack: fab
     name: Linkedin
     link: 'https://www.linkedin.com/in/juniorssz/'
-#  - icon: keybase
-#    icon_pack: fab
-#    name: Chat on Keybase
-#    link: 'https://keybase.io/'
-#  - icon: comments
-#    icon_pack: fas
-#    name: Discuss on Forum
-#    link: 'https://discourse.gohugo.io'
 
 # Site header
 # Main menu alignment (l = left, c = center, r = right)

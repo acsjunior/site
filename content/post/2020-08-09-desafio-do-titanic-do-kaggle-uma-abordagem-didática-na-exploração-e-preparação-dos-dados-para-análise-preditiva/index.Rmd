@@ -9,9 +9,9 @@ categories:
 tags:
   - kaggle
   - data wrangling
-  - R
-  - KNN
-  - missing data
+  - r
+  - knn
+  - machine learning
 subtitle: ''
 summary: ''
 authors: []

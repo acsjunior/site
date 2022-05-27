@@ -6,9 +6,8 @@ slug: []
 categories:
   - Tutoriais
 tags:
-  - R
+  - r
   - ggplot2
-  - ggpubr
   - visualização de dados
 subtitle: ''
 summary: ''

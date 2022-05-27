@@ -11,7 +11,7 @@ weight: 120
 
 active: true
 
-title: Tags
+title: Tópicos frequentes
 subtitle: ''
 
 content:

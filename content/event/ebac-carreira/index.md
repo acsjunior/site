@@ -7,6 +7,9 @@ date_end: "2021-09-29T20:00:00Z"
 featured: false
 location: EBAC Online (YouTube)
 summary: Participação na Maratona de Dados da Escola Britância de Artes Criativas & Tecnologia (EBAC). 
+tags:
+  - carreira
+  - data science
 title: Como se tornar um profissional de dados
 image:
   caption:

@@ -8,7 +8,7 @@ featured: false
 location: Estatidados (YouTube)
 summary: Live realizada no canal Estatidados sobre análises gráficas no R com o pacote **esquisse**.
 tags:
-  - R
+  - r
   - ggplot2
   - esquisse
   - visualização de dados

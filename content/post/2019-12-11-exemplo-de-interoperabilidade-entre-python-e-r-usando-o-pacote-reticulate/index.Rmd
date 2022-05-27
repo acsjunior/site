@@ -6,8 +6,8 @@ slug: []
 categories:
   - Tutoriais
 tags:
-  - R
-  - Python
+  - r
+  - python
   - reticulate
 subtitle: ''
 summary: ''

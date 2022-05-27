@@ -7,82 +7,82 @@ weight: 2
 
 Acesse https://www.git-scm.com e realize o download: 
 
-![](/courses/git-for-windows/img/git-001.png)
+![](/materials/git-for-windows/img/git-001.png)
 
 <br>
 
 Após o download, clique em *Run*:
 
-![](/courses/git-for-windows/img/git-002.png)
+![](/materials/git-for-windows/img/git-002.png)
 
 <br>
 
 Clique em *Next*:
 
-![](/courses/git-for-windows/img/git-003.png)
+![](/materials/git-for-windows/img/git-003.png)
 
 <br>
 
 Clique em *Next* novamente:
 
-![](/courses/git-for-windows/img/git-004.png)
+![](/materials/git-for-windows/img/git-004.png)
 
 <br>
 
 Selecione a opção *Additional icons* e clique em *Next*:
 
-![](/courses/git-for-windows/img/git-005.png)
+![](/materials/git-for-windows/img/git-005.png)
 
 <br>
 
 Clique em *Next*:
 
-![](/courses/git-for-windows/img/git-006.png)
+![](/materials/git-for-windows/img/git-006.png)
 
 <br>
 
 Clique em *Next*:
 
-![](/courses/git-for-windows/img/git-007.png)
+![](/materials/git-for-windows/img/git-007.png)
 
 <br>
 
 Clique em *Next*:
 
-![](/courses/git-for-windows/img/git-008.png)
+![](/materials/git-for-windows/img/git-008.png)
 
 <br>
 
 Clique em *Next*:
 
-![](/courses/git-for-windows/img/git-009.png)
+![](/materials/git-for-windows/img/git-009.png)
 
 <br>
 
 Clique em *Next*:
 
-![](/courses/git-for-windows/img/git-010.png)
+![](/materials/git-for-windows/img/git-010.png)
 
 <br>
 
 Clique em *Next*:
 
-![](/courses/git-for-windows/img/git-011.png)
+![](/materials/git-for-windows/img/git-011.png)
 
 <br>
 
 Clique em *Install*:
 
-![](/courses/git-for-windows/img/git-012.png)
+![](/materials/git-for-windows/img/git-012.png)
 
 <br>
 
 Aguarde a instalação:
 
-![](/courses/git-for-windows/img/git-013.png)
+![](/materials/git-for-windows/img/git-013.png)
 
 <br>
 
 Desabilite as opcões e clique em *Next*:
 
-![](/courses/git-for-windows/img/git-014.png)
+![](/materials/git-for-windows/img/git-014.png)

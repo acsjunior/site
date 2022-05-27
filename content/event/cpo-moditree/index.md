@@ -11,7 +11,6 @@ tags:
   - otimização
   - programação linear
   - problema do transporte
-  - MODI
 title: Resolvendo o Problema do Transporte com o método MODI Tree
 image:
   caption:

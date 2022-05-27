@@ -8,7 +8,7 @@ featured: false
 location: Estatidados (YouTube)
 summary: Mini treinamento do pacote **esquisse** publicado no canal Estatidados.
 tags:
-  - R
+  - r
   - ggplot2
   - esquisse
   - visualização de dados

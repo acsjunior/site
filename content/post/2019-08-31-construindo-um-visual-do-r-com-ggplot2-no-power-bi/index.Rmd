@@ -6,8 +6,8 @@ slug: []
 categories:
   - Tutoriais
 tags:
-  - Power BI
-  - R
+  - power bi
+  - r
   - ggplot2
   - visualização de dados
 subtitle: ''

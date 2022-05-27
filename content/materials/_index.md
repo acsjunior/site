@@ -3,6 +3,5 @@ header:
   caption: ""
   image: ""
 title: Materiais didáticos
-type: page
+view: 2
 ---
-

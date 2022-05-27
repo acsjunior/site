@@ -7,6 +7,9 @@ date_end: "2022-03-28T20:19:00Z"
 featured: false
 location: Estatidados (YouTube)
 summary: Mesa redonda no canal Estatidados sobre o processo de inclusão da ocupação Cientista de Dados na CBO - Classificação Brasileira de Ocupações.
+tags:
+  - cbo
+  - mesa redonda
 title: Inclusão da ocupação Cientista de Dados na CBO
 image:
   caption:

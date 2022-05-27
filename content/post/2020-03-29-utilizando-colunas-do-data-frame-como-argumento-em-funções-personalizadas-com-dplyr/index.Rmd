@@ -7,7 +7,7 @@ slug: []
 categories:
   - Tutoriais
 tags:
-  - R
+  - r
   - dplyr
   - tidyverse
   - data wrangling

@@ -7,6 +7,13 @@ date_end: "2021-12-14T22:30:00Z"
 featured: false
 location: PPGOLD (UFPR)
 summary: Aula ministrada para a turma de Modelagem em Operações do PPGOLD (UFPR).
+tags:
+  - ufpr
+  - ppgold
+  - python
+  - pyomo
+  - otimização
+  - programação linear
 title: Modelagem de Problemas de Otimização com Python e Pyomo
 image:
   caption:

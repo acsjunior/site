@@ -7,87 +7,87 @@ weight: 6
 
 Substituia a segunda linha do arquivo <b>Exemplo.txt</b>:
 
-![](/courses/git-for-windows/img/git-commands-023.png)
+![](/materials/git-for-windows/img/git-commands-023.png)
 
 <br>
 
 Verifique as alterações realizadas através do comando `git diff`:
 
-![](/courses/git-for-windows/img/git-commands-024.png)
+![](/materials/git-for-windows/img/git-commands-024.png)
 
 <br>
 
 Verifique o status do repositório:
 
-![](/courses/git-for-windows/img/git-commands-025.png)
+![](/materials/git-for-windows/img/git-commands-025.png)
 
 <br>
 
 Execute o comando `git restore Exemplo.txt` para desfazer as alterações:
 
-![](/courses/git-for-windows/img/git-commands-026.png)
-![](/courses/git-for-windows/img/git-commands-027.png)
+![](/materials/git-for-windows/img/git-commands-026.png)
+![](/materials/git-for-windows/img/git-commands-027.png)
 
 <br>
 
  Adicione uma nova linha no arquivo <b>Exemplo.txt</b>:
 
-![](/courses/git-for-windows/img/git-commands-028.png)
+![](/materials/git-for-windows/img/git-commands-028.png)
 
 <br>
 
 Adicione as alterações na <i>staging area</i> e verifique o status do respositório:
 
-![](/courses/git-for-windows/img/git-commands-029.png)
+![](/materials/git-for-windows/img/git-commands-029.png)
 
 <br>
 
 Execute o comando `git restore --staged *` para desfazer o passo anterior:
 
-![](/courses/git-for-windows/img/git-commands-030.png)
-![](/courses/git-for-windows/img/git-commands-031.png)
+![](/materials/git-for-windows/img/git-commands-030.png)
+![](/materials/git-for-windows/img/git-commands-031.png)
 
 <br>
 
 Adicione mas alguns caracteres no arquivo <b>Exemplo.txt</b>:
 
-![](/courses/git-for-windows/img/git-commands-031.png)
+![](/materials/git-for-windows/img/git-commands-031.png)
 
 <br>
 
 Verifique o status do respositório:
 
-![](/courses/git-for-windows/img/git-commands-032.png)
+![](/materials/git-for-windows/img/git-commands-032.png)
 
 <br>
 
 Adicione as alterações na <i>staging area</i>:
 
-![](/courses/git-for-windows/img/git-commands-033.png)
+![](/materials/git-for-windows/img/git-commands-033.png)
 
 <br>
 
 Salve as alterações realizadas:
 
-![](/courses/git-for-windows/img/git-commands-034.png)
+![](/materials/git-for-windows/img/git-commands-034.png)
 
 <br>
 
 Verifique o histórico do respositório:
 
-![](/courses/git-for-windows/img/git-commands-035.png)
+![](/materials/git-for-windows/img/git-commands-035.png)
 
 <br>
 
 Para desfazer as alterações salvas, execute o comando `git reset xxxx`, onde `xxxx` é o id do resumido do commit:
 
-![](/courses/git-for-windows/img/git-commands-036.png)
+![](/materials/git-for-windows/img/git-commands-036.png)
 
 <br>
 
 Verifique o histórico do respositório:
 
-![](/courses/git-for-windows/img/git-commands-037.png)
+![](/materials/git-for-windows/img/git-commands-037.png)
 
 ### Comandos utilizados
 * `git diff`: exibe as alterações realizadas

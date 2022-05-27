@@ -17,8 +17,9 @@ education:
 email: "juniorssz@gmail.com"
 highlight_name: false
 interests:
-- Problemas de Otimização
 - Modelos Lineares Generalizados
+- Modelos baseados em árvores
+- Problemas de otimização
 organizations:
 - name: Grupo Boticário
   url: https://www.grupoboticario.com.br/
@@ -51,9 +52,13 @@ superuser: true
 title: António C. da Silva Júnior
 ---
 
-Atua como Cientista de Dados no Grupo Boticário e é mestrando em Métodos Numéricos em Engenharia pela Universidade Federal do Paraná, com linha de pesquisa em problemas de otimização. Trabalhou por 9 anos nas áreas de Instrumentação e Automação Industrial, em projetos de engenharia no setor de Óleo e Gás, até migrar para a Ciência de Dados em 2018. Na área de dados possui perfil generalista, com afinidade desde a estruturação de bases de dados, data quality, análises descritiva e diagnóstica, até o desenvolvimento de modelos preditivos e prescritivos.
+Atualmente é Cientista de Dados Especialista na área de planejamento de demanda do Grupo Boticário e aluno de mestrado do programa de Métodos Numéricos em Engenharia da UFPR. 
 
-É brasileiro natural de Santos-SP e possui cidadania portuguesa.
+Trabalhou quase 10 anos nas áreas de Instrumentação e Automação Industrial, predominantemente com planejamento e controle de projetos de engenharia no setor de Óleo e Gás. 
+
+Atua na área de Ciência de Dados desde 2018 e considera-se um profissional com perfil generalista, com afinidade desde a estruturação de bases de dados, data quality, análises descritiva e diagnóstica, até a modelagem preditiva e prescritiva.
+
+É brasileiro e cidadão português.
 
 <!--
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.

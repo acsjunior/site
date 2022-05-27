@@ -7,54 +7,54 @@ weight: 8
 
 Verifique se o projeto local possui um repositório remoto:
 
-![](/courses/git-for-windows/img/git-github-001.png)
+![](/materials/git-for-windows/img/git-github-001.png)
 
 <br>
 
 Acesse o GitHub e crie um repositório remoto para o projeto:
 
-![](/courses/git-for-windows/img/git-github-002.png)
-![](/courses/git-for-windows/img/git-github-003.png)
-![](/courses/git-for-windows/img/git-github-004.png)
+![](/materials/git-for-windows/img/git-github-002.png)
+![](/materials/git-for-windows/img/git-github-003.png)
+![](/materials/git-for-windows/img/git-github-004.png)
 
 <br>
 
 Adicione o repositório remoto através do comando `git remote add origin xxxx`, onde `xxxx` é a url do repositório remoto:
 
-![](/courses/git-for-windows/img/git-github-005.png)
+![](/materials/git-for-windows/img/git-github-005.png)
 
 <br>
 
 Verifique novamente se existe um repositório remoto:
 
-![](/courses/git-for-windows/img/git-github-006.png)
+![](/materials/git-for-windows/img/git-github-006.png)
 
 <br>
 
 Verifique os detalhes do repositório remoto através do comando `git remote --v`:
 
-![](/courses/git-for-windows/img/git-github-007.png)
+![](/materials/git-for-windows/img/git-github-007.png)
 
 <br>
 
 Execute o comando `git push -u origin master` para carregar o conteúdo atualizado do repositório local para o repositório remoto :
 
-![](/courses/git-for-windows/img/git-github-008.png)
+![](/materials/git-for-windows/img/git-github-008.png)
 
 <br>
 
 Atualize a página do repositório no GitHub :
 
-![](/courses/git-for-windows/img/git-github-009.png)
+![](/materials/git-for-windows/img/git-github-009.png)
 
 <br>
 
 Adicione o <b>README</b>:
 
-![](/courses/git-for-windows/img/git-github-010.png)
-![](/courses/git-for-windows/img/git-github-011.png)
-![](/courses/git-for-windows/img/git-github-012.png)
-![](/courses/git-for-windows/img/git-github-013.png)
+![](/materials/git-for-windows/img/git-github-010.png)
+![](/materials/git-for-windows/img/git-github-011.png)
+![](/materials/git-for-windows/img/git-github-012.png)
+![](/materials/git-for-windows/img/git-github-013.png)
 
 <br>
 

@@ -10,9 +10,8 @@ summary: Live realizada na Casa da Pesquisa Operacional sobre exploração e pre
 tags:
   - kaggle
   - data wrangling
-  - R
-  - KNN
-  - missing data
+  - r
+  - knn
 title: Análise Exploratória de Dados - O Desafio do Titanic
 image:
   caption:

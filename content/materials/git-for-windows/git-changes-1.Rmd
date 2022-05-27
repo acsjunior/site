@@ -7,57 +7,57 @@ weight: 5
 
 Adicione uma nova linha no arquivo <b>Exemplo.txt</b>:
 
-![](/courses/git-for-windows/img/git-commands-011.png)
+![](/materials/git-for-windows/img/git-commands-011.png)
 
 <br>
 
 Adicione as alterações na staging area (`git add --all`) e salve as alterações (`git commit -m "primeira alteração realizada"`):
 
-![](/courses/git-for-windows/img/git-commands-012.png)
+![](/materials/git-for-windows/img/git-commands-012.png)
 
 <br>
 
 Verifique o histórico resumido do respositório através do comando `git log --oneline`:
 
-![](/courses/git-for-windows/img/git-commands-013.png)
-![](/courses/git-for-windows/img/git-commands-014.png)
+![](/materials/git-for-windows/img/git-commands-013.png)
+![](/materials/git-for-windows/img/git-commands-014.png)
 
 <br>
 
 Para verificar o grafo das alterações, execute o comando `git log --graph`:
 
-![](/courses/git-for-windows/img/git-commands-015.png)
+![](/materials/git-for-windows/img/git-commands-015.png)
 
 <br>
 
 Para retornar o projeto a uma versão específica, execute o comando `git checkout xxxx`, onde `xxxx` é o id da versão obtido através do comando `git log --oneline`:
 
-![](/courses/git-for-windows/img/git-commands-017.png)
+![](/materials/git-for-windows/img/git-commands-017.png)
 
 <br>
 
 Execute o comando `git log --oneline` para verificar novamente o histórico do respositório:
 
-![](/courses/git-for-windows/img/git-commands-018.png)
-![](/courses/git-for-windows/img/git-commands-019.png)
+![](/materials/git-for-windows/img/git-commands-018.png)
+![](/materials/git-for-windows/img/git-commands-019.png)
 
 <br>
 
 Execute o comando `git branch` para verificar em qual ramo as alterações estão sendo realizadas:
 
-![](/courses/git-for-windows/img/git-commands-020.png)
+![](/materials/git-for-windows/img/git-commands-020.png)
 
 <br>
 
 Execute o comando `git checkout master` para retornar o projeto para a última versão:
 
-![](/courses/git-for-windows/img/git-commands-021.png)
+![](/materials/git-for-windows/img/git-commands-021.png)
 
 <br>
 
 xecute o comando `git log --oneline` para verificar novamente o histórico do repositório:
 
-![](/courses/git-for-windows/img/git-commands-022.png)
+![](/materials/git-for-windows/img/git-commands-022.png)
 
 <br>
 

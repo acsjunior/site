@@ -6,9 +6,9 @@ slug: []
 categories:
   - Tutoriais
 tags:
-  - R
-  - R Markdown
-  - LaTeX
+  - r
+  - r markdown
+  - latex
 subtitle: ''
 summary: ''
 authors: []

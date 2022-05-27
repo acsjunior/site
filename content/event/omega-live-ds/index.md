@@ -8,6 +8,8 @@ featured: false
 location: Ômega Data Science (YouTube)
 summary: Participação na live da Ômega Data Science, discutindo sobre o que é ciência de dados.
 tags:
+  - data science
+  - mesa redonda
 title: O que é Ciência de Dados?
 image:
   caption:

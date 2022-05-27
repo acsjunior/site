@@ -6,8 +6,8 @@ slug: []
 categories:
   - Tutoriais
 tags:
-  - R
-  - SQL
+  - r
+  - sql
   - dplyr
   - tidyverse
   - data wrangling

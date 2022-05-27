@@ -7,6 +7,9 @@ date_end: "2021-11-08T20:00:00Z"
 featured: false
 location: EBAC Online (YouTube)
 summary: Participação no Intensivo de Dados da Escola Britância de Artes Criativas & Tecnologia (EBAC). 
+tags:
+  - carreira
+  - data science
 title: Entenda onde você se encaixa no mundo dos dados
 image:
   caption:

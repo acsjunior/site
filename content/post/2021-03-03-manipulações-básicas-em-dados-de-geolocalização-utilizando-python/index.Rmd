@@ -6,9 +6,8 @@ slug: []
 categories:
   - Tutoriais
 tags:
-  - Python
+  - python
   - geolocalização
-  - shapely
   - geopandas
 subtitle: ''
 summary: ''

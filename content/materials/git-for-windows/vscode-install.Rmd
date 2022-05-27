@@ -7,46 +7,46 @@ weight: 2
 
 Acesse https://code.visualstudio.com e clique em *Download for Windows*:
 
-![](/courses/git-for-windows/img/vscode-001.png)
+![](/materials/git-for-windows/img/vscode-001.png)
 
 <br>
 
 Clique em *Run*:
 
-![](/courses/git-for-windows/img/vscode-002.png)
+![](/materials/git-for-windows/img/vscode-002.png)
 
 <br>
 
 Aceite os termos da licensa e clique em *Next*:
 
-![](/courses/git-for-windows/img/vscode-003.png)
+![](/materials/git-for-windows/img/vscode-003.png)
 
 <br>
 
 Clique em *Next*:
 
-![](/courses/git-for-windows/img/vscode-005.png)
+![](/materials/git-for-windows/img/vscode-005.png)
 
 <br>
 
 Clique em *Next*:
 
-![](/courses/git-for-windows/img/vscode-006.png)
+![](/materials/git-for-windows/img/vscode-006.png)
 
 <br>
 
 Habilite a criação do ícone no desktop e clique em *Next*:
 
-![](/courses/git-for-windows/img/vscode-007.png)
+![](/materials/git-for-windows/img/vscode-007.png)
 
 <br>
 
 Clique em *Install*:
 
-![](/courses/git-for-windows/img/vscode-008.png)
+![](/materials/git-for-windows/img/vscode-008.png)
 
 <br>
 
 Desabilite a opção *Launch Visual Studio Code* e clique em *Finish*:
 
-![](/courses/git-for-windows/img/vscode-009.png)
+![](/materials/git-for-windows/img/vscode-009.png)
