@@ -27,7 +27,7 @@ role: Cientista de Dados Especialista
 social:
 - icon: envelope
   icon_pack: fas
-  link: /#contact
+  link: mailto:falecom@acsjunior.com?subject=Contato%20acsjunior.com
 - display:
     header: true
   icon: linkedin
@@ -36,9 +36,12 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/juniorssz
+- icon: youtube
+  icon_pack: fab
+  link: https://www.youtube.com/c/acsjuniorcom/about
 - icon: instagram
   icon_pack: fab
-  link: 'https://www.instagram.com/juniorssz/'
+  link: https://www.instagram.com/juniorssz/
 - icon: medium
   icon_pack: fab
   link: https://juniorssz.medium.com
