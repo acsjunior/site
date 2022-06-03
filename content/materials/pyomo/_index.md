@@ -1,7 +1,7 @@
 ---
 date: "2021-07-08"
 linkTitle: Modelando problemas de otimização com Python e Pyomo
-summary: Playlist completa disponível no YouTube!
+summary: Nesta sequência de vídeos você irá aprender como modelar e resolver problemas de otimização com Python e Pyomo.
 title: "Modelando problemas de otimização com Python e Pyomo"
 type: book
 ---
@@ -9,6 +9,8 @@ type: book
 {{< youtube gpx6ocGK2F8 >}}
 
 <hr>
+
+Nesta sequência de vídeos você irá aprender como modelar e resolver problemas de otimização com Python e Pyomo.
 
 Playlist completa disponível no YouTube!
 
