@@ -32,7 +32,7 @@ social:
     header: true
   icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/juniorssz/
+  link: https://www.linkedin.com/in/acsjunior/
 - icon: github
   icon_pack: fab
   link: https://github.com/juniorssz
