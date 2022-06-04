@@ -10,7 +10,7 @@ summary: Palestra sobre os diferentes papeis na área de dados, realizada no can
 tags:
   - carreira
   - data science
-title: Entenda onde você se encaixa no mundo dos dados
+title: Entenda onde você se encaixa no mundo dos dadosㅤ
 image:
   caption:
   focal_point: ''
@@ -18,3 +18,10 @@ image:
 ---
 
 {{< youtube ots1rPKv6KQ >}}
+
+<hr>
+
+Material de apoio:
+
+- [Apresentação](https://drive.google.com/uc?export=download&id=1KIl1DQJRZGGJEZg0BRCsSpZnnvABYrTG)
+

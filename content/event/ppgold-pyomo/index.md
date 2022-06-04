@@ -22,3 +22,12 @@ image:
 ---
 
 {{< youtube xLgnqb-ewqQ >}}
+
+<hr>
+
+Material de apoio:
+
+- [Apresentação](https://drive.google.com/uc?export=download&id=18QbTqUeIXruKQ1-Tk8JhWmuopgJsFPHa)
+- [Códigos (GitHub)](https://github.com/juniorssz/ppgold-pyomo)
+
+

@@ -4,7 +4,7 @@ education:
   courses:
   - course: M.e Métodos Numéricos em Engenharia
     institution: Universidade Federal do Paraná
-    year: 2022
+    year: 2023
   - course: Esp. Data Science & Big Data
     institution: Universidade Federal do Paraná
     year: 2020
@@ -23,7 +23,7 @@ interests:
 organizations:
 - name: Grupo Boticário
   url: https://www.grupoboticario.com.br/
-role: Cientista de Dados Especialista
+role: Cientista de Dados
 social:
 - icon: envelope
   icon_pack: fas

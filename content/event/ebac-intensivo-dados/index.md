@@ -18,3 +18,9 @@ image:
 ---
 
 {{< youtube j1gakiSS8Xc >}}
+
+<hr>
+
+Material de apoio:
+
+- [Apresentação](https://drive.google.com/uc?export=download&id=1KIl1DQJRZGGJEZg0BRCsSpZnnvABYrTG)
