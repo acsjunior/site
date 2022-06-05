@@ -38,7 +38,7 @@ social:
   link: https://github.com/juniorssz
 - icon: youtube
   icon_pack: fab
-  link: https://www.youtube.com/c/acsjuniorcom/about
+  link: https://www.youtube.com/channel/UCHl4-0SuuyhjHT-Vv1Y8ujQ/about
 - icon: instagram
   icon_pack: fab
   link: https://www.instagram.com/juniorssz/

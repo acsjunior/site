@@ -3,7 +3,7 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: acsjunior
+title: António C. da Silva Júnior | Cientista de Dados
 baseurl: '/'
 copyright: '© {year} acsjunior' # Footer text, e.g. '© {year} Me'
 
