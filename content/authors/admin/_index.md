@@ -41,10 +41,10 @@ social:
   link: https://www.youtube.com/channel/UCHl4-0SuuyhjHT-Vv1Y8ujQ/about
 - icon: instagram
   icon_pack: fab
-  link: https://www.instagram.com/juniorssz/
+  link: https://www.instagram.com/souacsjunior/
 - icon: medium
   icon_pack: fab
-  link: https://juniorssz.medium.com
+  link: https://medium.com/@souacsjunior
 - icon: lattes
   icon_pack: ai
   link: http://lattes.cnpq.br/9538279526734312
