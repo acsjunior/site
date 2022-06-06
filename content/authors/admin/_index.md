@@ -14,7 +14,7 @@ education:
   - course: Tec. Automação Industrial
     institution: Instituto Federal de São Paulo
     year: 2007
-email: "juniorssz@gmail.com"
+email: "sou@acsjunior.com"
 highlight_name: false
 interests:
 - Modelos Lineares Generalizados
@@ -27,7 +27,7 @@ role: Cientista de Dados
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:falecom@acsjunior.com?subject=Contato%20acsjunior.com
+  link: mailto:sou@acsjunior.com?subject=Contato%20acsjunior.com
 - display:
     header: true
   icon: linkedin
