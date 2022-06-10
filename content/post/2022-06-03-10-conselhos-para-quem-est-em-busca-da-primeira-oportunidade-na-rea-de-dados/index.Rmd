@@ -24,5 +24,5 @@ Estava pensando no impacto negativo que a publicidade em torno da área de dados
 Em 2018, após alguns anos atuando em outro segmento, ingressei oficialmente na área de dados. Com base nas experiências que vivi desde a época que comecei a me preparar até hoje, separei 10 conselhos que podem ser úteis para quem está trilhando o mesmo caminho:
 
 {{% callout note %}}
-[Acesse a publicação completa no **Medium**](https://juniorssz.medium.com/10-conselhos-para-quem-está-em-busca-da-primeira-oportunidade-na-área-de-dados-f6c0398816f0).
+[Acesse a publicação completa no **Medium**](https://medium.com/@souacsjunior/10-conselhos-para-quem-está-em-busca-da-primeira-oportunidade-na-área-de-dados-f6c0398816f0).
 {{% /callout %}}

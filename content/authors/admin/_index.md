@@ -39,12 +39,12 @@ social:
 - icon: youtube
   icon_pack: fab
   link: https://www.youtube.com/acsjunior_/about
-- icon: instagram
+- icon: twitter
   icon_pack: fab
-  link: https://www.instagram.com/juniorssz/
+  link: https://twitter.com/souacsjunior
 - icon: medium
   icon_pack: fab
-  link: https://medium.com/@souacsjunior
+  link: https://souacsjunior.medium.com
 - icon: lattes
   icon_pack: ai
   link: http://lattes.cnpq.br/9538279526734312
