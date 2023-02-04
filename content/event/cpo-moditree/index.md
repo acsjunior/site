@@ -9,8 +9,10 @@ location: Casa da Pesquisa Operacional (YouTube)
 summary: Palestra realizada na III Semana da Pesquisa Operacional sobre o método MODI Tree para resolução do Problema do Transporte.
 tags:
   - otimização
-  - programação linear
+  - programação linear inteira mista
+  - MILP
   - problema do transporte
+  - pesquisa operacional
 title: Resolvendo o Problema do Transporte com o método MODI Tree
 image:
   caption:

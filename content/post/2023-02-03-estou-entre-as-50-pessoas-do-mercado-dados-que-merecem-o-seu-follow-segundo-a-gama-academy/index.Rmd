@@ -1,0 +1,26 @@
+---
+title: Estou entre as 50 pessoas do mercado Dados que merecem o seu follow, segundo
+  a Gama Academy
+author: acsjunior
+date: '2023-02-03'
+slug: []
+categories:
+  - Diversos
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2023-02-03T15:08:50-03:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+Hoje descobri que fiquei entre os 50 profissionais de Dados indicados pela [Gama Academy](https://gama.academy), na edição 2023 do projeto [50 to Follow](https://50tofollow2023.corporate.gama.academy).
+
+[Clique aqui](https://50tofollow2023.corporate.gama.academy/dadosebi/) para acessar a lista completa.
+
+Muito feliz pelo reconhecimento, eu não fazia idéia que tinha tanta influência. Me deixaram ainda mais motivado em continuar contribuindo com a comunidade!

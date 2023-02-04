@@ -55,13 +55,13 @@ superuser: true
 title: António C. da Silva Júnior
 ---
 
-Atualmente é Cientista de Dados Especialista na área de planejamento de demanda do Grupo Boticário e aluno de mestrado do programa de Métodos Numéricos em Engenharia da UFPR. 
+Atualmente é Líder de Ciência de Dados no Grupo Boticário e aluno de mestrado do programa de Métodos Numéricos em Engenharia da UFPR. É formado em Análise e Desenvolvimento de Sistemas e tem especialização em Data Science e Big Data. 
 
-Trabalhou quase 10 anos nas áreas de Instrumentação e Automação Industrial, predominantemente com planejamento e controle de projetos de engenharia no setor de Óleo e Gás. 
+Trabalhou quase 10 anos em projetos de engenharia no setor de Óleo e Gás, até migrar para a Ciência de Dados em 2018. Em Dados atuou na área da Saúde, E-commerce e desde 2020 faz parte da equipe de Planejamento de Demanda do Grupo Boticário.
 
-Atua na área de Ciência de Dados desde 2018 e considera-se um profissional com perfil generalista, com afinidade desde a estruturação de bases de dados, data quality, análises descritiva e diagnóstica, até a modelagem preditiva e prescritiva.
+Considera-se um profissional orientado ao negócio e de perfil generalista, com afinidade desde a estruturação de bases de dados, data quality, análises descritiva e diagnóstica, até a modelagem preditiva e prescritiva.
 
-É brasileiro e cidadão português.
+É cidadão brasileiro e português.
 
 <!--
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
