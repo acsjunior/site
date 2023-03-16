@@ -16,14 +16,14 @@ education:
     year: 2007
 email: "sou@acsjunior.com"
 highlight_name: false
-interests:
-- Modelos Lineares Generalizados
-- Modelos baseados em árvores
-- Problemas de otimização
+# interests:
+# - Modelos Lineares Generalizados
+# - Modelos baseados em árvores
+# - Problemas de otimização
 organizations:
 - name: Grupo Boticário
   url: https://www.grupoboticario.com.br/
-role: Cientista de Dados
+role: Coord. de Ciência de Dados
 social:
 - icon: envelope
   icon_pack: fas
@@ -55,7 +55,7 @@ superuser: true
 title: António C. da Silva Júnior
 ---
 
-Atualmente é Líder de Ciência de Dados no Grupo Boticário e aluno de mestrado do programa de Métodos Numéricos em Engenharia da UFPR. É formado em Análise e Desenvolvimento de Sistemas e tem especialização em Data Science e Big Data. 
+Atualmente é Coordenador de Ciência de Dados no Grupo Boticário e aluno de mestrado do programa de Métodos Numéricos em Engenharia da UFPR. É formado em Análise e Desenvolvimento de Sistemas e tem especialização em Data Science e Big Data. 
 
 Trabalhou quase 10 anos em projetos de engenharia no setor de Óleo e Gás, até migrar para a Ciência de Dados em 2018. Em Dados atuou na área da Saúde, E-commerce e desde 2020 faz parte da equipe de Planejamento de Demanda do Grupo Boticário.
 

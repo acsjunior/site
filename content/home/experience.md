@@ -22,7 +22,7 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: Líder de Ciência de Dados
+  - title: Coordenador de Ciência de Dados
     company: Grupo Boticário
     company_url: 'https://www.grupoboticario.com.br/'
     location: São José dos Pinhais - PR
@@ -30,12 +30,12 @@ experience:
     date_end: ''
     description: ''
     
-  - title: Cientista de Dados Especialista
+  - title: Especialista em Ciência de Dados
     company: Grupo Boticário
     company_url: 'https://www.grupoboticario.com.br/'
     location: São José dos Pinhais - PR
     date_start: '2021-10-01'
-    date_end: '2022-12-01'
+    date_end: '2022-12-01'  
     description: ''
     
   - title: Cientista de Dados III
