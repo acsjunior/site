@@ -1,0 +1,27 @@
+---
+title: Como praticar SQL no Jupyter Notebook - Parte 2
+author: acsjunior
+date: '2023-07-22'
+slug: []
+categories:
+  - Tutoriais
+tags:
+  - sql
+  - python
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2023-07-22T08:28:23-03:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+No [artigo anterior](../2023-07-15-como-praticar-sql-no-jupyter-notebook/) foi demonstrado como criar um banco de dados e executar instruções SQL de maneira descomplicada, direto do Jupyter Notebook. Neste artigo o objetivo é demonstrar como extrair e inserir dados no banco de dados usando o Pandas.
+
+{{% callout note %}}
+[Acesse a publicação completa no **Linkedin**](https://www.linkedin.com/pulse/como-praticar-sql-jupyter-notebook-parte-2-da-silva-j%25C3%25BAnior/?trackingId=sR6itYehSHW%2FsczmMM%2F82A%3D%3D).
+{{% /callout %}}
